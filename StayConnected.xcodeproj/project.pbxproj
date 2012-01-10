@@ -1,0 +1,287 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B71228F14BCC26F00F2C5B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B71228214BCC26F00F2C5B6 /* InfoPlist.strings */; };
+		4B71229014BCC26F00F2C5B6 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B71228414BCC26F00F2C5B6 /* MainWindow.xib */; };
+		4B71229114BCC26F00F2C5B6 /* StayConnectedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B71228614BCC26F00F2C5B6 /* StayConnectedViewController.xib */; };
+		4B71229214BCC26F00F2C5B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B71228814BCC26F00F2C5B6 /* main.m */; };
+		4B71229314BCC26F00F2C5B6 /* StayConnected-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71228914BCC26F00F2C5B6 /* StayConnected-Info.plist */; };
+		4B71229414BCC26F00F2C5B6 /* StayConnectedAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B71228C14BCC26F00F2C5B6 /* StayConnectedAppDelegate.m */; };
+		4B71229514BCC26F00F2C5B6 /* StayConnectedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B71228E14BCC26F00F2C5B6 /* StayConnectedViewController.m */; };
+		4BBCA72F14BCC1D4004B135E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA72E14BCC1D4004B135E /* UIKit.framework */; };
+		4BBCA73114BCC1D4004B135E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA73014BCC1D4004B135E /* Foundation.framework */; };
+		4BBCA73314BCC1D4004B135E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA73214BCC1D4004B135E /* CoreGraphics.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4B71228314BCC26F00F2C5B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4B71228514BCC26F00F2C5B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		4B71228714BCC26F00F2C5B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/StayConnectedViewController.xib; sourceTree = "<group>"; };
+		4B71228814BCC26F00F2C5B6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4B71228914BCC26F00F2C5B6 /* StayConnected-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "StayConnected-Info.plist"; sourceTree = "<group>"; };
+		4B71228A14BCC26F00F2C5B6 /* StayConnected-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StayConnected-Prefix.pch"; sourceTree = "<group>"; };
+		4B71228B14BCC26F00F2C5B6 /* StayConnectedAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StayConnectedAppDelegate.h; sourceTree = "<group>"; };
+		4B71228C14BCC26F00F2C5B6 /* StayConnectedAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StayConnectedAppDelegate.m; sourceTree = "<group>"; };
+		4B71228D14BCC26F00F2C5B6 /* StayConnectedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StayConnectedViewController.h; sourceTree = "<group>"; };
+		4B71228E14BCC26F00F2C5B6 /* StayConnectedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StayConnectedViewController.m; sourceTree = "<group>"; };
+		4BBCA72A14BCC1D4004B135E /* StayConnected.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StayConnected.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BBCA72E14BCC1D4004B135E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4BBCA73014BCC1D4004B135E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4BBCA73214BCC1D4004B135E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4BBCA72714BCC1D4004B135E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BBCA72F14BCC1D4004B135E /* UIKit.framework in Frameworks */,
+				4BBCA73114BCC1D4004B135E /* Foundation.framework in Frameworks */,
+				4BBCA73314BCC1D4004B135E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B71228114BCC26F00F2C5B6 /* StayConnected */ = {
+			isa = PBXGroup;
+			children = (
+				4B7122C614BCC94900F2C5B6 /* Supporting Files */,
+				4B71228414BCC26F00F2C5B6 /* MainWindow.xib */,
+				4B71228614BCC26F00F2C5B6 /* StayConnectedViewController.xib */,
+				4B71228B14BCC26F00F2C5B6 /* StayConnectedAppDelegate.h */,
+				4B71228C14BCC26F00F2C5B6 /* StayConnectedAppDelegate.m */,
+				4B71228D14BCC26F00F2C5B6 /* StayConnectedViewController.h */,
+				4B71228E14BCC26F00F2C5B6 /* StayConnectedViewController.m */,
+			);
+			name = StayConnected;
+			path = src/StayConnected;
+			sourceTree = "<group>";
+		};
+		4B7122C614BCC94900F2C5B6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B71228214BCC26F00F2C5B6 /* InfoPlist.strings */,
+				4B71228814BCC26F00F2C5B6 /* main.m */,
+				4B71228914BCC26F00F2C5B6 /* StayConnected-Info.plist */,
+				4B71228A14BCC26F00F2C5B6 /* StayConnected-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4BBCA71F14BCC1D4004B135E = {
+			isa = PBXGroup;
+			children = (
+				4B71228114BCC26F00F2C5B6 /* StayConnected */,
+				4BBCA72D14BCC1D4004B135E /* Frameworks */,
+				4BBCA72B14BCC1D4004B135E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4BBCA72B14BCC1D4004B135E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4BBCA72A14BCC1D4004B135E /* StayConnected.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4BBCA72D14BCC1D4004B135E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4BBCA72E14BCC1D4004B135E /* UIKit.framework */,
+				4BBCA73014BCC1D4004B135E /* Foundation.framework */,
+				4BBCA73214BCC1D4004B135E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4BBCA72914BCC1D4004B135E /* StayConnected */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BBCA74B14BCC1D5004B135E /* Build configuration list for PBXNativeTarget "StayConnected" */;
+			buildPhases = (
+				4BBCA72614BCC1D4004B135E /* Sources */,
+				4BBCA72714BCC1D4004B135E /* Frameworks */,
+				4BBCA72814BCC1D4004B135E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StayConnected;
+			productName = StayConnected;
+			productReference = 4BBCA72A14BCC1D4004B135E /* StayConnected.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4BBCA72114BCC1D4004B135E /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4BBCA72414BCC1D4004B135E /* Build configuration list for PBXProject "StayConnected" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4BBCA71F14BCC1D4004B135E;
+			productRefGroup = 4BBCA72B14BCC1D4004B135E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4BBCA72914BCC1D4004B135E /* StayConnected */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4BBCA72814BCC1D4004B135E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B71228F14BCC26F00F2C5B6 /* InfoPlist.strings in Resources */,
+				4B71229014BCC26F00F2C5B6 /* MainWindow.xib in Resources */,
+				4B71229114BCC26F00F2C5B6 /* StayConnectedViewController.xib in Resources */,
+				4B71229314BCC26F00F2C5B6 /* StayConnected-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4BBCA72614BCC1D4004B135E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B71229214BCC26F00F2C5B6 /* main.m in Sources */,
+				4B71229414BCC26F00F2C5B6 /* StayConnectedAppDelegate.m in Sources */,
+				4B71229514BCC26F00F2C5B6 /* StayConnectedViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4B71228214BCC26F00F2C5B6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B71228314BCC26F00F2C5B6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4B71228414BCC26F00F2C5B6 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B71228514BCC26F00F2C5B6 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		4B71228614BCC26F00F2C5B6 /* StayConnectedViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B71228714BCC26F00F2C5B6 /* en */,
+			);
+			name = StayConnectedViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4BBCA74914BCC1D5004B135E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4BBCA74A14BCC1D5004B135E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		4BBCA74C14BCC1D5004B135E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "src/StayConnected/StayConnected-Prefix.pch";
+				INFOPLIST_FILE = "src/StayConnected/StayConnected-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4BBCA74D14BCC1D5004B135E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "src/StayConnected/StayConnected-Prefix.pch";
+				INFOPLIST_FILE = "src/StayConnected/StayConnected-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4BBCA72414BCC1D4004B135E /* Build configuration list for PBXProject "StayConnected" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BBCA74914BCC1D5004B135E /* Debug */,
+				4BBCA74A14BCC1D5004B135E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BBCA74B14BCC1D5004B135E /* Build configuration list for PBXNativeTarget "StayConnected" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BBCA74C14BCC1D5004B135E /* Debug */,
+				4BBCA74D14BCC1D5004B135E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4BBCA72114BCC1D4004B135E /* Project object */;
+}
