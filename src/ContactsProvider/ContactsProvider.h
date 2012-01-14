@@ -37,6 +37,11 @@
             callback:( id< ContactsCallback > )inCallback;
 
 /*
+ * Query the name of the provider
+ */
+-( NSString * )getName;
+
+/*
  * Hmm! This is here temporarily as Facebook expects the app to handle the
  * opening of URLs and the the facebook provider will, in turn, pass any such
  * requests on to its Facebook instance. The current usage would be that the
@@ -67,11 +72,6 @@
 -( void )sendMessage:( NSArray * )inContacts
              message:( NSString * )inMessage
             callback:( id< SendMessageCallback > )inCallback;
-
-/*
- * The name of the provider
- */
-@property ( readonly ) NSString * name;
 
 @end
 
