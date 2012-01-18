@@ -38,7 +38,7 @@
             secret:( NSString * )inSecret
    tokenRequestURL:( NSString * )inTokenRequestURL
       authoriseURL:( NSString * )inAuthoriseURL
-         accessURL:( NSString * )inAccessURL
+    tokenaccessURL:( NSString * )inAccessURL
     callbackSuffix:( NSString * )inCallbackSuffix;
 
 -( BOOL )openURL:( NSURL * )inURL;

@@ -37,6 +37,7 @@ static NSString * sURLSep         = @"?";
     didFinishWithData:( NSData * )inData;
 -( void )requestToken:( OAServiceTicket * )inTicket
      didFailWithError:( NSError * )inError;
+-( NSArray * )stringsToParameters:( NSArray * )inStrings;
 
 @end
 
@@ -70,7 +71,7 @@ static NSString * sURLSep         = @"?";
             secret:( NSString * )inSecret
    tokenRequestURL:( NSString * )inTokenRequestURL
       authoriseURL:( NSString * )inAuthoriseURL
-         accessURL:( NSString * )inAccessURL
+    tokenaccessURL:( NSString * )inAccessURL
     callbackSuffix:( NSString * )inCallbackSuffix {
     self = [ super init ];
     if ( self != nil ) {
@@ -174,6 +175,7 @@ static NSString * sURLSep         = @"?";
                                           realm:nil
                               signatureProvider:nil ];
     [ theRequest setHTTPMethod:mMethod ];
+    [ theRequest setParameters:[ self stringsToParameters:mParameters ] ];
     mDataFetcher = [ [ OADataFetcher alloc ] init ];
     [ mDataFetcher fetchDataWithRequest:theRequest
                                delegate:self
@@ -185,7 +187,7 @@ static NSString * sURLSep         = @"?";
 
 -( void )doRequest:( OAServiceTicket * )inTicket
  didFinishWithData:( NSData * )inData {
-    NSError * theError;
+    NSError * theError = nil;
     NSDictionary * theResults =
     [ NSJSONSerialization JSONObjectWithData:inData
                                      options:0
@@ -276,6 +278,22 @@ static NSString * sURLSep         = @"?";
 -( void )requestToken:( OAServiceTicket * )inTicket
      didFailWithError:( NSError * )inError {
     [ self requestComplete:nil error:inError ];
+}
+
+-( NSArray * )stringsToParameters:( NSArray * )inStrings {
+    NSMutableArray * theParameters = nil;
+    if ( inStrings != nil ) {
+        theParameters = [ [ NSMutableArray alloc ] init ];
+        int theCount = [ inStrings count ];
+        int theIndex = 0;
+        while ( theIndex < theCount ) {
+            [ theParameters addObject:
+             [ OARequestParameter requestParameter:[ inStrings objectAtIndex:theIndex ]
+                                             value:[ inStrings objectAtIndex:theIndex + 1 ] ] ];
+            theIndex += 2;
+        }
+    }
+    return [ theParameters autorelease ];
 }
 
 @end

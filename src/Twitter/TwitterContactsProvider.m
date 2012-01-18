@@ -1,3 +1,4 @@
+#import "OAuthRequestor.h"
 #import "TwitterConstants.h"
 #import "TwitterContactsProvider.h"
 #import "TwitterCreateNewContacts.h"
@@ -6,6 +7,36 @@
 #import "TwitterSendMessage.h"
 
 @implementation TwitterContactsProvider
+
+static NSString * sKey             = @"tXgnFM29DuKawZXbr1FfiA";
+static NSString * sSecret          = @"KX2nKmTNz1Rc0mV6FDFB5i7vjUBYupGEjcZn1gguvw";
+static NSString * sTokenRequestURL = @"https://twitter.com/oauth/request_token";
+static NSString * sAuthoriseURL    = @"https://twitter.com/oauth/authorize";
+static NSString * sTokenAccessURL  = @"https://twitter.com/oauth/access_token";
+static NSString * sCallbackSuffix  = @"twitter";
+
+-( void )dealloc {
+    [ mOAuthRequestor release ];
+    [ super dealloc ];
+}
+
+-( OAuthRequestor * )getOAuthRequestor {
+    return mOAuthRequestor;
+}
+
+-( id )init {
+    self = [ super init ];
+    if ( self != nil ) {
+        mOAuthRequestor =
+        [ [ OAuthRequestor alloc ] initWithKey:sKey
+                                        secret:sSecret
+                               tokenRequestURL:sTokenRequestURL
+                                  authoriseURL:sAuthoriseURL
+                                tokenaccessURL:sTokenAccessURL
+                                callbackSuffix:sCallbackSuffix ];
+    }
+    return self;
+}
 
 // ContactsProvider Implementation
 -( void )createNewContacts:( NSArray * )inContacts

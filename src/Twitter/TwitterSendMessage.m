@@ -1,27 +1,29 @@
+#import "Constants.h"
 #import "Contact.h"
 #import "ContactsProvider.h"
+#import "StayConnectedError.h"
 #import "TwitterContactsProvider.h"
 #import "TwitterRequestExecutor.h"
 #import "TwitterSendMessage.h"
 
 @interface TwitterSendMessage ( PrivateMethods )
 
--( void )requestComplete:( NSError * )inError;
--( void )sendMessage:( NSString * )inContactId
-               error:( NSError ** )outError;
+-( void )requestComplete;
 
 @end
 
 @implementation TwitterSendMessage
 
-static const NSString * const sURLSendMessage = @"http://api.twitter.com/1/direct_messages/new.json";
-static const NSString * const sKeyUserId = @"user_id";
-static const NSString * const sKeyText = @"text";
+static NSString * const sURLSendMessage = @"http://api.twitter.com/1/direct_messages/new.json";
+static NSString * const sKeyUserId      = @"user_id";
+static NSString * const sKeyText        = @"text";
 
 -( void )dealloc {
+    [ mErrors release ];
     [ mCallback release ];
     [ mMessage release ];
     [ mContacts release ];
+    [ mProvider release ];
     [ super dealloc ];
 }
 
@@ -29,62 +31,54 @@ static const NSString * const sKeyText = @"text";
                contacts:( NSArray * )inContacts
                 message:( NSString * )inMessage
                callback:( id< SendMessageCallback > )inCallback {
-    self = [ super initWithProvider:inProvider ];
+    self = [ super init ];
     if ( self != nil ) {
+        mProvider = [ inProvider retain ];
         mContacts = [ inContacts retain ];
         mMessage = [ inMessage retain ];
         mCallback = [ inCallback retain ];
+        mErrors = [ [ NSMutableString alloc ] init ];
+        mCompletedCount = 0;
     }
     return self;
 }
 
 -( void )sendMessage {
-    NSError * theError = nil;
+    // Todo: Can only send direct message to followers
     for ( id< Contact > theContact in mContacts ) {
-        [ self sendMessage:[ theContact getId ] error:&theError ];
-        if ( theError != nil ) {
-            break;
-        }
+        [ [ mProvider getOAuthRequestor ] httpPost:sURLSendMessage parameters:[ NSArray arrayWithObjects:sKeyUserId, [ theContact getId ], sKeyText, mMessage, nil ] callback:self ];
     }
-    [ self requestComplete:theError ];
+}
+
+// OAuthRequestCallback implementation
+-( void )requestComplete:( NSDictionary * )inResult error:( NSError * )inError {
+    @synchronized( self ) {
+        if ( inError != nil ) {
+            [ mErrors appendFormat:@"%@\n%@\n\n",
+             [ inError localizedDescription ],
+             [ inError localizedFailureReason ] ];
+        }
+        ++ mCompletedCount;
+        if ( mCompletedCount == [ mContacts count ] ) {
+            [ self requestComplete ];
+        }
+        
+    }
 }
 
 @end
 
 @implementation TwitterSendMessage ( PrivateMethods )
 
--( void )requestComplete:inError {
-    [ mCallback onMessageSent:inError ];
-    [ self requestComplete ];
-}
-
--( void )sendMessage:( NSString * )inContactId
-               error:( NSError ** )outError {
-    TwitterRequestExecutor * theRequest = [ [ TwitterRequestExecutor alloc ] init ];
-    [ self setBusy:TRUE ];
-    [ theRequest
-     execute:( NSString * )sURLSendMessage
-     parameters:[ NSDictionary dictionaryWithObjectsAndKeys:
-                 inContactId, ( NSString * )sKeyUserId,
-                 mMessage, ( NSString * )sKeyText, nil ]
-     method:TWRequestMethodPOST
-     handler:^( NSData * inResponseData, NSHTTPURLResponse * inURLResponse, NSError * inError ) {
-         if ( inURLResponse == nil || [ inURLResponse statusCode ] != 200 ) {
-             outError[ 0 ] = inError;
-         } else {
-             NSError * theError = nil;
-             NSDictionary * theResults =
-             [ NSJSONSerialization JSONObjectWithData:inResponseData
-                                              options:0
-                                                error:&theError ];
-             if ( theResults == nil ) {
-                 outError[ 0 ] = theError;
-             }
-         }
-         [ self setBusy:FALSE ];
-     } ];
-    [ self waitWhileBusy ];
-    [ theRequest release ];
+-( void )requestComplete {
+    NSError * theError = nil;
+    if ( [ mErrors length ] > 0 ) {
+        theError =
+        [ [ NSError alloc ] initWithCode:ErrTwitterSendFailed
+                             description:@"err_twitter_send_failed"
+                                  reason:mErrors ];
+    }
+    [ mCallback onMessageSent:[ theError autorelease ] ];
 }
 
 @end
