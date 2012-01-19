@@ -1,16 +1,15 @@
 #import <Foundation/Foundation.h>
 
-#import "TwitterRequestUtil.h"
+#import "OAuthRequestor.h"
 
 @class TwitterContactsProvider;
-@protocol ContactsCallback;
 
-@interface TwitterSearchContacts : TwitterRequestUtil {
+@interface TwitterSearchContacts : NSObject< OAuthRequestCallback > {
     @private
+    TwitterContactsProvider * mProvider;
     NSString * mSearchString;
     NSArray * mAttributes;
     id< ContactsCallback > mCallback;
-    NSMutableDictionary * mResults;
 }
 
 -( id )initWithProvider:( TwitterContactsProvider * )inProvider

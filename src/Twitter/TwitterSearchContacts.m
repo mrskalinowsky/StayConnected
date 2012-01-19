@@ -8,22 +8,20 @@
 
 -( void )addContactFromResult:( NSDictionary * )inResult
                      contacts:( NSMutableDictionary * )inContacts;
--( void )requestComplete:( NSError * )inError;
--( void )searchContacts:( NSError ** )outError;
 
 @end
 
 @implementation TwitterSearchContacts
 
-static const NSString * const sURLSearch = @"http://api.twitter.com/1/users/search.json";
-static const NSString * const sKeyQ = @"q";
+static NSString * const sURLSearch = @"http://api.twitter.com/1/users/search.json";
+static NSString * const sKeyQ      = @"q";
 
 
 -( void )dealloc {
-    [ mResults release ];
     [ mCallback release ];
     [ mAttributes release ];
     [ mSearchString release ];
+    [ mProvider release ];
     [ super dealloc ];
 }
 
@@ -31,20 +29,36 @@ static const NSString * const sKeyQ = @"q";
            searchString:( NSString * )inSearchString
              attributes:( NSArray * )inAttributes
                callback:( id< ContactsCallback > )inCallback {
-    self = [ super initWithProvider:inProvider ];
+    self = [ super init ];
     if ( self != nil ) {
+        mProvider = [ inProvider retain ];
         mSearchString = [ inSearchString retain ];
         mAttributes = [ inAttributes retain ];
         mCallback = [ inCallback retain ];
-        mResults = [ [ NSMutableDictionary alloc ] init ];
     }
     return self;
 }
 
 -( void )searchContacts {
-    NSError * theError = nil;
-    [ self searchContacts:&theError ];
-    [ self requestComplete:theError ];
+    [ [ mProvider getOAuthRequestor ]
+        httpGet:sURLSearch
+     parameters:[ NSArray arrayWithObjects:sKeyQ, mSearchString, nil ]
+       callback:self ];
+}
+
+// OAuthRequestCallback implementation
+-( void )requestComplete:( NSDictionary * )inResult error:( NSError * )inError {
+    if ( inError == nil ) {
+        NSMutableDictionary * theResults = [ [ NSMutableDictionary alloc ] init ];
+        for ( NSDictionary * theResult in inResult ) {
+            [ self addContactFromResult:theResult contacts:theResults ];
+        }
+        [ mCallback onContactsFound:[ theResults allValues ] error:nil ];
+        [ theResults autorelease ];
+    } else {
+        [ mCallback onContactsFound:nil error:inError ];
+    }
+    [ mProvider requestComplete:self ];
 }
 
 @end
@@ -60,43 +74,6 @@ static const NSString * const sKeyQ = @"q";
         [ inContacts setValue:theContact forKey:theId ];
         [ theContact release];
     }
-}
-
--( void )requestComplete:inError {
-    [ mCallback onContactsFound:inError == nil ? [ mResults allValues ] : nil
-                          error:inError ];
-    [ self requestComplete ];
-}
-
--( void )searchContacts:( NSError ** )outError {
-    TwitterRequestExecutor * theRequest = [ [ TwitterRequestExecutor alloc ] init ];
-    [ self setBusy:TRUE ];
-    [ theRequest
-     execute:( NSString * )sURLSearch
-     parameters:[ NSDictionary dictionaryWithObject:mSearchString
-                                             forKey:( NSString * )sKeyQ ]
-     method:TWRequestMethodGET
-     handler:^( NSData * inResponseData, NSHTTPURLResponse * inURLResponse, NSError * inError ) {
-         if ( inURLResponse == nil || [ inURLResponse statusCode ] != 200 ) {
-             outError[ 0 ] = inError;
-         } else {
-             NSError * theError = nil;
-             NSDictionary * theResults =
-             [ NSJSONSerialization JSONObjectWithData:inResponseData
-                                              options:0
-                                                error:&theError ];
-             if ( theResults == nil ) {
-                 outError[ 0 ] = theError;
-             } else {
-                 for ( NSDictionary * theResult in theResults ) {
-                     [ self addContactFromResult:theResult contacts:mResults ];
-                 }
-             }
-         }
-         [ self setBusy:FALSE ];
-     } ];
-    [ self waitWhileBusy ];
-    [ theRequest release ];
 }
 
 @end

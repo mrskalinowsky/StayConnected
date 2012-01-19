@@ -1,84 +1,78 @@
+#import "Constants.h"
 #import "ContactsProvider.h"
+#import "StayConnectedError.h"
 #import "TwitterContactsProvider.h"
 #import "TwitterRequestExecutor.h"
 #import "TwitterCreateNewContacts.h"
 
 @interface TwitterCreateNewContacts ( PrivateMethods )
 
--( void )createNewContact:( NSString * )inContactId
-                    error:( NSError ** )outError;
--( void )requestComplete:( NSError * )inError;
+-( void )requestComplete;
 
 @end
 
 @implementation TwitterCreateNewContacts
 
-static const NSString * const sURLCreateNewContact = @"http://api.twitter.com/1/friendships/create.json";
-static const NSString * const sKeyUserId = @"user_id";
+static NSString * const sURLCreateNewContact = @"http://api.twitter.com/1/friendships/create.json";
+static NSString * const sKeyUserId           = @"user_id";
 
 -( void )dealloc {
+    [ mErrors release ];
     [ mCallback release ];
     [ mContactIds release ];
+    [ mProvider release ];
     [ super dealloc ];
 }
 
 -( id )initWithProvider:( TwitterContactsProvider * )inProvider
              contactIds:( NSArray * )inContactIds
                callback:( id< NewContactsCallback > )inCallback {
-    self = [ super initWithProvider:inProvider ];
+    self = [ super init ];
     if ( self != nil ) {
+        mProvider = [ inProvider retain ];
         mContactIds = [ inContactIds retain ];
         mCallback = [ inCallback retain ];
+        mErrors = [ [ NSMutableString alloc ] init ];
+        mRemainingRequestCount = 0;
     }
     return self;
 }
 
 -( void )createNewContacts {
-    NSError * theError = nil;
+    mRemainingRequestCount = [ mContactIds count ];
     for ( NSString * theContactId in mContactIds ) {
-        [ self createNewContact:theContactId error:&theError ];
-        if ( theError != nil ) {
-            break;
+        [ [ mProvider getOAuthRequestor ] httpPost:sURLCreateNewContact parameters:[ NSArray arrayWithObjects:sKeyUserId, theContactId, nil ] callback:self ];
+    }
+}
+
+// OAuthRequestCallback implementation
+-( void )requestComplete:( NSDictionary * )inResult error:( NSError * )inError {
+    @synchronized( self ) {
+        if ( inError != nil ) {
+            [ mErrors appendFormat:@"%@\n%@\n\n",
+             [ inError localizedDescription ],
+             [ inError localizedFailureReason ] ];
+        }
+        -- mRemainingRequestCount;
+        if ( mRemainingRequestCount == 0 ) {
+            [ self requestComplete ];
         }
     }
-    [ self requestComplete:theError ];
 }
 
 @end
 
 @implementation TwitterCreateNewContacts ( PrivateMethods )
 
--( void )createNewContact:( NSString * )inContactId
-                    error:( NSError ** )outError {
-    TwitterRequestExecutor * theRequest = [ [ TwitterRequestExecutor alloc ] init ];
-    [ self setBusy:TRUE ];
-    [ theRequest
-     execute:( NSString * )sURLCreateNewContact
-     parameters:[ NSDictionary dictionaryWithObject:inContactId
-                                             forKey:( NSString * )sKeyUserId ]
-     method:TWRequestMethodPOST
-     handler:^( NSData * inResponseData, NSHTTPURLResponse * inURLResponse, NSError * inError ) {
-         if ( inURLResponse == nil || [ inURLResponse statusCode ] != 200 ) {
-             outError[ 0 ] = inError;
-         } else {
-             NSError * theError = nil;
-             NSDictionary * theResults =
-             [ NSJSONSerialization JSONObjectWithData:inResponseData
-                                              options:0
-                                                error:&theError ];
-             if ( theResults == nil ) {
-                 outError[ 0 ] = theError;
-             }
-         }
-         [ self setBusy:FALSE ];
-     } ];
-    [ self waitWhileBusy ];
-    [ theRequest release ];
-}
-
--( void )requestComplete:inError {
-    [ mCallback onContactsRequested:inError ];
-    [ self requestComplete ];
+-( void )requestComplete {
+    NSError * theError = nil;
+    if ( [ mErrors length ] > 0 ) {
+        theError =
+        [ [ NSError alloc ] initWithCode:ErrTwitterCreateNewContactsFailed
+                             description:@"err_twitter_create_new_contacts_failed"
+                                  reason:mErrors ];
+    }
+    [ mCallback onContactsRequested:[ theError autorelease ] ];
 }
 
 @end
