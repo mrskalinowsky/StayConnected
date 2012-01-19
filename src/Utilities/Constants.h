@@ -13,7 +13,8 @@ enum {
     ErrFacebookLoginCanceled,
     
     ErrTwitterNoAccount,
-    ErrTwitterSendFailed,
+    ErrTwitterSendMessageFailed,
+    ErrTwitterCreateNewContactsFailed,
     
     ErrOauthFailed
 };

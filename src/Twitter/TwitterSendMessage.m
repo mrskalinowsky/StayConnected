@@ -38,13 +38,14 @@ static NSString * const sKeyText        = @"text";
         mMessage = [ inMessage retain ];
         mCallback = [ inCallback retain ];
         mErrors = [ [ NSMutableString alloc ] init ];
-        mCompletedCount = 0;
+        mRemainingRequestCount = 0;
     }
     return self;
 }
 
 -( void )sendMessage {
     // Todo: Can only send direct message to followers
+    mRemainingRequestCount = [ mContacts count ];
     for ( id< Contact > theContact in mContacts ) {
         [ [ mProvider getOAuthRequestor ] httpPost:sURLSendMessage parameters:[ NSArray arrayWithObjects:sKeyUserId, [ theContact getId ], sKeyText, mMessage, nil ] callback:self ];
     }
@@ -58,11 +59,10 @@ static NSString * const sKeyText        = @"text";
              [ inError localizedDescription ],
              [ inError localizedFailureReason ] ];
         }
-        ++ mCompletedCount;
-        if ( mCompletedCount == [ mContacts count ] ) {
+        -- mRemainingRequestCount;
+        if ( mRemainingRequestCount == 0 ) {
             [ self requestComplete ];
         }
-        
     }
 }
 
@@ -74,7 +74,7 @@ static NSString * const sKeyText        = @"text";
     NSError * theError = nil;
     if ( [ mErrors length ] > 0 ) {
         theError =
-        [ [ NSError alloc ] initWithCode:ErrTwitterSendFailed
+        [ [ NSError alloc ] initWithCode:ErrTwitterSendMessageFailed
                              description:@"err_twitter_send_failed"
                                   reason:mErrors ];
     }

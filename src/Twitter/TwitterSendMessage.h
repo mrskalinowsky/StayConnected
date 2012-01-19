@@ -2,7 +2,6 @@
 
 #import "OAuthRequestor.h"
 
-@class TwitterContactsProvider;
 @protocol SendMessageCallback;
 
 @interface TwitterSendMessage : NSObject< OAuthRequestCallback > {
@@ -12,7 +11,7 @@
     NSString * mMessage;
     id< SendMessageCallback > mCallback;
     NSMutableString * mErrors;
-    int mCompletedCount;
+    int mRemainingRequestCount;
 }
 
 -( id )initWithProvider:( TwitterContactsProvider * )inProvider
