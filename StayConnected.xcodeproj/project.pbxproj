@@ -88,6 +88,7 @@
 		CB4B6A9D14C810F600803144 /* PSSVContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A9614C810F600803144 /* PSSVContainerView.m */; };
 		CB4B6A9E14C810F600803144 /* UIView+PSSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A9814C810F600803144 /* UIView+PSSizes.m */; };
 		CB4B6A9F14C810F600803144 /* UIViewController+PSStackedView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A9A14C810F600803144 /* UIViewController+PSStackedView.m */; };
+		CB4B6AB914C815DF00803144 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4B6AB714C815DF00803144 /* MainWindow-iPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -260,6 +261,7 @@
 		CB4B6A9814C810F600803144 /* UIView+PSSizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PSSizes.m"; sourceTree = "<group>"; };
 		CB4B6A9914C810F600803144 /* UIViewController+PSStackedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PSStackedView.h"; sourceTree = "<group>"; };
 		CB4B6A9A14C810F600803144 /* UIViewController+PSStackedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PSStackedView.m"; sourceTree = "<group>"; };
+		CB4B6AB814C815DF00803144 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "../../../Projects/StayConnected/src/StayConnected/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +286,7 @@
 		4B71228114BCC26F00F2C5B6 /* StayConnected */ = {
 			isa = PBXGroup;
 			children = (
+				CB4B6AB714C815DF00803144 /* MainWindow-iPad.xib */,
 				CB4B6A7314C8103900803144 /* StayConnectedRootViewController.h */,
 				CB4B6A7214C8103900803144 /* StayConnectedRootViewController.m */,
 				CB4B6A7514C8103900803144 /* StayConnectedStackController.h */,
@@ -713,6 +716,7 @@
 				CB4B6A8A14C8109700803144 /* background.png in Resources */,
 				CB4B6A8B14C8109700803144 /* NewGlow.png in Resources */,
 				CB4B6A8C14C8109700803144 /* NewGlow@2x.png in Resources */,
+				CB4B6AB914C815DF00803144 /* MainWindow-iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -808,6 +812,14 @@
 				4B71228514BCC26F00F2C5B6 /* en */,
 			);
 			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		CB4B6AB714C815DF00803144 /* MainWindow-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB4B6AB814C815DF00803144 /* en */,
+			);
+			name = "MainWindow-iPad.xib";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
