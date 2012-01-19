@@ -7,21 +7,26 @@
 //
 
 #import "StayConnectedAppDelegate.h"
+#import "StayConnectedRootViewController.h"
+#import "StayConnectedStackController.h"
 
-#import "StayConnectedViewController.h"
+@interface StayConnectedAppDelegate ()
+@property (nonatomic, strong) PSStackedViewController *stackController;
+@end
+
 
 @implementation StayConnectedAppDelegate
 
+@synthesize stackController = mStackController;
+@synthesize window=mWindow;
 
-@synthesize window=_window;
-
-@synthesize viewController=_viewController;
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
-     
-    self.window.rootViewController = self.viewController;
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+         
+    // set root controller as stack controller
+    StayConnectedRootViewController *masterController = [[StayConnectedRootViewController alloc] init];
+    self.stackController = [[StayConnectedStackController alloc] initWithRootViewController:masterController];
+    
+    self.window.rootViewController = self.stackController;
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -65,10 +70,9 @@
      */
 }
 
-- (void)dealloc
-{
-    [_window release];
-    [_viewController release];
+- (void)dealloc {
+    self.window = nil;
+    self.stackController = nil;
     [super dealloc];
 }
 

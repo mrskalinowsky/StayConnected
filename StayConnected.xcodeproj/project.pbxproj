@@ -12,7 +12,6 @@
 		4B71229114BCC26F00F2C5B6 /* StayConnectedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B71228614BCC26F00F2C5B6 /* StayConnectedViewController.xib */; };
 		4B71229214BCC26F00F2C5B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B71228814BCC26F00F2C5B6 /* main.m */; };
 		4B71229414BCC26F00F2C5B6 /* StayConnectedAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B71228C14BCC26F00F2C5B6 /* StayConnectedAppDelegate.m */; };
-		4B71229514BCC26F00F2C5B6 /* StayConnectedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B71228E14BCC26F00F2C5B6 /* StayConnectedViewController.m */; };
 		4BBCA72F14BCC1D4004B135E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA72E14BCC1D4004B135E /* UIKit.framework */; };
 		4BBCA73114BCC1D4004B135E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA73014BCC1D4004B135E /* Foundation.framework */; };
 		4BBCA73314BCC1D4004B135E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA73214BCC1D4004B135E /* CoreGraphics.framework */; };
@@ -56,6 +55,21 @@
 		62DB587C14C1D98E0002B1DA /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DB587B14C1D98E0002B1DA /* Twitter.framework */; };
 		62DB587E14C1D99B0002B1DA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DB587D14C1D99B0002B1DA /* Accounts.framework */; };
 		62DB588014C1DACE0002B1DA /* oauthAutoConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62DB587F14C1DACE0002B1DA /* oauthAutoConfig.plist */; };
+		CB4B6A2D14C5616000803144 /* PSStackedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A2314C5616000803144 /* PSStackedViewController.m */; };
+		CB4B6A2E14C5616000803144 /* PSStackedViewGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A2614C5616000803144 /* PSStackedViewGlobal.m */; };
+		CB4B6A2F14C5616000803144 /* PSSVContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A2814C5616000803144 /* PSSVContainerView.m */; };
+		CB4B6A3014C5616100803144 /* UIView+PSSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A2A14C5616000803144 /* UIView+PSSizes.m */; };
+		CB4B6A3114C5616100803144 /* UIViewController+PSStackedView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A2C14C5616000803144 /* UIViewController+PSStackedView.m */; };
+		CB4B6A3914C561D400803144 /* StayConnectedRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A3414C561D400803144 /* StayConnectedRootViewController.m */; };
+		CB4B6A3A14C561D400803144 /* StayConnectedStackController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A3614C561D400803144 /* StayConnectedStackController.m */; };
+		CB4B6A4714C7103C00803144 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4B6A4514C7103C00803144 /* MainWindow-iPad.xib */; };
+		CB4B6A4C14C710B000803144 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A4914C710B000803144 /* MenuTableViewCell.m */; };
+		CB4B6A4D14C710B000803144 /* UIImage+OverlayColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A4B14C710B000803144 /* UIImage+OverlayColor.m */; };
+		CB4B6A4F14C7194B00803144 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4B6A4E14C7194B00803144 /* iAd.framework */; };
+		CB4B6A5114C7197200803144 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4B6A5014C7197200803144 /* QuartzCore.framework */; };
+		CB4B6A5514C7FF0700803144 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4B6A5414C7FF0700803144 /* background.png */; };
+		CB4B6A5814C7FF2400803144 /* NewGlow.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4B6A5614C7FF2400803144 /* NewGlow.png */; };
+		CB4B6A5914C7FF2400803144 /* NewGlow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4B6A5714C7FF2400803144 /* NewGlow@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,8 +91,6 @@
 		4B71228A14BCC26F00F2C5B6 /* StayConnected-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StayConnected-Prefix.pch"; sourceTree = "<group>"; };
 		4B71228B14BCC26F00F2C5B6 /* StayConnectedAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StayConnectedAppDelegate.h; sourceTree = "<group>"; };
 		4B71228C14BCC26F00F2C5B6 /* StayConnectedAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StayConnectedAppDelegate.m; sourceTree = "<group>"; };
-		4B71228D14BCC26F00F2C5B6 /* StayConnectedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StayConnectedViewController.h; sourceTree = "<group>"; };
-		4B71228E14BCC26F00F2C5B6 /* StayConnectedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StayConnectedViewController.m; sourceTree = "<group>"; };
 		4BBCA72A14BCC1D4004B135E /* StayConnected.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StayConnected.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BBCA72E14BCC1D4004B135E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4BBCA73014BCC1D4004B135E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -165,6 +177,32 @@
 		62DB587B14C1D98E0002B1DA /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		62DB587D14C1D99B0002B1DA /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		62DB587F14C1DACE0002B1DA /* oauthAutoConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = oauthAutoConfig.plist; sourceTree = "<group>"; };
+		CB4B6A2114C5616000803144 /* PSStackedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStackedView.h; sourceTree = "<group>"; };
+		CB4B6A2214C5616000803144 /* PSStackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStackedViewController.h; sourceTree = "<group>"; };
+		CB4B6A2314C5616000803144 /* PSStackedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSStackedViewController.m; sourceTree = "<group>"; };
+		CB4B6A2414C5616000803144 /* PSStackedViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStackedViewDelegate.h; sourceTree = "<group>"; };
+		CB4B6A2514C5616000803144 /* PSStackedViewGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStackedViewGlobal.h; sourceTree = "<group>"; };
+		CB4B6A2614C5616000803144 /* PSStackedViewGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSStackedViewGlobal.m; sourceTree = "<group>"; };
+		CB4B6A2714C5616000803144 /* PSSVContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSSVContainerView.h; sourceTree = "<group>"; };
+		CB4B6A2814C5616000803144 /* PSSVContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSSVContainerView.m; sourceTree = "<group>"; };
+		CB4B6A2914C5616000803144 /* UIView+PSSizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PSSizes.h"; sourceTree = "<group>"; };
+		CB4B6A2A14C5616000803144 /* UIView+PSSizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PSSizes.m"; sourceTree = "<group>"; };
+		CB4B6A2B14C5616000803144 /* UIViewController+PSStackedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PSStackedView.h"; sourceTree = "<group>"; };
+		CB4B6A2C14C5616000803144 /* UIViewController+PSStackedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PSStackedView.m"; sourceTree = "<group>"; };
+		CB4B6A3414C561D400803144 /* StayConnectedRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StayConnectedRootViewController.m; sourceTree = "<group>"; };
+		CB4B6A3514C561D400803144 /* StayConnectedRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StayConnectedRootViewController.h; sourceTree = "<group>"; };
+		CB4B6A3614C561D400803144 /* StayConnectedStackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StayConnectedStackController.m; sourceTree = "<group>"; };
+		CB4B6A3714C561D400803144 /* StayConnectedStackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StayConnectedStackController.h; sourceTree = "<group>"; };
+		CB4B6A4614C7103C00803144 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		CB4B6A4814C710B000803144 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuTableViewCell.h; path = View/MenuTableViewCell.h; sourceTree = "<group>"; };
+		CB4B6A4914C710B000803144 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableViewCell.m; path = View/MenuTableViewCell.m; sourceTree = "<group>"; };
+		CB4B6A4A14C710B000803144 /* UIImage+OverlayColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+OverlayColor.h"; path = "View/UIImage+OverlayColor.h"; sourceTree = "<group>"; };
+		CB4B6A4B14C710B000803144 /* UIImage+OverlayColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+OverlayColor.m"; path = "View/UIImage+OverlayColor.m"; sourceTree = "<group>"; };
+		CB4B6A4E14C7194B00803144 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		CB4B6A5014C7197200803144 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CB4B6A5414C7FF0700803144 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		CB4B6A5614C7FF2400803144 /* NewGlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewGlow.png; sourceTree = "<group>"; };
+		CB4B6A5714C7FF2400803144 /* NewGlow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NewGlow@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +210,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB4B6A5114C7197200803144 /* QuartzCore.framework in Frameworks */,
+				CB4B6A4F14C7194B00803144 /* iAd.framework in Frameworks */,
 				62DB587E14C1D99B0002B1DA /* Accounts.framework in Frameworks */,
 				62DB587C14C1D98E0002B1DA /* Twitter.framework in Frameworks */,
 				62DB587A14C1D9850002B1DA /* Security.framework in Frameworks */,
@@ -189,11 +229,14 @@
 			children = (
 				4B7122C614BCC94900F2C5B6 /* Supporting Files */,
 				4B71228414BCC26F00F2C5B6 /* MainWindow.xib */,
+				CB4B6A4514C7103C00803144 /* MainWindow-iPad.xib */,
 				4B71228614BCC26F00F2C5B6 /* StayConnectedViewController.xib */,
 				4B71228B14BCC26F00F2C5B6 /* StayConnectedAppDelegate.h */,
 				4B71228C14BCC26F00F2C5B6 /* StayConnectedAppDelegate.m */,
-				4B71228D14BCC26F00F2C5B6 /* StayConnectedViewController.h */,
-				4B71228E14BCC26F00F2C5B6 /* StayConnectedViewController.m */,
+				CB4B6A3714C561D400803144 /* StayConnectedStackController.h */,
+				CB4B6A3614C561D400803144 /* StayConnectedStackController.m */,
+				CB4B6A3414C561D400803144 /* StayConnectedRootViewController.m */,
+				CB4B6A3514C561D400803144 /* StayConnectedRootViewController.h */,
 			);
 			name = StayConnected;
 			path = src/StayConnected;
@@ -233,6 +276,8 @@
 		4BBCA72D14BCC1D4004B135E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB4B6A5014C7197200803144 /* QuartzCore.framework */,
+				CB4B6A4E14C7194B00803144 /* iAd.framework */,
 				62DB587D14C1D99B0002B1DA /* Accounts.framework */,
 				62DB587B14C1D98E0002B1DA /* Twitter.framework */,
 				62DB587914C1D9850002B1DA /* Security.framework */,
@@ -246,6 +291,8 @@
 		62DB57CC14C1D7BE0002B1DA /* src */ = {
 			isa = PBXGroup;
 			children = (
+				CB4B6A5214C7FEE600803144 /* Resources */,
+				CB4B6A3E14C56A0800803144 /* View */,
 				62DB57CD14C1D7BE0002B1DA /* ContactsProvider */,
 				62DB57D714C1D7BE0002B1DA /* Facebook */,
 				62DB57E614C1D7BE0002B1DA /* LinkedIn */,
@@ -354,6 +401,7 @@
 		62DB584914C1D7C90002B1DA /* 3rdparty */ = {
 			isa = PBXGroup;
 			children = (
+				CB4B6A1F14C5616000803144 /* PSStackedView */,
 				62DB584A14C1D7C90002B1DA /* facebook */,
 			);
 			path = 3rdparty;
@@ -415,6 +463,62 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		CB4B6A1F14C5616000803144 /* PSStackedView */ = {
+			isa = PBXGroup;
+			children = (
+				CB4B6A2014C5616000803144 /* src */,
+			);
+			path = PSStackedView;
+			sourceTree = "<group>";
+		};
+		CB4B6A2014C5616000803144 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				CB4B6A2114C5616000803144 /* PSStackedView.h */,
+				CB4B6A2214C5616000803144 /* PSStackedViewController.h */,
+				CB4B6A2314C5616000803144 /* PSStackedViewController.m */,
+				CB4B6A2414C5616000803144 /* PSStackedViewDelegate.h */,
+				CB4B6A2514C5616000803144 /* PSStackedViewGlobal.h */,
+				CB4B6A2614C5616000803144 /* PSStackedViewGlobal.m */,
+				CB4B6A2714C5616000803144 /* PSSVContainerView.h */,
+				CB4B6A2814C5616000803144 /* PSSVContainerView.m */,
+				CB4B6A2914C5616000803144 /* UIView+PSSizes.h */,
+				CB4B6A2A14C5616000803144 /* UIView+PSSizes.m */,
+				CB4B6A2B14C5616000803144 /* UIViewController+PSStackedView.h */,
+				CB4B6A2C14C5616000803144 /* UIViewController+PSStackedView.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		CB4B6A3E14C56A0800803144 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB4B6A4814C710B000803144 /* MenuTableViewCell.h */,
+				CB4B6A4914C710B000803144 /* MenuTableViewCell.m */,
+				CB4B6A4A14C710B000803144 /* UIImage+OverlayColor.h */,
+				CB4B6A4B14C710B000803144 /* UIImage+OverlayColor.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CB4B6A5214C7FEE600803144 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CB4B6A5314C7FEE600803144 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CB4B6A5314C7FEE600803144 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CB4B6A5614C7FF2400803144 /* NewGlow.png */,
+				CB4B6A5714C7FF2400803144 /* NewGlow@2x.png */,
+				CB4B6A5414C7FF0700803144 /* background.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -440,6 +544,9 @@
 /* Begin PBXProject section */
 		4BBCA72114BCC1D4004B135E /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = 4BBCA72414BCC1D4004B135E /* Build configuration list for PBXProject "StayConnected" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -483,6 +590,10 @@
 				4B71229114BCC26F00F2C5B6 /* StayConnectedViewController.xib in Resources */,
 				62DB586C14C1D7C90002B1DA /* FBDialog.bundle in Resources */,
 				62DB588014C1DACE0002B1DA /* oauthAutoConfig.plist in Resources */,
+				CB4B6A4714C7103C00803144 /* MainWindow-iPad.xib in Resources */,
+				CB4B6A5514C7FF0700803144 /* background.png in Resources */,
+				CB4B6A5814C7FF2400803144 /* NewGlow.png in Resources */,
+				CB4B6A5914C7FF2400803144 /* NewGlow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,7 +606,6 @@
 			files = (
 				4B71229214BCC26F00F2C5B6 /* main.m in Sources */,
 				4B71229414BCC26F00F2C5B6 /* StayConnectedAppDelegate.m in Sources */,
-				4B71229514BCC26F00F2C5B6 /* StayConnectedViewController.m in Sources */,
 				62DB582314C1D7BE0002B1DA /* ContactAttributes.m in Sources */,
 				62DB582414C1D7BE0002B1DA /* ContactBaseImpl.m in Sources */,
 				62DB582514C1D7BE0002B1DA /* ContactGroupBaseImpl.m in Sources */,
@@ -531,6 +641,15 @@
 				62DB587314C1D7C90002B1DA /* SBJsonBase.m in Sources */,
 				62DB587414C1D7C90002B1DA /* SBJsonParser.m in Sources */,
 				62DB587514C1D7C90002B1DA /* SBJsonWriter.m in Sources */,
+				CB4B6A2D14C5616000803144 /* PSStackedViewController.m in Sources */,
+				CB4B6A2E14C5616000803144 /* PSStackedViewGlobal.m in Sources */,
+				CB4B6A2F14C5616000803144 /* PSSVContainerView.m in Sources */,
+				CB4B6A3014C5616100803144 /* UIView+PSSizes.m in Sources */,
+				CB4B6A3114C5616100803144 /* UIViewController+PSStackedView.m in Sources */,
+				CB4B6A3914C561D400803144 /* StayConnectedRootViewController.m in Sources */,
+				CB4B6A3A14C561D400803144 /* StayConnectedStackController.m in Sources */,
+				CB4B6A4C14C710B000803144 /* MenuTableViewCell.m in Sources */,
+				CB4B6A4D14C710B000803144 /* UIImage+OverlayColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +678,14 @@
 				4B71228714BCC26F00F2C5B6 /* en */,
 			);
 			name = StayConnectedViewController.xib;
+			sourceTree = "<group>";
+		};
+		CB4B6A4514C7103C00803144 /* MainWindow-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB4B6A4614C7103C00803144 /* en */,
+			);
+			name = "MainWindow-iPad.xib";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -604,8 +731,11 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/StayConnected/StayConnected-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "src/StayConnected/StayConnected-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -617,8 +747,11 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/StayConnected/StayConnected-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "src/StayConnected/StayConnected-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

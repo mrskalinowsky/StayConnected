@@ -9,13 +9,18 @@
 #import <UIKit/UIKit.h>
 
 @class StayConnectedViewController;
+@class PSStackedViewController;
+
+#define XAppDelegate ((StayConnectedAppDelegate *)[[UIApplication sharedApplication] delegate])
 
 @interface StayConnectedAppDelegate : NSObject <UIApplicationDelegate> {
-
+    
+    UIWindow						*mWindow;	
+    PSStackedViewController         *mStackController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, strong, readonly) PSStackedViewController *stackController;
 
-@property (nonatomic, retain) IBOutlet StayConnectedViewController *viewController;
 
 @end
