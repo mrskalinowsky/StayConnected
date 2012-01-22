@@ -6,13 +6,14 @@
 //  Copyright (c) 2011 Sun. All rights reserved.
 //
 
-#import "StayConnectedRootViewController.h"
+#import "AppMenuViewController.h"
 #import "MenuTableViewCell.h"
 #include <QuartzCore/QuartzCore.h>
 #import "PSStackedView.h"
 #import "Constants.h"
-#import "StayConnectedAppDelegate.h"
+#import "AppDelegate.h"
 #import "UIImage+OverlayColor.h"
+#import "FacebookContactsProvider.h"
 
 typedef enum {
     SectionMenuContacts = 0,
@@ -20,13 +21,13 @@ typedef enum {
 	SectionMenuSettings = 2,
 } SectionMenu;
 
-@interface StayConnectedRootViewController()
+@interface AppMenuViewController()
 
 @property (nonatomic, retain) IBOutlet UIPopoverController*	popoverController;
 
 @end
 
-@implementation StayConnectedRootViewController
+@implementation AppMenuViewController
 
 @synthesize popoverController = mPopoverController;
 @synthesize menuView = mMenuTable;
@@ -242,6 +243,16 @@ typedef enum {
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {    
+    
+    switch (indexPath.section) {
+        case SectionMenuAccounts: {
+            switch (indexPath.row) {
+                case 1: {
+                    [XAppDelegate.fbProvider getContacts:nil attributes:nil callback:nil];
+                }   break;
+            }
+        }
+    }
 }
 
 #pragma mark -

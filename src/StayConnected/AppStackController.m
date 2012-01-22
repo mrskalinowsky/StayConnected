@@ -6,21 +6,21 @@
 //  Copyright (c) 2011 Sun. All rights reserved.
 //
 
-#import "StayConnectedStackController.h"
-#import "StayConnectedAppDelegate.h"
+#import "AppStackController.h"
+#import "AppDelegate.h"
 #import "PSStackedViewGlobal.h"
 #import "UIViewController+PSStackedView.h"
 #import "PSStackedViewController.h"
 #import "PSStackedView.h"
 
-@interface StayConnectedStackController()
+@interface AppStackController()
 
 @property (nonatomic, strong) ADBannerView*  bannerView;
 
 @end
 
 
-@implementation StayConnectedStackController
+@implementation AppStackController
 @synthesize bannerView = mBannerView;
 
 #pragma mark - AD stuff

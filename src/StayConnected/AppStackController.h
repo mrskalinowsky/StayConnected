@@ -10,7 +10,7 @@
 #import <iAD/iAD.h>
 #import "PSStackedViewController.h"
 
-@interface StayConnectedStackController : PSStackedViewController <ADBannerViewDelegate> {
+@interface AppStackController : PSStackedViewController <ADBannerViewDelegate> {
 @private
     BOOL                        mBannerViewIsVisible;
     ADBannerView*               mBannerView;

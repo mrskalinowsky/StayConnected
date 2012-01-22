@@ -8,93 +8,98 @@
 
 /* Begin PBXBuildFile section */
 		4B71228F14BCC26F00F2C5B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B71228214BCC26F00F2C5B6 /* InfoPlist.strings */; };
-		4B71229014BCC26F00F2C5B6 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B71228414BCC26F00F2C5B6 /* MainWindow.xib */; };
 		4B71229214BCC26F00F2C5B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B71228814BCC26F00F2C5B6 /* main.m */; };
-		4B71229414BCC26F00F2C5B6 /* StayConnectedAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B71228C14BCC26F00F2C5B6 /* StayConnectedAppDelegate.m */; };
 		4BBCA72F14BCC1D4004B135E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA72E14BCC1D4004B135E /* UIKit.framework */; };
 		4BBCA73114BCC1D4004B135E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA73014BCC1D4004B135E /* Foundation.framework */; };
 		4BBCA73314BCC1D4004B135E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA73214BCC1D4004B135E /* CoreGraphics.framework */; };
-		62D12D2114C646DE0033376E /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D12CF914C646DE0033376E /* NSMutableURLRequest+Parameters.m */; };
-		62D12D2214C646DE0033376E /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D12CFB14C646DE0033376E /* NSString+URLEncoding.m */; };
-		62D12D2314C646DE0033376E /* NSURL+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D12CFD14C646DE0033376E /* NSURL+Base.m */; };
-		62D12D2414C646DE0033376E /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 62D12CFF14C646DE0033376E /* Base64Transcoder.c */; };
-		62D12D2514C646DE0033376E /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 62D12D0114C646DE0033376E /* hmac.c */; };
-		62D12D2614C646DE0033376E /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 62D12D0314C646DE0033376E /* sha1.c */; };
-		62D12D2714C646DE0033376E /* OAAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D12D0614C646DE0033376E /* OAAttachment.m */; };
-		62D12D2814C646DE0033376E /* OACall.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D12D0814C646DE0033376E /* OACall.m */; };
-		62D12D2914C646DE0033376E /* OAConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D12D0A14C646DE0033376E /* OAConsumer.m */; };
-		62D12D2A14C646DE0033376E /* OADataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D12D0C14C646DE0033376E /* OADataFetcher.m */; };
-		62D12D2B14C646DE0033376E /* OAHMAC_SHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D12D0E14C646DE0033376E /* OAHMAC_SHA1SignatureProvider.m */; };
-		62D12D2C14C646DE0033376E /* OAMutableURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D12D1014C646DE0033376E /* OAMutableURLRequest.m */; };
-		62D12D2D14C646DE0033376E /* OAPlaintextSignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D12D1214C646DE0033376E /* OAPlaintextSignatureProvider.m */; };
-		62D12D2E14C646DE0033376E /* OAProblem.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D12D1414C646DE0033376E /* OAProblem.m */; };
-		62D12D2F14C646DE0033376E /* OARequestParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D12D1614C646DE0033376E /* OARequestParameter.m */; };
-		62D12D3014C646DE0033376E /* OAServiceTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D12D1814C646DE0033376E /* OAServiceTicket.m */; };
-		62D12D3114C646DE0033376E /* OATestServer.rb in Resources */ = {isa = PBXBuildFile; fileRef = 62D12D1A14C646DE0033376E /* OATestServer.rb */; };
-		62D12D3214C646DE0033376E /* OAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D12D1C14C646DE0033376E /* OAToken.m */; };
-		62D12D3314C646DE0033376E /* OATokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D12D1E14C646DE0033376E /* OATokenManager.m */; };
-		62D12D3414C646DE0033376E /* README in Resources */ = {isa = PBXBuildFile; fileRef = 62D12D2014C646DE0033376E /* README */; };
-		62D12D3714C646FA0033376E /* OAuthRequestor.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D12D3614C646FA0033376E /* OAuthRequestor.m */; };
-		62DB582314C1D7BE0002B1DA /* ContactAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB57D014C1D7BE0002B1DA /* ContactAttributes.m */; };
-		62DB582414C1D7BE0002B1DA /* ContactBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB57D214C1D7BE0002B1DA /* ContactBaseImpl.m */; };
-		62DB582514C1D7BE0002B1DA /* ContactGroupBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB57D514C1D7BE0002B1DA /* ContactGroupBaseImpl.m */; };
-		62DB582614C1D7BE0002B1DA /* FacebookAuthoriser.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB57D914C1D7BE0002B1DA /* FacebookAuthoriser.m */; };
-		62DB582714C1D7BE0002B1DA /* FacebookConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB57DB14C1D7BE0002B1DA /* FacebookConstants.m */; };
-		62DB582814C1D7BE0002B1DA /* FacebookContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB57DD14C1D7BE0002B1DA /* FacebookContact.m */; };
-		62DB582914C1D7BE0002B1DA /* FacebookContactGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB57DF14C1D7BE0002B1DA /* FacebookContactGroup.m */; };
-		62DB582A14C1D7BE0002B1DA /* FacebookContactsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB57E114C1D7BE0002B1DA /* FacebookContactsProvider.m */; };
-		62DB582B14C1D7BE0002B1DA /* FacebookGetContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB57E314C1D7BE0002B1DA /* FacebookGetContacts.m */; };
-		62DB582C14C1D7BE0002B1DA /* FacebookSearchContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB57E514C1D7BE0002B1DA /* FacebookSearchContacts.m */; };
-		62DB582D14C1D7BE0002B1DA /* LinkedInConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB57E814C1D7BE0002B1DA /* LinkedInConstants.m */; };
-		62DB582E14C1D7BE0002B1DA /* LinkedInContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB57EA14C1D7BE0002B1DA /* LinkedInContact.m */; };
-		62DB582F14C1D7BE0002B1DA /* LinkedInContactGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB57EC14C1D7BE0002B1DA /* LinkedInContactGroup.m */; };
-		62DB583014C1D7BE0002B1DA /* LinkedInContactsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB57EE14C1D7BE0002B1DA /* LinkedInContactsProvider.m */; };
-		62DB583D14C1D7BE0002B1DA /* TwitterConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB580D14C1D7BE0002B1DA /* TwitterConstants.m */; };
-		62DB583E14C1D7BE0002B1DA /* TwitterContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB580F14C1D7BE0002B1DA /* TwitterContact.m */; };
-		62DB583F14C1D7BE0002B1DA /* TwitterContactsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB581114C1D7BE0002B1DA /* TwitterContactsProvider.m */; };
-		62DB584014C1D7BE0002B1DA /* TwitterCreateNewContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB581314C1D7BE0002B1DA /* TwitterCreateNewContacts.m */; };
-		62DB584114C1D7BE0002B1DA /* TwitterGetContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB581514C1D7BE0002B1DA /* TwitterGetContacts.m */; };
-		62DB584214C1D7BE0002B1DA /* TwitterRequestExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB581714C1D7BE0002B1DA /* TwitterRequestExecutor.m */; };
-		62DB584314C1D7BE0002B1DA /* TwitterRequestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB581914C1D7BE0002B1DA /* TwitterRequestUtil.m */; };
-		62DB584414C1D7BE0002B1DA /* TwitterSearchContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB581B14C1D7BE0002B1DA /* TwitterSearchContacts.m */; };
-		62DB584514C1D7BE0002B1DA /* TwitterSendMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB581D14C1D7BE0002B1DA /* TwitterSendMessage.m */; };
-		62DB584614C1D7BE0002B1DA /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB582014C1D7BE0002B1DA /* Constants.m */; };
-		62DB584714C1D7BE0002B1DA /* StayConnectedError.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB582214C1D7BE0002B1DA /* StayConnectedError.m */; };
-		62DB586B14C1D7C90002B1DA /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB585014C1D7C90002B1DA /* Facebook.m */; };
-		62DB586C14C1D7C90002B1DA /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 62DB585314C1D7C90002B1DA /* FBDialog.bundle */; };
-		62DB586D14C1D7C90002B1DA /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB585514C1D7C90002B1DA /* FBDialog.m */; };
-		62DB586E14C1D7C90002B1DA /* FBLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB585714C1D7C90002B1DA /* FBLoginDialog.m */; };
-		62DB586F14C1D7C90002B1DA /* FBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB585914C1D7C90002B1DA /* FBRequest.m */; };
-		62DB587014C1D7C90002B1DA /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB585D14C1D7C90002B1DA /* NSObject+SBJSON.m */; };
-		62DB587114C1D7C90002B1DA /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB585F14C1D7C90002B1DA /* NSString+SBJSON.m */; };
-		62DB587214C1D7C90002B1DA /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB586114C1D7C90002B1DA /* SBJSON.m */; };
-		62DB587314C1D7C90002B1DA /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB586314C1D7C90002B1DA /* SBJsonBase.m */; };
-		62DB587414C1D7C90002B1DA /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB586514C1D7C90002B1DA /* SBJsonParser.m */; };
-		62DB587514C1D7C90002B1DA /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DB586714C1D7C90002B1DA /* SBJsonWriter.m */; };
 		62DB587A14C1D9850002B1DA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DB587914C1D9850002B1DA /* Security.framework */; };
 		62DB587C14C1D98E0002B1DA /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DB587B14C1D98E0002B1DA /* Twitter.framework */; };
 		62DB587E14C1D99B0002B1DA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DB587D14C1D99B0002B1DA /* Accounts.framework */; };
 		CB4B6A6F14C80FCB00803144 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4B6A6E14C80FCB00803144 /* QuartzCore.framework */; };
 		CB4B6A7114C80FD700803144 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4B6A7014C80FD700803144 /* iAd.framework */; };
-		CB4B6A7614C8103900803144 /* StayConnectedRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A7214C8103900803144 /* StayConnectedRootViewController.m */; };
-		CB4B6A7714C8103900803144 /* StayConnectedStackController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A7414C8103900803144 /* StayConnectedStackController.m */; };
-		CB4B6A8314C8108600803144 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A8014C8108600803144 /* MenuTableViewCell.m */; };
-		CB4B6A8414C8108600803144 /* UIImage+OverlayColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A8214C8108600803144 /* UIImage+OverlayColor.m */; };
-		CB4B6A8A14C8109700803144 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4B6A8714C8109700803144 /* background.png */; };
-		CB4B6A8B14C8109700803144 /* NewGlow.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4B6A8814C8109700803144 /* NewGlow.png */; };
-		CB4B6A8C14C8109700803144 /* NewGlow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4B6A8914C8109700803144 /* NewGlow@2x.png */; };
-		CB4B6A9B14C810F600803144 /* PSStackedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A9114C810F600803144 /* PSStackedViewController.m */; };
-		CB4B6A9C14C810F600803144 /* PSStackedViewGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A9414C810F600803144 /* PSStackedViewGlobal.m */; };
-		CB4B6A9D14C810F600803144 /* PSSVContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A9614C810F600803144 /* PSSVContainerView.m */; };
-		CB4B6A9E14C810F600803144 /* UIView+PSSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A9814C810F600803144 /* UIView+PSSizes.m */; };
-		CB4B6A9F14C810F600803144 /* UIViewController+PSStackedView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6A9A14C810F600803144 /* UIViewController+PSStackedView.m */; };
-		CB4B6AB914C815DF00803144 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4B6AB714C815DF00803144 /* MainWindow-iPad.xib */; };
+		CB4B6AE214CB291400803144 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6ADD14CB291400803144 /* AppDelegate.m */; };
+		CB4B6AE314CB291400803144 /* AppMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6ADF14CB291400803144 /* AppMenuViewController.m */; };
+		CB4B6AE414CB291400803144 /* AppStackController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6AE114CB291400803144 /* AppStackController.m */; };
+		CB4B6AE914CB292E00803144 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4B6AE514CB292E00803144 /* MainWindow-iPad.xib */; };
+		CB4B6AEA14CB292E00803144 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4B6AE714CB292E00803144 /* MainWindow.xib */; };
+		CB4B6AF914CB2CAC00803144 /* FacebookAuthoriser.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6AEC14CB2CAB00803144 /* FacebookAuthoriser.m */; };
+		CB4B6AFA14CB2CAC00803144 /* FacebookConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6AEE14CB2CAB00803144 /* FacebookConstants.m */; };
+		CB4B6AFB14CB2CAC00803144 /* FacebookContact.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6AF014CB2CAB00803144 /* FacebookContact.m */; };
+		CB4B6AFC14CB2CAC00803144 /* FacebookContactGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6AF214CB2CAB00803144 /* FacebookContactGroup.m */; };
+		CB4B6AFD14CB2CAC00803144 /* FacebookContactsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6AF414CB2CAB00803144 /* FacebookContactsProvider.m */; };
+		CB4B6AFE14CB2CAC00803144 /* FacebookGetContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6AF614CB2CAC00803144 /* FacebookGetContacts.m */; };
+		CB4B6AFF14CB2CAC00803144 /* FacebookSearchContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6AF814CB2CAC00803144 /* FacebookSearchContacts.m */; };
+		CB4B6B0914CB2CE300803144 /* ContactAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B0214CB2CE300803144 /* ContactAttributes.m */; };
+		CB4B6B0A14CB2CE300803144 /* ContactBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B0414CB2CE300803144 /* ContactBaseImpl.m */; };
+		CB4B6B0B14CB2CE300803144 /* ContactGroupBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B0714CB2CE300803144 /* ContactGroupBaseImpl.m */; };
+		CB4B6B1014CB2D1800803144 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B0D14CB2D1800803144 /* MenuTableViewCell.m */; };
+		CB4B6B1114CB2D1800803144 /* UIImage+OverlayColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B0F14CB2D1800803144 /* UIImage+OverlayColor.m */; };
+		CB4B6B1A14CB2D4000803144 /* LinkedInConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B1314CB2D4000803144 /* LinkedInConstants.m */; };
+		CB4B6B1B14CB2D4000803144 /* LinkedInContact.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B1514CB2D4000803144 /* LinkedInContact.m */; };
+		CB4B6B1C14CB2D4000803144 /* LinkedInContactGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B1714CB2D4000803144 /* LinkedInContactGroup.m */; };
+		CB4B6B1D14CB2D4000803144 /* LinkedInContactsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B1914CB2D4000803144 /* LinkedInContactsProvider.m */; };
+		CB4B6B4B14CB2DB400803144 /* TwitterConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B3A14CB2DB400803144 /* TwitterConstants.m */; };
+		CB4B6B4C14CB2DB400803144 /* TwitterContact.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B3C14CB2DB400803144 /* TwitterContact.m */; };
+		CB4B6B4D14CB2DB400803144 /* TwitterContactsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B3E14CB2DB400803144 /* TwitterContactsProvider.m */; };
+		CB4B6B4E14CB2DB400803144 /* TwitterCreateNewContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B4014CB2DB400803144 /* TwitterCreateNewContacts.m */; };
+		CB4B6B4F14CB2DB400803144 /* TwitterGetContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B4214CB2DB400803144 /* TwitterGetContacts.m */; };
+		CB4B6B5014CB2DB400803144 /* TwitterRequestExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B4414CB2DB400803144 /* TwitterRequestExecutor.m */; };
+		CB4B6B5114CB2DB400803144 /* TwitterRequestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B4614CB2DB400803144 /* TwitterRequestUtil.m */; };
+		CB4B6B5214CB2DB400803144 /* TwitterSearchContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B4814CB2DB400803144 /* TwitterSearchContacts.m */; };
+		CB4B6B5314CB2DB400803144 /* TwitterSendMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B4A14CB2DB400803144 /* TwitterSendMessage.m */; };
+		CB4B6B5614CB2DD600803144 /* OAuthRequestor.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B5514CB2DD600803144 /* OAuthRequestor.m */; };
+		CB4B6B5B14CB2DF200803144 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B5814CB2DF200803144 /* Constants.m */; };
+		CB4B6B5C14CB2DF200803144 /* StayConnectedError.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B5A14CB2DF200803144 /* StayConnectedError.m */; };
+		CB4B6B6014CB2E1800803144 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4B6B5D14CB2E1800803144 /* background.png */; };
+		CB4B6B6114CB2E1800803144 /* NewGlow.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4B6B5E14CB2E1800803144 /* NewGlow.png */; };
+		CB4B6B6214CB2E1800803144 /* NewGlow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4B6B5F14CB2E1800803144 /* NewGlow@2x.png */; };
+		CB4B6BBD14CB2F3600803144 /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B6914CB2F3600803144 /* Facebook.m */; };
+		CB4B6BBE14CB2F3600803144 /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CB4B6B6C14CB2F3600803144 /* FBDialog.bundle */; };
+		CB4B6BBF14CB2F3600803144 /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B6E14CB2F3600803144 /* FBDialog.m */; };
+		CB4B6BC014CB2F3600803144 /* FBLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B7014CB2F3600803144 /* FBLoginDialog.m */; };
+		CB4B6BC114CB2F3600803144 /* FBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B7214CB2F3600803144 /* FBRequest.m */; };
+		CB4B6BC214CB2F3600803144 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B7614CB2F3600803144 /* NSObject+SBJSON.m */; };
+		CB4B6BC314CB2F3600803144 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B7814CB2F3600803144 /* NSString+SBJSON.m */; };
+		CB4B6BC414CB2F3600803144 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B7A14CB2F3600803144 /* SBJSON.m */; };
+		CB4B6BC514CB2F3600803144 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B7C14CB2F3600803144 /* SBJsonBase.m */; };
+		CB4B6BC614CB2F3600803144 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B7E14CB2F3600803144 /* SBJsonParser.m */; };
+		CB4B6BC714CB2F3600803144 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B8014CB2F3600803144 /* SBJsonWriter.m */; };
+		CB4B6BC814CB2F3600803144 /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B8414CB2F3600803144 /* NSMutableURLRequest+Parameters.m */; };
+		CB4B6BC914CB2F3600803144 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B8614CB2F3600803144 /* NSString+URLEncoding.m */; };
+		CB4B6BCA14CB2F3600803144 /* NSURL+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B8814CB2F3600803144 /* NSURL+Base.m */; };
+		CB4B6BCB14CB2F3600803144 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B8A14CB2F3600803144 /* Base64Transcoder.c */; };
+		CB4B6BCC14CB2F3600803144 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B8C14CB2F3600803144 /* hmac.c */; };
+		CB4B6BCD14CB2F3600803144 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B8E14CB2F3600803144 /* sha1.c */; };
+		CB4B6BCE14CB2F3600803144 /* OAAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B9114CB2F3600803144 /* OAAttachment.m */; };
+		CB4B6BCF14CB2F3600803144 /* OACall.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B9314CB2F3600803144 /* OACall.m */; };
+		CB4B6BD014CB2F3600803144 /* OAConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B9514CB2F3600803144 /* OAConsumer.m */; };
+		CB4B6BD114CB2F3600803144 /* OADataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B9714CB2F3600803144 /* OADataFetcher.m */; };
+		CB4B6BD214CB2F3600803144 /* OAHMAC_SHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B9914CB2F3600803144 /* OAHMAC_SHA1SignatureProvider.m */; };
+		CB4B6BD314CB2F3600803144 /* OAMutableURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B9B14CB2F3600803144 /* OAMutableURLRequest.m */; };
+		CB4B6BD414CB2F3600803144 /* OAPlaintextSignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B9D14CB2F3600803144 /* OAPlaintextSignatureProvider.m */; };
+		CB4B6BD514CB2F3600803144 /* OAProblem.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B9F14CB2F3600803144 /* OAProblem.m */; };
+		CB4B6BD614CB2F3600803144 /* OARequestParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6BA114CB2F3600803144 /* OARequestParameter.m */; };
+		CB4B6BD714CB2F3600803144 /* OAServiceTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6BA314CB2F3600803144 /* OAServiceTicket.m */; };
+		CB4B6BD814CB2F3600803144 /* OATestServer.rb in Resources */ = {isa = PBXBuildFile; fileRef = CB4B6BA514CB2F3600803144 /* OATestServer.rb */; };
+		CB4B6BD914CB2F3600803144 /* OAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6BA714CB2F3600803144 /* OAToken.m */; };
+		CB4B6BDA14CB2F3600803144 /* OATokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6BA914CB2F3600803144 /* OATokenManager.m */; };
+		CB4B6BDB14CB2F3600803144 /* README in Resources */ = {isa = PBXBuildFile; fileRef = CB4B6BAB14CB2F3600803144 /* README */; };
+		CB4B6BDC14CB2F3600803144 /* PSStackedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6BB014CB2F3600803144 /* PSStackedViewController.m */; };
+		CB4B6BDD14CB2F3600803144 /* PSStackedViewGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6BB314CB2F3600803144 /* PSStackedViewGlobal.m */; };
+		CB4B6BDE14CB2F3600803144 /* PSSVContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6BB514CB2F3600803144 /* PSSVContainerView.m */; };
+		CB4B6BDF14CB2F3600803144 /* UIView+PSSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6BB714CB2F3600803144 /* UIView+PSSizes.m */; };
+		CB4B6BE014CB2F3600803144 /* UIViewController+PSStackedView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6BB914CB2F3600803144 /* UIViewController+PSStackedView.m */; };
+		CB4B6C2D14CC32E200803144 /* ConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6C2A14CC32E200803144 /* ConnectionController.m */; };
+		CB4B6C2E14CC32E200803144 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6C2C14CC32E200803144 /* WebViewController.m */; };
+		CB4B6C3014CC32F900803144 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4B6C2F14CC32F900803144 /* WebViewController.xib */; };
+		CB4B6C3414CC359000803144 /* ActivityLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6C3314CC359000803144 /* ActivityLabel.m */; };
+		CB4B6C3714CC3A0F00803144 /* StayConnectedMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6C3614CC3A0E00803144 /* StayConnectedMetrics.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		62DB587714C1D7C90002B1DA /* PBXContainerItemProxy */ = {
+		CB4B6BE214CB2F3700803144 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 62DB584C14C1D7C90002B1DA /* facebook-ios-sdk.xcodeproj */;
+			containerPortal = CB4B6B6514CB2F3600803144 /* facebook-ios-sdk.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = "facebook-ios-sdk";
@@ -103,165 +108,175 @@
 
 /* Begin PBXFileReference section */
 		4B71228314BCC26F00F2C5B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4B71228514BCC26F00F2C5B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		4B71228814BCC26F00F2C5B6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4B71228914BCC26F00F2C5B6 /* StayConnected-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "StayConnected-Info.plist"; sourceTree = "<group>"; };
 		4B71228A14BCC26F00F2C5B6 /* StayConnected-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StayConnected-Prefix.pch"; sourceTree = "<group>"; };
-		4B71228B14BCC26F00F2C5B6 /* StayConnectedAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StayConnectedAppDelegate.h; sourceTree = "<group>"; };
-		4B71228C14BCC26F00F2C5B6 /* StayConnectedAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StayConnectedAppDelegate.m; sourceTree = "<group>"; };
 		4BBCA72A14BCC1D4004B135E /* StayConnected.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StayConnected.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BBCA72E14BCC1D4004B135E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4BBCA73014BCC1D4004B135E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4BBCA73214BCC1D4004B135E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		62D12CF814C646DE0033376E /* NSMutableURLRequest+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Parameters.h"; sourceTree = "<group>"; };
-		62D12CF914C646DE0033376E /* NSMutableURLRequest+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Parameters.m"; sourceTree = "<group>"; };
-		62D12CFA14C646DE0033376E /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
-		62D12CFB14C646DE0033376E /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
-		62D12CFC14C646DE0033376E /* NSURL+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Base.h"; sourceTree = "<group>"; };
-		62D12CFD14C646DE0033376E /* NSURL+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Base.m"; sourceTree = "<group>"; };
-		62D12CFF14C646DE0033376E /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
-		62D12D0014C646DE0033376E /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
-		62D12D0114C646DE0033376E /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
-		62D12D0214C646DE0033376E /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
-		62D12D0314C646DE0033376E /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
-		62D12D0414C646DE0033376E /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
-		62D12D0514C646DE0033376E /* OAAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAAttachment.h; sourceTree = "<group>"; };
-		62D12D0614C646DE0033376E /* OAAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAAttachment.m; sourceTree = "<group>"; };
-		62D12D0714C646DE0033376E /* OACall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OACall.h; sourceTree = "<group>"; };
-		62D12D0814C646DE0033376E /* OACall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OACall.m; sourceTree = "<group>"; };
-		62D12D0914C646DE0033376E /* OAConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAConsumer.h; sourceTree = "<group>"; };
-		62D12D0A14C646DE0033376E /* OAConsumer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAConsumer.m; sourceTree = "<group>"; };
-		62D12D0B14C646DE0033376E /* OADataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OADataFetcher.h; sourceTree = "<group>"; };
-		62D12D0C14C646DE0033376E /* OADataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OADataFetcher.m; sourceTree = "<group>"; };
-		62D12D0D14C646DE0033376E /* OAHMAC_SHA1SignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAHMAC_SHA1SignatureProvider.h; sourceTree = "<group>"; };
-		62D12D0E14C646DE0033376E /* OAHMAC_SHA1SignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAHMAC_SHA1SignatureProvider.m; sourceTree = "<group>"; };
-		62D12D0F14C646DE0033376E /* OAMutableURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAMutableURLRequest.h; sourceTree = "<group>"; };
-		62D12D1014C646DE0033376E /* OAMutableURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAMutableURLRequest.m; sourceTree = "<group>"; };
-		62D12D1114C646DE0033376E /* OAPlaintextSignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAPlaintextSignatureProvider.h; sourceTree = "<group>"; };
-		62D12D1214C646DE0033376E /* OAPlaintextSignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAPlaintextSignatureProvider.m; sourceTree = "<group>"; };
-		62D12D1314C646DE0033376E /* OAProblem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAProblem.h; sourceTree = "<group>"; };
-		62D12D1414C646DE0033376E /* OAProblem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAProblem.m; sourceTree = "<group>"; };
-		62D12D1514C646DE0033376E /* OARequestParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OARequestParameter.h; sourceTree = "<group>"; };
-		62D12D1614C646DE0033376E /* OARequestParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OARequestParameter.m; sourceTree = "<group>"; };
-		62D12D1714C646DE0033376E /* OAServiceTicket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAServiceTicket.h; sourceTree = "<group>"; };
-		62D12D1814C646DE0033376E /* OAServiceTicket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAServiceTicket.m; sourceTree = "<group>"; };
-		62D12D1914C646DE0033376E /* OASignatureProviding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OASignatureProviding.h; sourceTree = "<group>"; };
-		62D12D1A14C646DE0033376E /* OATestServer.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = OATestServer.rb; sourceTree = "<group>"; };
-		62D12D1B14C646DE0033376E /* OAToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAToken.h; sourceTree = "<group>"; };
-		62D12D1C14C646DE0033376E /* OAToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAToken.m; sourceTree = "<group>"; };
-		62D12D1D14C646DE0033376E /* OATokenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OATokenManager.h; sourceTree = "<group>"; };
-		62D12D1E14C646DE0033376E /* OATokenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OATokenManager.m; sourceTree = "<group>"; };
-		62D12D1F14C646DE0033376E /* OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer.h; sourceTree = "<group>"; };
-		62D12D2014C646DE0033376E /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		62D12D3514C646FA0033376E /* OAuthRequestor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthRequestor.h; sourceTree = "<group>"; };
-		62D12D3614C646FA0033376E /* OAuthRequestor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthRequestor.m; sourceTree = "<group>"; };
-		62DB57CE14C1D7BE0002B1DA /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
-		62DB57CF14C1D7BE0002B1DA /* ContactAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactAttributes.h; sourceTree = "<group>"; };
-		62DB57D014C1D7BE0002B1DA /* ContactAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactAttributes.m; sourceTree = "<group>"; };
-		62DB57D114C1D7BE0002B1DA /* ContactBaseImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactBaseImpl.h; sourceTree = "<group>"; };
-		62DB57D214C1D7BE0002B1DA /* ContactBaseImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactBaseImpl.m; sourceTree = "<group>"; };
-		62DB57D314C1D7BE0002B1DA /* ContactGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactGroup.h; sourceTree = "<group>"; };
-		62DB57D414C1D7BE0002B1DA /* ContactGroupBaseImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactGroupBaseImpl.h; sourceTree = "<group>"; };
-		62DB57D514C1D7BE0002B1DA /* ContactGroupBaseImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactGroupBaseImpl.m; sourceTree = "<group>"; };
-		62DB57D614C1D7BE0002B1DA /* ContactsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsProvider.h; sourceTree = "<group>"; };
-		62DB57D814C1D7BE0002B1DA /* FacebookAuthoriser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookAuthoriser.h; sourceTree = "<group>"; };
-		62DB57D914C1D7BE0002B1DA /* FacebookAuthoriser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookAuthoriser.m; sourceTree = "<group>"; };
-		62DB57DA14C1D7BE0002B1DA /* FacebookConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookConstants.h; sourceTree = "<group>"; };
-		62DB57DB14C1D7BE0002B1DA /* FacebookConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookConstants.m; sourceTree = "<group>"; };
-		62DB57DC14C1D7BE0002B1DA /* FacebookContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookContact.h; sourceTree = "<group>"; };
-		62DB57DD14C1D7BE0002B1DA /* FacebookContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookContact.m; sourceTree = "<group>"; };
-		62DB57DE14C1D7BE0002B1DA /* FacebookContactGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookContactGroup.h; sourceTree = "<group>"; };
-		62DB57DF14C1D7BE0002B1DA /* FacebookContactGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookContactGroup.m; sourceTree = "<group>"; };
-		62DB57E014C1D7BE0002B1DA /* FacebookContactsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookContactsProvider.h; sourceTree = "<group>"; };
-		62DB57E114C1D7BE0002B1DA /* FacebookContactsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookContactsProvider.m; sourceTree = "<group>"; };
-		62DB57E214C1D7BE0002B1DA /* FacebookGetContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookGetContacts.h; sourceTree = "<group>"; };
-		62DB57E314C1D7BE0002B1DA /* FacebookGetContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookGetContacts.m; sourceTree = "<group>"; };
-		62DB57E414C1D7BE0002B1DA /* FacebookSearchContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookSearchContacts.h; sourceTree = "<group>"; };
-		62DB57E514C1D7BE0002B1DA /* FacebookSearchContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookSearchContacts.m; sourceTree = "<group>"; };
-		62DB57E714C1D7BE0002B1DA /* LinkedInConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInConstants.h; sourceTree = "<group>"; };
-		62DB57E814C1D7BE0002B1DA /* LinkedInConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInConstants.m; sourceTree = "<group>"; };
-		62DB57E914C1D7BE0002B1DA /* LinkedInContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInContact.h; sourceTree = "<group>"; };
-		62DB57EA14C1D7BE0002B1DA /* LinkedInContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInContact.m; sourceTree = "<group>"; };
-		62DB57EB14C1D7BE0002B1DA /* LinkedInContactGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInContactGroup.h; sourceTree = "<group>"; };
-		62DB57EC14C1D7BE0002B1DA /* LinkedInContactGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInContactGroup.m; sourceTree = "<group>"; };
-		62DB57ED14C1D7BE0002B1DA /* LinkedInContactsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInContactsProvider.h; sourceTree = "<group>"; };
-		62DB57EE14C1D7BE0002B1DA /* LinkedInContactsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInContactsProvider.m; sourceTree = "<group>"; };
-		62DB580C14C1D7BE0002B1DA /* TwitterConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterConstants.h; sourceTree = "<group>"; };
-		62DB580D14C1D7BE0002B1DA /* TwitterConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterConstants.m; sourceTree = "<group>"; };
-		62DB580E14C1D7BE0002B1DA /* TwitterContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterContact.h; sourceTree = "<group>"; };
-		62DB580F14C1D7BE0002B1DA /* TwitterContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterContact.m; sourceTree = "<group>"; };
-		62DB581014C1D7BE0002B1DA /* TwitterContactsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterContactsProvider.h; sourceTree = "<group>"; };
-		62DB581114C1D7BE0002B1DA /* TwitterContactsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterContactsProvider.m; sourceTree = "<group>"; };
-		62DB581214C1D7BE0002B1DA /* TwitterCreateNewContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterCreateNewContacts.h; sourceTree = "<group>"; };
-		62DB581314C1D7BE0002B1DA /* TwitterCreateNewContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterCreateNewContacts.m; sourceTree = "<group>"; };
-		62DB581414C1D7BE0002B1DA /* TwitterGetContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterGetContacts.h; sourceTree = "<group>"; };
-		62DB581514C1D7BE0002B1DA /* TwitterGetContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterGetContacts.m; sourceTree = "<group>"; };
-		62DB581614C1D7BE0002B1DA /* TwitterRequestExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterRequestExecutor.h; sourceTree = "<group>"; };
-		62DB581714C1D7BE0002B1DA /* TwitterRequestExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterRequestExecutor.m; sourceTree = "<group>"; };
-		62DB581814C1D7BE0002B1DA /* TwitterRequestUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterRequestUtil.h; sourceTree = "<group>"; };
-		62DB581914C1D7BE0002B1DA /* TwitterRequestUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterRequestUtil.m; sourceTree = "<group>"; };
-		62DB581A14C1D7BE0002B1DA /* TwitterSearchContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterSearchContacts.h; sourceTree = "<group>"; };
-		62DB581B14C1D7BE0002B1DA /* TwitterSearchContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterSearchContacts.m; sourceTree = "<group>"; };
-		62DB581C14C1D7BE0002B1DA /* TwitterSendMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterSendMessage.h; sourceTree = "<group>"; };
-		62DB581D14C1D7BE0002B1DA /* TwitterSendMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterSendMessage.m; sourceTree = "<group>"; };
-		62DB581F14C1D7BE0002B1DA /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		62DB582014C1D7BE0002B1DA /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
-		62DB582114C1D7BE0002B1DA /* StayConnectedError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StayConnectedError.h; sourceTree = "<group>"; };
-		62DB582214C1D7BE0002B1DA /* StayConnectedError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StayConnectedError.m; sourceTree = "<group>"; };
-		62DB584C14C1D7C90002B1DA /* facebook-ios-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "facebook-ios-sdk.xcodeproj"; sourceTree = "<group>"; };
-		62DB584F14C1D7C90002B1DA /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
-		62DB585014C1D7C90002B1DA /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facebook.m; sourceTree = "<group>"; };
-		62DB585114C1D7C90002B1DA /* facebook_ios_sdk_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = facebook_ios_sdk_Prefix.pch; sourceTree = "<group>"; };
-		62DB585214C1D7C90002B1DA /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConnect.h; sourceTree = "<group>"; };
-		62DB585314C1D7C90002B1DA /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBDialog.bundle; sourceTree = "<group>"; };
-		62DB585414C1D7C90002B1DA /* FBDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDialog.h; sourceTree = "<group>"; };
-		62DB585514C1D7C90002B1DA /* FBDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBDialog.m; sourceTree = "<group>"; };
-		62DB585614C1D7C90002B1DA /* FBLoginDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLoginDialog.h; sourceTree = "<group>"; };
-		62DB585714C1D7C90002B1DA /* FBLoginDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginDialog.m; sourceTree = "<group>"; };
-		62DB585814C1D7C90002B1DA /* FBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBRequest.h; sourceTree = "<group>"; };
-		62DB585914C1D7C90002B1DA /* FBRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBRequest.m; sourceTree = "<group>"; };
-		62DB585B14C1D7C90002B1DA /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
-		62DB585C14C1D7C90002B1DA /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
-		62DB585D14C1D7C90002B1DA /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
-		62DB585E14C1D7C90002B1DA /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
-		62DB585F14C1D7C90002B1DA /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
-		62DB586014C1D7C90002B1DA /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
-		62DB586114C1D7C90002B1DA /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
-		62DB586214C1D7C90002B1DA /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
-		62DB586314C1D7C90002B1DA /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
-		62DB586414C1D7C90002B1DA /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
-		62DB586514C1D7C90002B1DA /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
-		62DB586614C1D7C90002B1DA /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
-		62DB586714C1D7C90002B1DA /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		62DB587914C1D9850002B1DA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		62DB587B14C1D98E0002B1DA /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		62DB587D14C1D99B0002B1DA /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		CB4B6A6E14C80FCB00803144 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CB4B6A7014C80FD700803144 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		CB4B6A7214C8103900803144 /* StayConnectedRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StayConnectedRootViewController.m; sourceTree = "<group>"; };
-		CB4B6A7314C8103900803144 /* StayConnectedRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StayConnectedRootViewController.h; sourceTree = "<group>"; };
-		CB4B6A7414C8103900803144 /* StayConnectedStackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StayConnectedStackController.m; sourceTree = "<group>"; };
-		CB4B6A7514C8103900803144 /* StayConnectedStackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StayConnectedStackController.h; sourceTree = "<group>"; };
-		CB4B6A7F14C8108600803144 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
-		CB4B6A8014C8108600803144 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
-		CB4B6A8114C8108600803144 /* UIImage+OverlayColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OverlayColor.h"; sourceTree = "<group>"; };
-		CB4B6A8214C8108600803144 /* UIImage+OverlayColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+OverlayColor.m"; sourceTree = "<group>"; };
-		CB4B6A8714C8109700803144 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		CB4B6A8814C8109700803144 /* NewGlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewGlow.png; sourceTree = "<group>"; };
-		CB4B6A8914C8109700803144 /* NewGlow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NewGlow@2x.png"; sourceTree = "<group>"; };
-		CB4B6A8F14C810F600803144 /* PSStackedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStackedView.h; sourceTree = "<group>"; };
-		CB4B6A9014C810F600803144 /* PSStackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStackedViewController.h; sourceTree = "<group>"; };
-		CB4B6A9114C810F600803144 /* PSStackedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSStackedViewController.m; sourceTree = "<group>"; };
-		CB4B6A9214C810F600803144 /* PSStackedViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStackedViewDelegate.h; sourceTree = "<group>"; };
-		CB4B6A9314C810F600803144 /* PSStackedViewGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStackedViewGlobal.h; sourceTree = "<group>"; };
-		CB4B6A9414C810F600803144 /* PSStackedViewGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSStackedViewGlobal.m; sourceTree = "<group>"; };
-		CB4B6A9514C810F600803144 /* PSSVContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSSVContainerView.h; sourceTree = "<group>"; };
-		CB4B6A9614C810F600803144 /* PSSVContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSSVContainerView.m; sourceTree = "<group>"; };
-		CB4B6A9714C810F600803144 /* UIView+PSSizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PSSizes.h"; sourceTree = "<group>"; };
-		CB4B6A9814C810F600803144 /* UIView+PSSizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PSSizes.m"; sourceTree = "<group>"; };
-		CB4B6A9914C810F600803144 /* UIViewController+PSStackedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PSStackedView.h"; sourceTree = "<group>"; };
-		CB4B6A9A14C810F600803144 /* UIViewController+PSStackedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PSStackedView.m"; sourceTree = "<group>"; };
-		CB4B6AB814C815DF00803144 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "../../../Projects/StayConnected/src/StayConnected/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		CB4B6ADC14CB291400803144 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CB4B6ADD14CB291400803144 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CB4B6ADE14CB291400803144 /* AppMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppMenuViewController.h; sourceTree = "<group>"; };
+		CB4B6ADF14CB291400803144 /* AppMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppMenuViewController.m; sourceTree = "<group>"; };
+		CB4B6AE014CB291400803144 /* AppStackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppStackController.h; sourceTree = "<group>"; };
+		CB4B6AE114CB291400803144 /* AppStackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppStackController.m; sourceTree = "<group>"; };
+		CB4B6AE614CB292E00803144 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		CB4B6AE814CB292E00803144 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		CB4B6AEB14CB2CAA00803144 /* FacebookAuthoriser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookAuthoriser.h; sourceTree = "<group>"; };
+		CB4B6AEC14CB2CAB00803144 /* FacebookAuthoriser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookAuthoriser.m; sourceTree = "<group>"; };
+		CB4B6AED14CB2CAB00803144 /* FacebookConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookConstants.h; sourceTree = "<group>"; };
+		CB4B6AEE14CB2CAB00803144 /* FacebookConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookConstants.m; sourceTree = "<group>"; };
+		CB4B6AEF14CB2CAB00803144 /* FacebookContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookContact.h; sourceTree = "<group>"; };
+		CB4B6AF014CB2CAB00803144 /* FacebookContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookContact.m; sourceTree = "<group>"; };
+		CB4B6AF114CB2CAB00803144 /* FacebookContactGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookContactGroup.h; sourceTree = "<group>"; };
+		CB4B6AF214CB2CAB00803144 /* FacebookContactGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookContactGroup.m; sourceTree = "<group>"; };
+		CB4B6AF314CB2CAB00803144 /* FacebookContactsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookContactsProvider.h; sourceTree = "<group>"; };
+		CB4B6AF414CB2CAB00803144 /* FacebookContactsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookContactsProvider.m; sourceTree = "<group>"; };
+		CB4B6AF514CB2CAB00803144 /* FacebookGetContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookGetContacts.h; sourceTree = "<group>"; };
+		CB4B6AF614CB2CAC00803144 /* FacebookGetContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookGetContacts.m; sourceTree = "<group>"; };
+		CB4B6AF714CB2CAC00803144 /* FacebookSearchContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookSearchContacts.h; sourceTree = "<group>"; };
+		CB4B6AF814CB2CAC00803144 /* FacebookSearchContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookSearchContacts.m; sourceTree = "<group>"; };
+		CB4B6B0014CB2CE300803144 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		CB4B6B0114CB2CE300803144 /* ContactAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactAttributes.h; sourceTree = "<group>"; };
+		CB4B6B0214CB2CE300803144 /* ContactAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactAttributes.m; sourceTree = "<group>"; };
+		CB4B6B0314CB2CE300803144 /* ContactBaseImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactBaseImpl.h; sourceTree = "<group>"; };
+		CB4B6B0414CB2CE300803144 /* ContactBaseImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactBaseImpl.m; sourceTree = "<group>"; };
+		CB4B6B0514CB2CE300803144 /* ContactGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactGroup.h; sourceTree = "<group>"; };
+		CB4B6B0614CB2CE300803144 /* ContactGroupBaseImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactGroupBaseImpl.h; sourceTree = "<group>"; };
+		CB4B6B0714CB2CE300803144 /* ContactGroupBaseImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactGroupBaseImpl.m; sourceTree = "<group>"; };
+		CB4B6B0814CB2CE300803144 /* ContactsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsProvider.h; sourceTree = "<group>"; };
+		CB4B6B0C14CB2D1800803144 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
+		CB4B6B0D14CB2D1800803144 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
+		CB4B6B0E14CB2D1800803144 /* UIImage+OverlayColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OverlayColor.h"; sourceTree = "<group>"; };
+		CB4B6B0F14CB2D1800803144 /* UIImage+OverlayColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+OverlayColor.m"; sourceTree = "<group>"; };
+		CB4B6B1214CB2D4000803144 /* LinkedInConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInConstants.h; sourceTree = "<group>"; };
+		CB4B6B1314CB2D4000803144 /* LinkedInConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInConstants.m; sourceTree = "<group>"; };
+		CB4B6B1414CB2D4000803144 /* LinkedInContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInContact.h; sourceTree = "<group>"; };
+		CB4B6B1514CB2D4000803144 /* LinkedInContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInContact.m; sourceTree = "<group>"; };
+		CB4B6B1614CB2D4000803144 /* LinkedInContactGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInContactGroup.h; sourceTree = "<group>"; };
+		CB4B6B1714CB2D4000803144 /* LinkedInContactGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInContactGroup.m; sourceTree = "<group>"; };
+		CB4B6B1814CB2D4000803144 /* LinkedInContactsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInContactsProvider.h; sourceTree = "<group>"; };
+		CB4B6B1914CB2D4000803144 /* LinkedInContactsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInContactsProvider.m; sourceTree = "<group>"; };
+		CB4B6B3914CB2DB400803144 /* TwitterConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterConstants.h; sourceTree = "<group>"; };
+		CB4B6B3A14CB2DB400803144 /* TwitterConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterConstants.m; sourceTree = "<group>"; };
+		CB4B6B3B14CB2DB400803144 /* TwitterContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterContact.h; sourceTree = "<group>"; };
+		CB4B6B3C14CB2DB400803144 /* TwitterContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterContact.m; sourceTree = "<group>"; };
+		CB4B6B3D14CB2DB400803144 /* TwitterContactsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterContactsProvider.h; sourceTree = "<group>"; };
+		CB4B6B3E14CB2DB400803144 /* TwitterContactsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterContactsProvider.m; sourceTree = "<group>"; };
+		CB4B6B3F14CB2DB400803144 /* TwitterCreateNewContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterCreateNewContacts.h; sourceTree = "<group>"; };
+		CB4B6B4014CB2DB400803144 /* TwitterCreateNewContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterCreateNewContacts.m; sourceTree = "<group>"; };
+		CB4B6B4114CB2DB400803144 /* TwitterGetContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterGetContacts.h; sourceTree = "<group>"; };
+		CB4B6B4214CB2DB400803144 /* TwitterGetContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterGetContacts.m; sourceTree = "<group>"; };
+		CB4B6B4314CB2DB400803144 /* TwitterRequestExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterRequestExecutor.h; sourceTree = "<group>"; };
+		CB4B6B4414CB2DB400803144 /* TwitterRequestExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterRequestExecutor.m; sourceTree = "<group>"; };
+		CB4B6B4514CB2DB400803144 /* TwitterRequestUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterRequestUtil.h; sourceTree = "<group>"; };
+		CB4B6B4614CB2DB400803144 /* TwitterRequestUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterRequestUtil.m; sourceTree = "<group>"; };
+		CB4B6B4714CB2DB400803144 /* TwitterSearchContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterSearchContacts.h; sourceTree = "<group>"; };
+		CB4B6B4814CB2DB400803144 /* TwitterSearchContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterSearchContacts.m; sourceTree = "<group>"; };
+		CB4B6B4914CB2DB400803144 /* TwitterSendMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterSendMessage.h; sourceTree = "<group>"; };
+		CB4B6B4A14CB2DB400803144 /* TwitterSendMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterSendMessage.m; sourceTree = "<group>"; };
+		CB4B6B5414CB2DD600803144 /* OAuthRequestor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthRequestor.h; sourceTree = "<group>"; };
+		CB4B6B5514CB2DD600803144 /* OAuthRequestor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthRequestor.m; sourceTree = "<group>"; };
+		CB4B6B5714CB2DF100803144 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		CB4B6B5814CB2DF200803144 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		CB4B6B5914CB2DF200803144 /* StayConnectedError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StayConnectedError.h; sourceTree = "<group>"; };
+		CB4B6B5A14CB2DF200803144 /* StayConnectedError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StayConnectedError.m; sourceTree = "<group>"; };
+		CB4B6B5D14CB2E1800803144 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		CB4B6B5E14CB2E1800803144 /* NewGlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewGlow.png; sourceTree = "<group>"; };
+		CB4B6B5F14CB2E1800803144 /* NewGlow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NewGlow@2x.png"; sourceTree = "<group>"; };
+		CB4B6B6514CB2F3600803144 /* facebook-ios-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "facebook-ios-sdk.xcodeproj"; sourceTree = "<group>"; };
+		CB4B6B6814CB2F3600803144 /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
+		CB4B6B6914CB2F3600803144 /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facebook.m; sourceTree = "<group>"; };
+		CB4B6B6A14CB2F3600803144 /* facebook_ios_sdk_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = facebook_ios_sdk_Prefix.pch; sourceTree = "<group>"; };
+		CB4B6B6B14CB2F3600803144 /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConnect.h; sourceTree = "<group>"; };
+		CB4B6B6C14CB2F3600803144 /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBDialog.bundle; sourceTree = "<group>"; };
+		CB4B6B6D14CB2F3600803144 /* FBDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDialog.h; sourceTree = "<group>"; };
+		CB4B6B6E14CB2F3600803144 /* FBDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBDialog.m; sourceTree = "<group>"; };
+		CB4B6B6F14CB2F3600803144 /* FBLoginDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLoginDialog.h; sourceTree = "<group>"; };
+		CB4B6B7014CB2F3600803144 /* FBLoginDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginDialog.m; sourceTree = "<group>"; };
+		CB4B6B7114CB2F3600803144 /* FBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBRequest.h; sourceTree = "<group>"; };
+		CB4B6B7214CB2F3600803144 /* FBRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBRequest.m; sourceTree = "<group>"; };
+		CB4B6B7414CB2F3600803144 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		CB4B6B7514CB2F3600803144 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		CB4B6B7614CB2F3600803144 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		CB4B6B7714CB2F3600803144 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		CB4B6B7814CB2F3600803144 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		CB4B6B7914CB2F3600803144 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		CB4B6B7A14CB2F3600803144 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		CB4B6B7B14CB2F3600803144 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		CB4B6B7C14CB2F3600803144 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		CB4B6B7D14CB2F3600803144 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		CB4B6B7E14CB2F3600803144 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		CB4B6B7F14CB2F3600803144 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		CB4B6B8014CB2F3600803144 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		CB4B6B8314CB2F3600803144 /* NSMutableURLRequest+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Parameters.h"; sourceTree = "<group>"; };
+		CB4B6B8414CB2F3600803144 /* NSMutableURLRequest+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Parameters.m"; sourceTree = "<group>"; };
+		CB4B6B8514CB2F3600803144 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		CB4B6B8614CB2F3600803144 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		CB4B6B8714CB2F3600803144 /* NSURL+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Base.h"; sourceTree = "<group>"; };
+		CB4B6B8814CB2F3600803144 /* NSURL+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Base.m"; sourceTree = "<group>"; };
+		CB4B6B8A14CB2F3600803144 /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
+		CB4B6B8B14CB2F3600803144 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
+		CB4B6B8C14CB2F3600803144 /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
+		CB4B6B8D14CB2F3600803144 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		CB4B6B8E14CB2F3600803144 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
+		CB4B6B8F14CB2F3600803144 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		CB4B6B9014CB2F3600803144 /* OAAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAAttachment.h; sourceTree = "<group>"; };
+		CB4B6B9114CB2F3600803144 /* OAAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAAttachment.m; sourceTree = "<group>"; };
+		CB4B6B9214CB2F3600803144 /* OACall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OACall.h; sourceTree = "<group>"; };
+		CB4B6B9314CB2F3600803144 /* OACall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OACall.m; sourceTree = "<group>"; };
+		CB4B6B9414CB2F3600803144 /* OAConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAConsumer.h; sourceTree = "<group>"; };
+		CB4B6B9514CB2F3600803144 /* OAConsumer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAConsumer.m; sourceTree = "<group>"; };
+		CB4B6B9614CB2F3600803144 /* OADataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OADataFetcher.h; sourceTree = "<group>"; };
+		CB4B6B9714CB2F3600803144 /* OADataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OADataFetcher.m; sourceTree = "<group>"; };
+		CB4B6B9814CB2F3600803144 /* OAHMAC_SHA1SignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAHMAC_SHA1SignatureProvider.h; sourceTree = "<group>"; };
+		CB4B6B9914CB2F3600803144 /* OAHMAC_SHA1SignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAHMAC_SHA1SignatureProvider.m; sourceTree = "<group>"; };
+		CB4B6B9A14CB2F3600803144 /* OAMutableURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAMutableURLRequest.h; sourceTree = "<group>"; };
+		CB4B6B9B14CB2F3600803144 /* OAMutableURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAMutableURLRequest.m; sourceTree = "<group>"; };
+		CB4B6B9C14CB2F3600803144 /* OAPlaintextSignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAPlaintextSignatureProvider.h; sourceTree = "<group>"; };
+		CB4B6B9D14CB2F3600803144 /* OAPlaintextSignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAPlaintextSignatureProvider.m; sourceTree = "<group>"; };
+		CB4B6B9E14CB2F3600803144 /* OAProblem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAProblem.h; sourceTree = "<group>"; };
+		CB4B6B9F14CB2F3600803144 /* OAProblem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAProblem.m; sourceTree = "<group>"; };
+		CB4B6BA014CB2F3600803144 /* OARequestParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OARequestParameter.h; sourceTree = "<group>"; };
+		CB4B6BA114CB2F3600803144 /* OARequestParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OARequestParameter.m; sourceTree = "<group>"; };
+		CB4B6BA214CB2F3600803144 /* OAServiceTicket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAServiceTicket.h; sourceTree = "<group>"; };
+		CB4B6BA314CB2F3600803144 /* OAServiceTicket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAServiceTicket.m; sourceTree = "<group>"; };
+		CB4B6BA414CB2F3600803144 /* OASignatureProviding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OASignatureProviding.h; sourceTree = "<group>"; };
+		CB4B6BA514CB2F3600803144 /* OATestServer.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = OATestServer.rb; sourceTree = "<group>"; };
+		CB4B6BA614CB2F3600803144 /* OAToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAToken.h; sourceTree = "<group>"; };
+		CB4B6BA714CB2F3600803144 /* OAToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAToken.m; sourceTree = "<group>"; };
+		CB4B6BA814CB2F3600803144 /* OATokenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OATokenManager.h; sourceTree = "<group>"; };
+		CB4B6BA914CB2F3600803144 /* OATokenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OATokenManager.m; sourceTree = "<group>"; };
+		CB4B6BAA14CB2F3600803144 /* OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer.h; sourceTree = "<group>"; };
+		CB4B6BAB14CB2F3600803144 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		CB4B6BAE14CB2F3600803144 /* PSStackedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStackedView.h; sourceTree = "<group>"; };
+		CB4B6BAF14CB2F3600803144 /* PSStackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStackedViewController.h; sourceTree = "<group>"; };
+		CB4B6BB014CB2F3600803144 /* PSStackedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSStackedViewController.m; sourceTree = "<group>"; };
+		CB4B6BB114CB2F3600803144 /* PSStackedViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStackedViewDelegate.h; sourceTree = "<group>"; };
+		CB4B6BB214CB2F3600803144 /* PSStackedViewGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStackedViewGlobal.h; sourceTree = "<group>"; };
+		CB4B6BB314CB2F3600803144 /* PSStackedViewGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSStackedViewGlobal.m; sourceTree = "<group>"; };
+		CB4B6BB414CB2F3600803144 /* PSSVContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSSVContainerView.h; sourceTree = "<group>"; };
+		CB4B6BB514CB2F3600803144 /* PSSVContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSSVContainerView.m; sourceTree = "<group>"; };
+		CB4B6BB614CB2F3600803144 /* UIView+PSSizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PSSizes.h"; sourceTree = "<group>"; };
+		CB4B6BB714CB2F3600803144 /* UIView+PSSizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PSSizes.m"; sourceTree = "<group>"; };
+		CB4B6BB814CB2F3600803144 /* UIViewController+PSStackedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PSStackedView.h"; sourceTree = "<group>"; };
+		CB4B6BB914CB2F3600803144 /* UIViewController+PSStackedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PSStackedView.m"; sourceTree = "<group>"; };
+		CB4B6C2914CC32E200803144 /* ConnectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionController.h; sourceTree = "<group>"; };
+		CB4B6C2A14CC32E200803144 /* ConnectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionController.m; sourceTree = "<group>"; };
+		CB4B6C2B14CC32E200803144 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		CB4B6C2C14CC32E200803144 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		CB4B6C2F14CC32F900803144 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		CB4B6C3114CC336300803144 /* DismissDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissDelegate.h; sourceTree = "<group>"; };
+		CB4B6C3214CC359000803144 /* ActivityLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityLabel.h; sourceTree = "<group>"; };
+		CB4B6C3314CC359000803144 /* ActivityLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityLabel.m; sourceTree = "<group>"; };
+		CB4B6C3514CC3A0E00803144 /* StayConnectedMetrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StayConnectedMetrics.h; sourceTree = "<group>"; };
+		CB4B6C3614CC3A0E00803144 /* StayConnectedMetrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StayConnectedMetrics.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,15 +301,15 @@
 		4B71228114BCC26F00F2C5B6 /* StayConnected */ = {
 			isa = PBXGroup;
 			children = (
-				CB4B6AB714C815DF00803144 /* MainWindow-iPad.xib */,
-				CB4B6A7314C8103900803144 /* StayConnectedRootViewController.h */,
-				CB4B6A7214C8103900803144 /* StayConnectedRootViewController.m */,
-				CB4B6A7514C8103900803144 /* StayConnectedStackController.h */,
-				CB4B6A7414C8103900803144 /* StayConnectedStackController.m */,
+				CB4B6AE514CB292E00803144 /* MainWindow-iPad.xib */,
+				CB4B6AE714CB292E00803144 /* MainWindow.xib */,
+				CB4B6ADC14CB291400803144 /* AppDelegate.h */,
+				CB4B6ADD14CB291400803144 /* AppDelegate.m */,
+				CB4B6ADE14CB291400803144 /* AppMenuViewController.h */,
+				CB4B6ADF14CB291400803144 /* AppMenuViewController.m */,
+				CB4B6AE014CB291400803144 /* AppStackController.h */,
+				CB4B6AE114CB291400803144 /* AppStackController.m */,
 				4B7122C614BCC94900F2C5B6 /* Supporting Files */,
-				4B71228414BCC26F00F2C5B6 /* MainWindow.xib */,
-				4B71228B14BCC26F00F2C5B6 /* StayConnectedAppDelegate.h */,
-				4B71228C14BCC26F00F2C5B6 /* StayConnectedAppDelegate.m */,
 			);
 			name = StayConnected;
 			path = src/StayConnected;
@@ -345,72 +360,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		62D12CF614C646DE0033376E /* OAuthConsumer */ = {
-			isa = PBXGroup;
-			children = (
-				62D12CF714C646DE0033376E /* Categories */,
-				62D12CFE14C646DE0033376E /* Crypto */,
-				62D12D0514C646DE0033376E /* OAAttachment.h */,
-				62D12D0614C646DE0033376E /* OAAttachment.m */,
-				62D12D0714C646DE0033376E /* OACall.h */,
-				62D12D0814C646DE0033376E /* OACall.m */,
-				62D12D0914C646DE0033376E /* OAConsumer.h */,
-				62D12D0A14C646DE0033376E /* OAConsumer.m */,
-				62D12D0B14C646DE0033376E /* OADataFetcher.h */,
-				62D12D0C14C646DE0033376E /* OADataFetcher.m */,
-				62D12D0D14C646DE0033376E /* OAHMAC_SHA1SignatureProvider.h */,
-				62D12D0E14C646DE0033376E /* OAHMAC_SHA1SignatureProvider.m */,
-				62D12D0F14C646DE0033376E /* OAMutableURLRequest.h */,
-				62D12D1014C646DE0033376E /* OAMutableURLRequest.m */,
-				62D12D1114C646DE0033376E /* OAPlaintextSignatureProvider.h */,
-				62D12D1214C646DE0033376E /* OAPlaintextSignatureProvider.m */,
-				62D12D1314C646DE0033376E /* OAProblem.h */,
-				62D12D1414C646DE0033376E /* OAProblem.m */,
-				62D12D1514C646DE0033376E /* OARequestParameter.h */,
-				62D12D1614C646DE0033376E /* OARequestParameter.m */,
-				62D12D1714C646DE0033376E /* OAServiceTicket.h */,
-				62D12D1814C646DE0033376E /* OAServiceTicket.m */,
-				62D12D1914C646DE0033376E /* OASignatureProviding.h */,
-				62D12D1A14C646DE0033376E /* OATestServer.rb */,
-				62D12D1B14C646DE0033376E /* OAToken.h */,
-				62D12D1C14C646DE0033376E /* OAToken.m */,
-				62D12D1D14C646DE0033376E /* OATokenManager.h */,
-				62D12D1E14C646DE0033376E /* OATokenManager.m */,
-				62D12D1F14C646DE0033376E /* OAuthConsumer.h */,
-				62D12D2014C646DE0033376E /* README */,
-			);
-			path = OAuthConsumer;
-			sourceTree = "<group>";
-		};
-		62D12CF714C646DE0033376E /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				62D12CF814C646DE0033376E /* NSMutableURLRequest+Parameters.h */,
-				62D12CF914C646DE0033376E /* NSMutableURLRequest+Parameters.m */,
-				62D12CFA14C646DE0033376E /* NSString+URLEncoding.h */,
-				62D12CFB14C646DE0033376E /* NSString+URLEncoding.m */,
-				62D12CFC14C646DE0033376E /* NSURL+Base.h */,
-				62D12CFD14C646DE0033376E /* NSURL+Base.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		62D12CFE14C646DE0033376E /* Crypto */ = {
-			isa = PBXGroup;
-			children = (
-				62D12CFF14C646DE0033376E /* Base64Transcoder.c */,
-				62D12D0014C646DE0033376E /* Base64Transcoder.h */,
-				62D12D0114C646DE0033376E /* hmac.c */,
-				62D12D0214C646DE0033376E /* hmac.h */,
-				62D12D0314C646DE0033376E /* sha1.c */,
-				62D12D0414C646DE0033376E /* sha1.h */,
-			);
-			path = Crypto;
-			sourceTree = "<group>";
-		};
 		62DB57CC14C1D7BE0002B1DA /* src */ = {
 			isa = PBXGroup;
 			children = (
+				CB4B6C2814CC32E100803144 /* Controller */,
 				CB4B6A8514C8109700803144 /* Resources */,
 				CB4B6A7E14C8108600803144 /* View */,
 				62DB57CD14C1D7BE0002B1DA /* ContactsProvider */,
@@ -426,15 +379,15 @@
 		62DB57CD14C1D7BE0002B1DA /* ContactsProvider */ = {
 			isa = PBXGroup;
 			children = (
-				62DB57CE14C1D7BE0002B1DA /* Contact.h */,
-				62DB57CF14C1D7BE0002B1DA /* ContactAttributes.h */,
-				62DB57D014C1D7BE0002B1DA /* ContactAttributes.m */,
-				62DB57D114C1D7BE0002B1DA /* ContactBaseImpl.h */,
-				62DB57D214C1D7BE0002B1DA /* ContactBaseImpl.m */,
-				62DB57D314C1D7BE0002B1DA /* ContactGroup.h */,
-				62DB57D414C1D7BE0002B1DA /* ContactGroupBaseImpl.h */,
-				62DB57D514C1D7BE0002B1DA /* ContactGroupBaseImpl.m */,
-				62DB57D614C1D7BE0002B1DA /* ContactsProvider.h */,
+				CB4B6B0014CB2CE300803144 /* Contact.h */,
+				CB4B6B0114CB2CE300803144 /* ContactAttributes.h */,
+				CB4B6B0214CB2CE300803144 /* ContactAttributes.m */,
+				CB4B6B0314CB2CE300803144 /* ContactBaseImpl.h */,
+				CB4B6B0414CB2CE300803144 /* ContactBaseImpl.m */,
+				CB4B6B0514CB2CE300803144 /* ContactGroup.h */,
+				CB4B6B0614CB2CE300803144 /* ContactGroupBaseImpl.h */,
+				CB4B6B0714CB2CE300803144 /* ContactGroupBaseImpl.m */,
+				CB4B6B0814CB2CE300803144 /* ContactsProvider.h */,
 			);
 			path = ContactsProvider;
 			sourceTree = "<group>";
@@ -442,20 +395,20 @@
 		62DB57D714C1D7BE0002B1DA /* Facebook */ = {
 			isa = PBXGroup;
 			children = (
-				62DB57D814C1D7BE0002B1DA /* FacebookAuthoriser.h */,
-				62DB57D914C1D7BE0002B1DA /* FacebookAuthoriser.m */,
-				62DB57DA14C1D7BE0002B1DA /* FacebookConstants.h */,
-				62DB57DB14C1D7BE0002B1DA /* FacebookConstants.m */,
-				62DB57DC14C1D7BE0002B1DA /* FacebookContact.h */,
-				62DB57DD14C1D7BE0002B1DA /* FacebookContact.m */,
-				62DB57DE14C1D7BE0002B1DA /* FacebookContactGroup.h */,
-				62DB57DF14C1D7BE0002B1DA /* FacebookContactGroup.m */,
-				62DB57E014C1D7BE0002B1DA /* FacebookContactsProvider.h */,
-				62DB57E114C1D7BE0002B1DA /* FacebookContactsProvider.m */,
-				62DB57E214C1D7BE0002B1DA /* FacebookGetContacts.h */,
-				62DB57E314C1D7BE0002B1DA /* FacebookGetContacts.m */,
-				62DB57E414C1D7BE0002B1DA /* FacebookSearchContacts.h */,
-				62DB57E514C1D7BE0002B1DA /* FacebookSearchContacts.m */,
+				CB4B6AEB14CB2CAA00803144 /* FacebookAuthoriser.h */,
+				CB4B6AEC14CB2CAB00803144 /* FacebookAuthoriser.m */,
+				CB4B6AED14CB2CAB00803144 /* FacebookConstants.h */,
+				CB4B6AEE14CB2CAB00803144 /* FacebookConstants.m */,
+				CB4B6AEF14CB2CAB00803144 /* FacebookContact.h */,
+				CB4B6AF014CB2CAB00803144 /* FacebookContact.m */,
+				CB4B6AF114CB2CAB00803144 /* FacebookContactGroup.h */,
+				CB4B6AF214CB2CAB00803144 /* FacebookContactGroup.m */,
+				CB4B6AF314CB2CAB00803144 /* FacebookContactsProvider.h */,
+				CB4B6AF414CB2CAB00803144 /* FacebookContactsProvider.m */,
+				CB4B6AF514CB2CAB00803144 /* FacebookGetContacts.h */,
+				CB4B6AF614CB2CAC00803144 /* FacebookGetContacts.m */,
+				CB4B6AF714CB2CAC00803144 /* FacebookSearchContacts.h */,
+				CB4B6AF814CB2CAC00803144 /* FacebookSearchContacts.m */,
 			);
 			path = Facebook;
 			sourceTree = "<group>";
@@ -463,14 +416,14 @@
 		62DB57E614C1D7BE0002B1DA /* LinkedIn */ = {
 			isa = PBXGroup;
 			children = (
-				62DB57E714C1D7BE0002B1DA /* LinkedInConstants.h */,
-				62DB57E814C1D7BE0002B1DA /* LinkedInConstants.m */,
-				62DB57E914C1D7BE0002B1DA /* LinkedInContact.h */,
-				62DB57EA14C1D7BE0002B1DA /* LinkedInContact.m */,
-				62DB57EB14C1D7BE0002B1DA /* LinkedInContactGroup.h */,
-				62DB57EC14C1D7BE0002B1DA /* LinkedInContactGroup.m */,
-				62DB57ED14C1D7BE0002B1DA /* LinkedInContactsProvider.h */,
-				62DB57EE14C1D7BE0002B1DA /* LinkedInContactsProvider.m */,
+				CB4B6B1214CB2D4000803144 /* LinkedInConstants.h */,
+				CB4B6B1314CB2D4000803144 /* LinkedInConstants.m */,
+				CB4B6B1414CB2D4000803144 /* LinkedInContact.h */,
+				CB4B6B1514CB2D4000803144 /* LinkedInContact.m */,
+				CB4B6B1614CB2D4000803144 /* LinkedInContactGroup.h */,
+				CB4B6B1714CB2D4000803144 /* LinkedInContactGroup.m */,
+				CB4B6B1814CB2D4000803144 /* LinkedInContactsProvider.h */,
+				CB4B6B1914CB2D4000803144 /* LinkedInContactsProvider.m */,
 			);
 			path = LinkedIn;
 			sourceTree = "<group>";
@@ -478,8 +431,8 @@
 		62DB57EF14C1D7BE0002B1DA /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
-				62D12D3514C646FA0033376E /* OAuthRequestor.h */,
-				62D12D3614C646FA0033376E /* OAuthRequestor.m */,
+				CB4B6B5414CB2DD600803144 /* OAuthRequestor.h */,
+				CB4B6B5514CB2DD600803144 /* OAuthRequestor.m */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
@@ -487,24 +440,24 @@
 		62DB580B14C1D7BE0002B1DA /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
-				62DB580C14C1D7BE0002B1DA /* TwitterConstants.h */,
-				62DB580D14C1D7BE0002B1DA /* TwitterConstants.m */,
-				62DB580E14C1D7BE0002B1DA /* TwitterContact.h */,
-				62DB580F14C1D7BE0002B1DA /* TwitterContact.m */,
-				62DB581014C1D7BE0002B1DA /* TwitterContactsProvider.h */,
-				62DB581114C1D7BE0002B1DA /* TwitterContactsProvider.m */,
-				62DB581214C1D7BE0002B1DA /* TwitterCreateNewContacts.h */,
-				62DB581314C1D7BE0002B1DA /* TwitterCreateNewContacts.m */,
-				62DB581414C1D7BE0002B1DA /* TwitterGetContacts.h */,
-				62DB581514C1D7BE0002B1DA /* TwitterGetContacts.m */,
-				62DB581614C1D7BE0002B1DA /* TwitterRequestExecutor.h */,
-				62DB581714C1D7BE0002B1DA /* TwitterRequestExecutor.m */,
-				62DB581814C1D7BE0002B1DA /* TwitterRequestUtil.h */,
-				62DB581914C1D7BE0002B1DA /* TwitterRequestUtil.m */,
-				62DB581A14C1D7BE0002B1DA /* TwitterSearchContacts.h */,
-				62DB581B14C1D7BE0002B1DA /* TwitterSearchContacts.m */,
-				62DB581C14C1D7BE0002B1DA /* TwitterSendMessage.h */,
-				62DB581D14C1D7BE0002B1DA /* TwitterSendMessage.m */,
+				CB4B6B3914CB2DB400803144 /* TwitterConstants.h */,
+				CB4B6B3A14CB2DB400803144 /* TwitterConstants.m */,
+				CB4B6B3B14CB2DB400803144 /* TwitterContact.h */,
+				CB4B6B3C14CB2DB400803144 /* TwitterContact.m */,
+				CB4B6B3D14CB2DB400803144 /* TwitterContactsProvider.h */,
+				CB4B6B3E14CB2DB400803144 /* TwitterContactsProvider.m */,
+				CB4B6B3F14CB2DB400803144 /* TwitterCreateNewContacts.h */,
+				CB4B6B4014CB2DB400803144 /* TwitterCreateNewContacts.m */,
+				CB4B6B4114CB2DB400803144 /* TwitterGetContacts.h */,
+				CB4B6B4214CB2DB400803144 /* TwitterGetContacts.m */,
+				CB4B6B4314CB2DB400803144 /* TwitterRequestExecutor.h */,
+				CB4B6B4414CB2DB400803144 /* TwitterRequestExecutor.m */,
+				CB4B6B4514CB2DB400803144 /* TwitterRequestUtil.h */,
+				CB4B6B4614CB2DB400803144 /* TwitterRequestUtil.m */,
+				CB4B6B4714CB2DB400803144 /* TwitterSearchContacts.h */,
+				CB4B6B4814CB2DB400803144 /* TwitterSearchContacts.m */,
+				CB4B6B4914CB2DB400803144 /* TwitterSendMessage.h */,
+				CB4B6B4A14CB2DB400803144 /* TwitterSendMessage.m */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -512,10 +465,13 @@
 		62DB581E14C1D7BE0002B1DA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				62DB581F14C1D7BE0002B1DA /* Constants.h */,
-				62DB582014C1D7BE0002B1DA /* Constants.m */,
-				62DB582114C1D7BE0002B1DA /* StayConnectedError.h */,
-				62DB582214C1D7BE0002B1DA /* StayConnectedError.m */,
+				CB4B6C3114CC336300803144 /* DismissDelegate.h */,
+				CB4B6B5714CB2DF100803144 /* Constants.h */,
+				CB4B6B5814CB2DF200803144 /* Constants.m */,
+				CB4B6B5914CB2DF200803144 /* StayConnectedError.h */,
+				CB4B6B5A14CB2DF200803144 /* StayConnectedError.m */,
+				CB4B6C3514CC3A0E00803144 /* StayConnectedMetrics.h */,
+				CB4B6C3614CC3A0E00803144 /* StayConnectedMetrics.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -523,76 +479,22 @@
 		62DB584914C1D7C90002B1DA /* 3rdparty */ = {
 			isa = PBXGroup;
 			children = (
-				CB4B6A8D14C810F600803144 /* PSStackedView */,
-				62D12CF614C646DE0033376E /* OAuthConsumer */,
-				62DB584A14C1D7C90002B1DA /* facebook */,
+				CB4B6B6314CB2F3600803144 /* facebook */,
+				CB4B6B8114CB2F3600803144 /* OAuthConsumer */,
+				CB4B6BAC14CB2F3600803144 /* PSStackedView */,
 			);
 			path = 3rdparty;
-			sourceTree = "<group>";
-		};
-		62DB584A14C1D7C90002B1DA /* facebook */ = {
-			isa = PBXGroup;
-			children = (
-				62DB584B14C1D7C90002B1DA /* src */,
-			);
-			path = facebook;
-			sourceTree = "<group>";
-		};
-		62DB584B14C1D7C90002B1DA /* src */ = {
-			isa = PBXGroup;
-			children = (
-				62DB584C14C1D7C90002B1DA /* facebook-ios-sdk.xcodeproj */,
-				62DB584F14C1D7C90002B1DA /* Facebook.h */,
-				62DB585014C1D7C90002B1DA /* Facebook.m */,
-				62DB585114C1D7C90002B1DA /* facebook_ios_sdk_Prefix.pch */,
-				62DB585214C1D7C90002B1DA /* FBConnect.h */,
-				62DB585314C1D7C90002B1DA /* FBDialog.bundle */,
-				62DB585414C1D7C90002B1DA /* FBDialog.h */,
-				62DB585514C1D7C90002B1DA /* FBDialog.m */,
-				62DB585614C1D7C90002B1DA /* FBLoginDialog.h */,
-				62DB585714C1D7C90002B1DA /* FBLoginDialog.m */,
-				62DB585814C1D7C90002B1DA /* FBRequest.h */,
-				62DB585914C1D7C90002B1DA /* FBRequest.m */,
-				62DB585A14C1D7C90002B1DA /* JSON */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		62DB584D14C1D7C90002B1DA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				62DB587814C1D7C90002B1DA /* libfacebook_ios_sdk.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		62DB585A14C1D7C90002B1DA /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				62DB585B14C1D7C90002B1DA /* JSON.h */,
-				62DB585C14C1D7C90002B1DA /* NSObject+SBJSON.h */,
-				62DB585D14C1D7C90002B1DA /* NSObject+SBJSON.m */,
-				62DB585E14C1D7C90002B1DA /* NSString+SBJSON.h */,
-				62DB585F14C1D7C90002B1DA /* NSString+SBJSON.m */,
-				62DB586014C1D7C90002B1DA /* SBJSON.h */,
-				62DB586114C1D7C90002B1DA /* SBJSON.m */,
-				62DB586214C1D7C90002B1DA /* SBJsonBase.h */,
-				62DB586314C1D7C90002B1DA /* SBJsonBase.m */,
-				62DB586414C1D7C90002B1DA /* SBJsonParser.h */,
-				62DB586514C1D7C90002B1DA /* SBJsonParser.m */,
-				62DB586614C1D7C90002B1DA /* SBJsonWriter.h */,
-				62DB586714C1D7C90002B1DA /* SBJsonWriter.m */,
-			);
-			path = JSON;
 			sourceTree = "<group>";
 		};
 		CB4B6A7E14C8108600803144 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CB4B6A7F14C8108600803144 /* MenuTableViewCell.h */,
-				CB4B6A8014C8108600803144 /* MenuTableViewCell.m */,
-				CB4B6A8114C8108600803144 /* UIImage+OverlayColor.h */,
-				CB4B6A8214C8108600803144 /* UIImage+OverlayColor.m */,
+				CB4B6C3214CC359000803144 /* ActivityLabel.h */,
+				CB4B6C3314CC359000803144 /* ActivityLabel.m */,
+				CB4B6B0C14CB2D1800803144 /* MenuTableViewCell.h */,
+				CB4B6B0D14CB2D1800803144 /* MenuTableViewCell.m */,
+				CB4B6B0E14CB2D1800803144 /* UIImage+OverlayColor.h */,
+				CB4B6B0F14CB2D1800803144 /* UIImage+OverlayColor.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -600,6 +502,7 @@
 		CB4B6A8514C8109700803144 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CB4B6C2F14CC32F900803144 /* WebViewController.xib */,
 				CB4B6A8614C8109700803144 /* Images */,
 			);
 			path = Resources;
@@ -608,38 +511,168 @@
 		CB4B6A8614C8109700803144 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				CB4B6A8714C8109700803144 /* background.png */,
-				CB4B6A8814C8109700803144 /* NewGlow.png */,
-				CB4B6A8914C8109700803144 /* NewGlow@2x.png */,
+				CB4B6B5D14CB2E1800803144 /* background.png */,
+				CB4B6B5E14CB2E1800803144 /* NewGlow.png */,
+				CB4B6B5F14CB2E1800803144 /* NewGlow@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
 		};
-		CB4B6A8D14C810F600803144 /* PSStackedView */ = {
+		CB4B6B6314CB2F3600803144 /* facebook */ = {
 			isa = PBXGroup;
 			children = (
-				CB4B6A8E14C810F600803144 /* src */,
+				CB4B6B6414CB2F3600803144 /* src */,
+			);
+			path = facebook;
+			sourceTree = "<group>";
+		};
+		CB4B6B6414CB2F3600803144 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				CB4B6B6514CB2F3600803144 /* facebook-ios-sdk.xcodeproj */,
+				CB4B6B6814CB2F3600803144 /* Facebook.h */,
+				CB4B6B6914CB2F3600803144 /* Facebook.m */,
+				CB4B6B6A14CB2F3600803144 /* facebook_ios_sdk_Prefix.pch */,
+				CB4B6B6B14CB2F3600803144 /* FBConnect.h */,
+				CB4B6B6C14CB2F3600803144 /* FBDialog.bundle */,
+				CB4B6B6D14CB2F3600803144 /* FBDialog.h */,
+				CB4B6B6E14CB2F3600803144 /* FBDialog.m */,
+				CB4B6B6F14CB2F3600803144 /* FBLoginDialog.h */,
+				CB4B6B7014CB2F3600803144 /* FBLoginDialog.m */,
+				CB4B6B7114CB2F3600803144 /* FBRequest.h */,
+				CB4B6B7214CB2F3600803144 /* FBRequest.m */,
+				CB4B6B7314CB2F3600803144 /* JSON */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		CB4B6B6614CB2F3600803144 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB4B6BE314CB2F3700803144 /* libfacebook_ios_sdk.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB4B6B7314CB2F3600803144 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				CB4B6B7414CB2F3600803144 /* JSON.h */,
+				CB4B6B7514CB2F3600803144 /* NSObject+SBJSON.h */,
+				CB4B6B7614CB2F3600803144 /* NSObject+SBJSON.m */,
+				CB4B6B7714CB2F3600803144 /* NSString+SBJSON.h */,
+				CB4B6B7814CB2F3600803144 /* NSString+SBJSON.m */,
+				CB4B6B7914CB2F3600803144 /* SBJSON.h */,
+				CB4B6B7A14CB2F3600803144 /* SBJSON.m */,
+				CB4B6B7B14CB2F3600803144 /* SBJsonBase.h */,
+				CB4B6B7C14CB2F3600803144 /* SBJsonBase.m */,
+				CB4B6B7D14CB2F3600803144 /* SBJsonParser.h */,
+				CB4B6B7E14CB2F3600803144 /* SBJsonParser.m */,
+				CB4B6B7F14CB2F3600803144 /* SBJsonWriter.h */,
+				CB4B6B8014CB2F3600803144 /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		CB4B6B8114CB2F3600803144 /* OAuthConsumer */ = {
+			isa = PBXGroup;
+			children = (
+				CB4B6B8214CB2F3600803144 /* Categories */,
+				CB4B6B8914CB2F3600803144 /* Crypto */,
+				CB4B6B9014CB2F3600803144 /* OAAttachment.h */,
+				CB4B6B9114CB2F3600803144 /* OAAttachment.m */,
+				CB4B6B9214CB2F3600803144 /* OACall.h */,
+				CB4B6B9314CB2F3600803144 /* OACall.m */,
+				CB4B6B9414CB2F3600803144 /* OAConsumer.h */,
+				CB4B6B9514CB2F3600803144 /* OAConsumer.m */,
+				CB4B6B9614CB2F3600803144 /* OADataFetcher.h */,
+				CB4B6B9714CB2F3600803144 /* OADataFetcher.m */,
+				CB4B6B9814CB2F3600803144 /* OAHMAC_SHA1SignatureProvider.h */,
+				CB4B6B9914CB2F3600803144 /* OAHMAC_SHA1SignatureProvider.m */,
+				CB4B6B9A14CB2F3600803144 /* OAMutableURLRequest.h */,
+				CB4B6B9B14CB2F3600803144 /* OAMutableURLRequest.m */,
+				CB4B6B9C14CB2F3600803144 /* OAPlaintextSignatureProvider.h */,
+				CB4B6B9D14CB2F3600803144 /* OAPlaintextSignatureProvider.m */,
+				CB4B6B9E14CB2F3600803144 /* OAProblem.h */,
+				CB4B6B9F14CB2F3600803144 /* OAProblem.m */,
+				CB4B6BA014CB2F3600803144 /* OARequestParameter.h */,
+				CB4B6BA114CB2F3600803144 /* OARequestParameter.m */,
+				CB4B6BA214CB2F3600803144 /* OAServiceTicket.h */,
+				CB4B6BA314CB2F3600803144 /* OAServiceTicket.m */,
+				CB4B6BA414CB2F3600803144 /* OASignatureProviding.h */,
+				CB4B6BA514CB2F3600803144 /* OATestServer.rb */,
+				CB4B6BA614CB2F3600803144 /* OAToken.h */,
+				CB4B6BA714CB2F3600803144 /* OAToken.m */,
+				CB4B6BA814CB2F3600803144 /* OATokenManager.h */,
+				CB4B6BA914CB2F3600803144 /* OATokenManager.m */,
+				CB4B6BAA14CB2F3600803144 /* OAuthConsumer.h */,
+				CB4B6BAB14CB2F3600803144 /* README */,
+			);
+			path = OAuthConsumer;
+			sourceTree = "<group>";
+		};
+		CB4B6B8214CB2F3600803144 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				CB4B6B8314CB2F3600803144 /* NSMutableURLRequest+Parameters.h */,
+				CB4B6B8414CB2F3600803144 /* NSMutableURLRequest+Parameters.m */,
+				CB4B6B8514CB2F3600803144 /* NSString+URLEncoding.h */,
+				CB4B6B8614CB2F3600803144 /* NSString+URLEncoding.m */,
+				CB4B6B8714CB2F3600803144 /* NSURL+Base.h */,
+				CB4B6B8814CB2F3600803144 /* NSURL+Base.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		CB4B6B8914CB2F3600803144 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				CB4B6B8A14CB2F3600803144 /* Base64Transcoder.c */,
+				CB4B6B8B14CB2F3600803144 /* Base64Transcoder.h */,
+				CB4B6B8C14CB2F3600803144 /* hmac.c */,
+				CB4B6B8D14CB2F3600803144 /* hmac.h */,
+				CB4B6B8E14CB2F3600803144 /* sha1.c */,
+				CB4B6B8F14CB2F3600803144 /* sha1.h */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		CB4B6BAC14CB2F3600803144 /* PSStackedView */ = {
+			isa = PBXGroup;
+			children = (
+				CB4B6BAD14CB2F3600803144 /* src */,
 			);
 			path = PSStackedView;
 			sourceTree = "<group>";
 		};
-		CB4B6A8E14C810F600803144 /* src */ = {
+		CB4B6BAD14CB2F3600803144 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				CB4B6A8F14C810F600803144 /* PSStackedView.h */,
-				CB4B6A9014C810F600803144 /* PSStackedViewController.h */,
-				CB4B6A9114C810F600803144 /* PSStackedViewController.m */,
-				CB4B6A9214C810F600803144 /* PSStackedViewDelegate.h */,
-				CB4B6A9314C810F600803144 /* PSStackedViewGlobal.h */,
-				CB4B6A9414C810F600803144 /* PSStackedViewGlobal.m */,
-				CB4B6A9514C810F600803144 /* PSSVContainerView.h */,
-				CB4B6A9614C810F600803144 /* PSSVContainerView.m */,
-				CB4B6A9714C810F600803144 /* UIView+PSSizes.h */,
-				CB4B6A9814C810F600803144 /* UIView+PSSizes.m */,
-				CB4B6A9914C810F600803144 /* UIViewController+PSStackedView.h */,
-				CB4B6A9A14C810F600803144 /* UIViewController+PSStackedView.m */,
+				CB4B6BAE14CB2F3600803144 /* PSStackedView.h */,
+				CB4B6BAF14CB2F3600803144 /* PSStackedViewController.h */,
+				CB4B6BB014CB2F3600803144 /* PSStackedViewController.m */,
+				CB4B6BB114CB2F3600803144 /* PSStackedViewDelegate.h */,
+				CB4B6BB214CB2F3600803144 /* PSStackedViewGlobal.h */,
+				CB4B6BB314CB2F3600803144 /* PSStackedViewGlobal.m */,
+				CB4B6BB414CB2F3600803144 /* PSSVContainerView.h */,
+				CB4B6BB514CB2F3600803144 /* PSSVContainerView.m */,
+				CB4B6BB614CB2F3600803144 /* UIView+PSSizes.h */,
+				CB4B6BB714CB2F3600803144 /* UIView+PSSizes.m */,
+				CB4B6BB814CB2F3600803144 /* UIViewController+PSStackedView.h */,
+				CB4B6BB914CB2F3600803144 /* UIViewController+PSStackedView.m */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		CB4B6C2814CC32E100803144 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CB4B6C2914CC32E200803144 /* ConnectionController.h */,
+				CB4B6C2A14CC32E200803144 /* ConnectionController.m */,
+				CB4B6C2B14CC32E200803144 /* WebViewController.h */,
+				CB4B6C2C14CC32E200803144 /* WebViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -682,8 +715,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 62DB584D14C1D7C90002B1DA /* Products */;
-					ProjectRef = 62DB584C14C1D7C90002B1DA /* facebook-ios-sdk.xcodeproj */;
+					ProductGroup = CB4B6B6614CB2F3600803144 /* Products */;
+					ProjectRef = CB4B6B6514CB2F3600803144 /* facebook-ios-sdk.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -694,11 +727,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		62DB587814C1D7C90002B1DA /* libfacebook_ios_sdk.a */ = {
+		CB4B6BE314CB2F3700803144 /* libfacebook_ios_sdk.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libfacebook_ios_sdk.a;
-			remoteRef = 62DB587714C1D7C90002B1DA /* PBXContainerItemProxy */;
+			remoteRef = CB4B6BE214CB2F3700803144 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -709,14 +742,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B71228F14BCC26F00F2C5B6 /* InfoPlist.strings in Resources */,
-				4B71229014BCC26F00F2C5B6 /* MainWindow.xib in Resources */,
-				62DB586C14C1D7C90002B1DA /* FBDialog.bundle in Resources */,
-				62D12D3114C646DE0033376E /* OATestServer.rb in Resources */,
-				62D12D3414C646DE0033376E /* README in Resources */,
-				CB4B6A8A14C8109700803144 /* background.png in Resources */,
-				CB4B6A8B14C8109700803144 /* NewGlow.png in Resources */,
-				CB4B6A8C14C8109700803144 /* NewGlow@2x.png in Resources */,
-				CB4B6AB914C815DF00803144 /* MainWindow-iPad.xib in Resources */,
+				CB4B6AE914CB292E00803144 /* MainWindow-iPad.xib in Resources */,
+				CB4B6AEA14CB292E00803144 /* MainWindow.xib in Resources */,
+				CB4B6B6014CB2E1800803144 /* background.png in Resources */,
+				CB4B6B6114CB2E1800803144 /* NewGlow.png in Resources */,
+				CB4B6B6214CB2E1800803144 /* NewGlow@2x.png in Resources */,
+				CB4B6BBE14CB2F3600803144 /* FBDialog.bundle in Resources */,
+				CB4B6BD814CB2F3600803144 /* OATestServer.rb in Resources */,
+				CB4B6BDB14CB2F3600803144 /* README in Resources */,
+				CB4B6C3014CC32F900803144 /* WebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,70 +762,74 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B71229214BCC26F00F2C5B6 /* main.m in Sources */,
-				4B71229414BCC26F00F2C5B6 /* StayConnectedAppDelegate.m in Sources */,
-				62DB582314C1D7BE0002B1DA /* ContactAttributes.m in Sources */,
-				62DB582414C1D7BE0002B1DA /* ContactBaseImpl.m in Sources */,
-				62DB582514C1D7BE0002B1DA /* ContactGroupBaseImpl.m in Sources */,
-				62DB582614C1D7BE0002B1DA /* FacebookAuthoriser.m in Sources */,
-				62DB582714C1D7BE0002B1DA /* FacebookConstants.m in Sources */,
-				62DB582814C1D7BE0002B1DA /* FacebookContact.m in Sources */,
-				62DB582914C1D7BE0002B1DA /* FacebookContactGroup.m in Sources */,
-				62DB582A14C1D7BE0002B1DA /* FacebookContactsProvider.m in Sources */,
-				62DB582B14C1D7BE0002B1DA /* FacebookGetContacts.m in Sources */,
-				62DB582C14C1D7BE0002B1DA /* FacebookSearchContacts.m in Sources */,
-				62DB582D14C1D7BE0002B1DA /* LinkedInConstants.m in Sources */,
-				62DB582E14C1D7BE0002B1DA /* LinkedInContact.m in Sources */,
-				62DB582F14C1D7BE0002B1DA /* LinkedInContactGroup.m in Sources */,
-				62DB583014C1D7BE0002B1DA /* LinkedInContactsProvider.m in Sources */,
-				62DB583D14C1D7BE0002B1DA /* TwitterConstants.m in Sources */,
-				62DB583E14C1D7BE0002B1DA /* TwitterContact.m in Sources */,
-				62DB583F14C1D7BE0002B1DA /* TwitterContactsProvider.m in Sources */,
-				62DB584014C1D7BE0002B1DA /* TwitterCreateNewContacts.m in Sources */,
-				62DB584114C1D7BE0002B1DA /* TwitterGetContacts.m in Sources */,
-				62DB584214C1D7BE0002B1DA /* TwitterRequestExecutor.m in Sources */,
-				62DB584314C1D7BE0002B1DA /* TwitterRequestUtil.m in Sources */,
-				62DB584414C1D7BE0002B1DA /* TwitterSearchContacts.m in Sources */,
-				62DB584514C1D7BE0002B1DA /* TwitterSendMessage.m in Sources */,
-				62DB584614C1D7BE0002B1DA /* Constants.m in Sources */,
-				62DB584714C1D7BE0002B1DA /* StayConnectedError.m in Sources */,
-				62DB586B14C1D7C90002B1DA /* Facebook.m in Sources */,
-				62DB586D14C1D7C90002B1DA /* FBDialog.m in Sources */,
-				62DB586E14C1D7C90002B1DA /* FBLoginDialog.m in Sources */,
-				62DB586F14C1D7C90002B1DA /* FBRequest.m in Sources */,
-				62DB587014C1D7C90002B1DA /* NSObject+SBJSON.m in Sources */,
-				62DB587114C1D7C90002B1DA /* NSString+SBJSON.m in Sources */,
-				62DB587214C1D7C90002B1DA /* SBJSON.m in Sources */,
-				62DB587314C1D7C90002B1DA /* SBJsonBase.m in Sources */,
-				62DB587414C1D7C90002B1DA /* SBJsonParser.m in Sources */,
-				62DB587514C1D7C90002B1DA /* SBJsonWriter.m in Sources */,
-				62D12D2114C646DE0033376E /* NSMutableURLRequest+Parameters.m in Sources */,
-				62D12D2214C646DE0033376E /* NSString+URLEncoding.m in Sources */,
-				62D12D2314C646DE0033376E /* NSURL+Base.m in Sources */,
-				62D12D2414C646DE0033376E /* Base64Transcoder.c in Sources */,
-				62D12D2514C646DE0033376E /* hmac.c in Sources */,
-				62D12D2614C646DE0033376E /* sha1.c in Sources */,
-				62D12D2714C646DE0033376E /* OAAttachment.m in Sources */,
-				62D12D2814C646DE0033376E /* OACall.m in Sources */,
-				62D12D2914C646DE0033376E /* OAConsumer.m in Sources */,
-				62D12D2A14C646DE0033376E /* OADataFetcher.m in Sources */,
-				62D12D2B14C646DE0033376E /* OAHMAC_SHA1SignatureProvider.m in Sources */,
-				62D12D2C14C646DE0033376E /* OAMutableURLRequest.m in Sources */,
-				62D12D2D14C646DE0033376E /* OAPlaintextSignatureProvider.m in Sources */,
-				62D12D2E14C646DE0033376E /* OAProblem.m in Sources */,
-				62D12D2F14C646DE0033376E /* OARequestParameter.m in Sources */,
-				62D12D3014C646DE0033376E /* OAServiceTicket.m in Sources */,
-				62D12D3214C646DE0033376E /* OAToken.m in Sources */,
-				62D12D3314C646DE0033376E /* OATokenManager.m in Sources */,
-				62D12D3714C646FA0033376E /* OAuthRequestor.m in Sources */,
-				CB4B6A7614C8103900803144 /* StayConnectedRootViewController.m in Sources */,
-				CB4B6A7714C8103900803144 /* StayConnectedStackController.m in Sources */,
-				CB4B6A8314C8108600803144 /* MenuTableViewCell.m in Sources */,
-				CB4B6A8414C8108600803144 /* UIImage+OverlayColor.m in Sources */,
-				CB4B6A9B14C810F600803144 /* PSStackedViewController.m in Sources */,
-				CB4B6A9C14C810F600803144 /* PSStackedViewGlobal.m in Sources */,
-				CB4B6A9D14C810F600803144 /* PSSVContainerView.m in Sources */,
-				CB4B6A9E14C810F600803144 /* UIView+PSSizes.m in Sources */,
-				CB4B6A9F14C810F600803144 /* UIViewController+PSStackedView.m in Sources */,
+				CB4B6AE214CB291400803144 /* AppDelegate.m in Sources */,
+				CB4B6AE314CB291400803144 /* AppMenuViewController.m in Sources */,
+				CB4B6AE414CB291400803144 /* AppStackController.m in Sources */,
+				CB4B6AF914CB2CAC00803144 /* FacebookAuthoriser.m in Sources */,
+				CB4B6AFA14CB2CAC00803144 /* FacebookConstants.m in Sources */,
+				CB4B6AFB14CB2CAC00803144 /* FacebookContact.m in Sources */,
+				CB4B6AFC14CB2CAC00803144 /* FacebookContactGroup.m in Sources */,
+				CB4B6AFD14CB2CAC00803144 /* FacebookContactsProvider.m in Sources */,
+				CB4B6AFE14CB2CAC00803144 /* FacebookGetContacts.m in Sources */,
+				CB4B6AFF14CB2CAC00803144 /* FacebookSearchContacts.m in Sources */,
+				CB4B6B0914CB2CE300803144 /* ContactAttributes.m in Sources */,
+				CB4B6B0A14CB2CE300803144 /* ContactBaseImpl.m in Sources */,
+				CB4B6B0B14CB2CE300803144 /* ContactGroupBaseImpl.m in Sources */,
+				CB4B6B1014CB2D1800803144 /* MenuTableViewCell.m in Sources */,
+				CB4B6B1114CB2D1800803144 /* UIImage+OverlayColor.m in Sources */,
+				CB4B6B1A14CB2D4000803144 /* LinkedInConstants.m in Sources */,
+				CB4B6B1B14CB2D4000803144 /* LinkedInContact.m in Sources */,
+				CB4B6B1C14CB2D4000803144 /* LinkedInContactGroup.m in Sources */,
+				CB4B6B1D14CB2D4000803144 /* LinkedInContactsProvider.m in Sources */,
+				CB4B6B4B14CB2DB400803144 /* TwitterConstants.m in Sources */,
+				CB4B6B4C14CB2DB400803144 /* TwitterContact.m in Sources */,
+				CB4B6B4D14CB2DB400803144 /* TwitterContactsProvider.m in Sources */,
+				CB4B6B4E14CB2DB400803144 /* TwitterCreateNewContacts.m in Sources */,
+				CB4B6B4F14CB2DB400803144 /* TwitterGetContacts.m in Sources */,
+				CB4B6B5014CB2DB400803144 /* TwitterRequestExecutor.m in Sources */,
+				CB4B6B5114CB2DB400803144 /* TwitterRequestUtil.m in Sources */,
+				CB4B6B5214CB2DB400803144 /* TwitterSearchContacts.m in Sources */,
+				CB4B6B5314CB2DB400803144 /* TwitterSendMessage.m in Sources */,
+				CB4B6B5614CB2DD600803144 /* OAuthRequestor.m in Sources */,
+				CB4B6B5B14CB2DF200803144 /* Constants.m in Sources */,
+				CB4B6B5C14CB2DF200803144 /* StayConnectedError.m in Sources */,
+				CB4B6BBD14CB2F3600803144 /* Facebook.m in Sources */,
+				CB4B6BBF14CB2F3600803144 /* FBDialog.m in Sources */,
+				CB4B6BC014CB2F3600803144 /* FBLoginDialog.m in Sources */,
+				CB4B6BC114CB2F3600803144 /* FBRequest.m in Sources */,
+				CB4B6BC214CB2F3600803144 /* NSObject+SBJSON.m in Sources */,
+				CB4B6BC314CB2F3600803144 /* NSString+SBJSON.m in Sources */,
+				CB4B6BC414CB2F3600803144 /* SBJSON.m in Sources */,
+				CB4B6BC514CB2F3600803144 /* SBJsonBase.m in Sources */,
+				CB4B6BC614CB2F3600803144 /* SBJsonParser.m in Sources */,
+				CB4B6BC714CB2F3600803144 /* SBJsonWriter.m in Sources */,
+				CB4B6BC814CB2F3600803144 /* NSMutableURLRequest+Parameters.m in Sources */,
+				CB4B6BC914CB2F3600803144 /* NSString+URLEncoding.m in Sources */,
+				CB4B6BCA14CB2F3600803144 /* NSURL+Base.m in Sources */,
+				CB4B6BCB14CB2F3600803144 /* Base64Transcoder.c in Sources */,
+				CB4B6BCC14CB2F3600803144 /* hmac.c in Sources */,
+				CB4B6BCD14CB2F3600803144 /* sha1.c in Sources */,
+				CB4B6BCE14CB2F3600803144 /* OAAttachment.m in Sources */,
+				CB4B6BCF14CB2F3600803144 /* OACall.m in Sources */,
+				CB4B6BD014CB2F3600803144 /* OAConsumer.m in Sources */,
+				CB4B6BD114CB2F3600803144 /* OADataFetcher.m in Sources */,
+				CB4B6BD214CB2F3600803144 /* OAHMAC_SHA1SignatureProvider.m in Sources */,
+				CB4B6BD314CB2F3600803144 /* OAMutableURLRequest.m in Sources */,
+				CB4B6BD414CB2F3600803144 /* OAPlaintextSignatureProvider.m in Sources */,
+				CB4B6BD514CB2F3600803144 /* OAProblem.m in Sources */,
+				CB4B6BD614CB2F3600803144 /* OARequestParameter.m in Sources */,
+				CB4B6BD714CB2F3600803144 /* OAServiceTicket.m in Sources */,
+				CB4B6BD914CB2F3600803144 /* OAToken.m in Sources */,
+				CB4B6BDA14CB2F3600803144 /* OATokenManager.m in Sources */,
+				CB4B6BDC14CB2F3600803144 /* PSStackedViewController.m in Sources */,
+				CB4B6BDD14CB2F3600803144 /* PSStackedViewGlobal.m in Sources */,
+				CB4B6BDE14CB2F3600803144 /* PSSVContainerView.m in Sources */,
+				CB4B6BDF14CB2F3600803144 /* UIView+PSSizes.m in Sources */,
+				CB4B6BE014CB2F3600803144 /* UIViewController+PSStackedView.m in Sources */,
+				CB4B6C2D14CC32E200803144 /* ConnectionController.m in Sources */,
+				CB4B6C2E14CC32E200803144 /* WebViewController.m in Sources */,
+				CB4B6C3414CC359000803144 /* ActivityLabel.m in Sources */,
+				CB4B6C3714CC3A0F00803144 /* StayConnectedMetrics.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,20 +844,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		4B71228414BCC26F00F2C5B6 /* MainWindow.xib */ = {
+		CB4B6AE514CB292E00803144 /* MainWindow-iPad.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4B71228514BCC26F00F2C5B6 /* en */,
-			);
-			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		CB4B6AB714C815DF00803144 /* MainWindow-iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB4B6AB814C815DF00803144 /* en */,
+				CB4B6AE614CB292E00803144 /* en */,
 			);
 			name = "MainWindow-iPad.xib";
+			sourceTree = "<group>";
+		};
+		CB4B6AE714CB292E00803144 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB4B6AE814CB292E00803144 /* en */,
+			);
+			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

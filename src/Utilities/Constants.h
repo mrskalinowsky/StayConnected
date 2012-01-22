@@ -28,3 +28,7 @@ enum {
     blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0
 
 #define sectionColor            HTML(0x3371A3)
+
+
+#define RELEASE_SAFELY(__POINTER) { [__POINTER release]; __POINTER = nil; }
+#define INVALIDATE_TIMER(__TIMER) { [__TIMER invalidate]; __TIMER = nil; }

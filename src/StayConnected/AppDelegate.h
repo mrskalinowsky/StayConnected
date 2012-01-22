@@ -7,20 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DismissDelegate.h"
 
 @class StayConnectedViewController;
 @class PSStackedViewController;
+@class ContactProvider;
 
-#define XAppDelegate ((StayConnectedAppDelegate *)[[UIApplication sharedApplication] delegate])
+#define XAppDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
-@interface StayConnectedAppDelegate : NSObject <UIApplicationDelegate> {
-    
+@interface AppDelegate : NSObject <UIApplicationDelegate, DismissDelegate> {
+@private    
     UIWindow						*mWindow;	
     PSStackedViewController         *mStackController;
+    ContactProvider                 *mFBProvider;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, strong, readonly) PSStackedViewController *stackController;
-
+@property (nonatomic, strong, readonly) ContactProvider *fbProvider;
 
 @end

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StayConnectedRootViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate> {
+@interface AppMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate> {
 @private
     UITableView*                mMenuTable;
     UIViewController*           mCurrentViewController;
