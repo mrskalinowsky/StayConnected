@@ -1,7 +1,5 @@
 #import "TwitterConstants.h"
 #import "TwitterContact.h"
-#import "TwitterContactsProvider.h"
-#import "TwitterRequestExecutor.h"
 #import "TwitterSearchContacts.h"
 
 @interface TwitterSearchContacts ( PrivateMethods )
@@ -16,49 +14,23 @@
 static NSString * const sURLSearch = @"http://api.twitter.com/1/users/search.json";
 static NSString * const sKeyQ      = @"q";
 
-
--( void )dealloc {
-    [ mCallback release ];
-    [ mAttributes release ];
-    [ mSearchString release ];
-    [ mProvider release ];
-    [ super dealloc ];
-}
-
--( id )initWithProvider:( TwitterContactsProvider * )inProvider
-           searchString:( NSString * )inSearchString
-             attributes:( NSArray * )inAttributes
-               callback:( id< ContactsCallback > )inCallback {
-    self = [ super init ];
-    if ( self != nil ) {
-        mProvider = [ inProvider retain ];
-        mSearchString = [ inSearchString retain ];
-        mAttributes = [ inAttributes retain ];
-        mCallback = [ inCallback retain ];
+-( NSArray * )searchContacts:( NSString * )inSearchString
+                  attributes:( NSArray * )inAttributes
+                       error:( NSError ** )outError {
+    NSDictionary * theResults =
+    [ mRequestor httpGet:sURLSearch
+              parameters:[ NSArray arrayWithObjects:sKeyQ, inSearchString, nil ]
+                   error:outError ];
+    if ( outError[ 0 ] != nil ) {
+        return nil;
     }
-    return self;
-}
-
--( void )searchContacts {
-    [ [ mProvider getOAuthRequestor ]
-        httpGet:sURLSearch
-     parameters:[ NSArray arrayWithObjects:sKeyQ, mSearchString, nil ]
-       callback:self ];
-}
-
-// OAuthRequestCallback implementation
--( void )requestComplete:( NSDictionary * )inResult error:( NSError * )inError {
-    if ( inError == nil ) {
-        NSMutableDictionary * theResults = [ [ NSMutableDictionary alloc ] init ];
-        for ( NSDictionary * theResult in inResult ) {
-            [ self addContactFromResult:theResult contacts:theResults ];
-        }
-        [ mCallback onContactsFound:[ theResults allValues ] error:nil ];
-        [ theResults autorelease ];
-    } else {
-        [ mCallback onContactsFound:nil error:inError ];
+    NSMutableDictionary * theContacts = [ [ NSMutableDictionary alloc ] init ];
+    for ( NSDictionary * theResult in theResults ) {
+        [ self addContactFromResult:theResult contacts:theContacts ];
     }
-    [ mProvider requestComplete:self ];
+    NSArray * theFinalContacts = [ theContacts allValues ];
+    [ theContacts release ];
+    return theFinalContacts;
 }
 
 @end

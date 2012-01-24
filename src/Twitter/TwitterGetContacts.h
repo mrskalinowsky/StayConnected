@@ -1,23 +1,11 @@
 #import <Foundation/Foundation.h>
 
-#import "TwitterRequestUtil.h"
+#import "TwitterCommandBaseImpl.h"
 
-@class TwitterContactsProvider;
-@protocol ContactsCallback;
+@interface TwitterGetContacts : TwitterCommandBaseImpl
 
-@interface TwitterGetContacts : TwitterRequestUtil {
-    @private
-    NSArray * mContactIds;
-    NSArray * mAttributes;
-    id< ContactsCallback > mCallback;
-    NSMutableDictionary * mResults;
-}
-
--( void )getContacts;
-
--( id )initWithProvider:( TwitterContactsProvider * )inProvider
-             contactIds:( NSArray * )inContactIds
+-( NSArray * )getContacts:( NSArray * )inContactIds
                attributes:( NSArray * )inAttributes
-                 callback:( id< ContactsCallback > )inCallback;
+                    error:( NSError ** )outError;
 
 @end

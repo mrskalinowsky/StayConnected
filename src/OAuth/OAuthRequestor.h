@@ -1,44 +1,33 @@
 #import <Foundation/Foundation.h>
 
-#import "OAConsumer.h"
-#import "OADataFetcher.h"
-#import "OAToken.h"
+#import "BusyLocker.h"
 
-@protocol OAuthRequestCallback <NSObject>
+@class OAConsumer;
+@class OAToken;
 
--( void )requestComplete:( NSDictionary * )inResult error:( NSError * )inError;
-
-@end
-
-@interface OAuthRequestor : NSObject {
+@interface OAuthRequestor : BusyLocker {
     @private
-    OAConsumer * mOAConsumer;
-    OADataFetcher * mDataFetcher;
-    OAToken * mRequestToken;
-    OAToken * mAccessToken;
-    NSURL * mRequestTokenURL;
-    NSString * mAuthoriseURL;
-    NSURL * mAccessTokenURL;
-    NSString * mCallbackURL;
-    NSString * mMethod;
-    NSURL * mURL;
-    NSArray * mParameters;
-    id< OAuthRequestCallback > mCallback;
+    OAConsumer * mConsumer;
+    OAToken *    mToken;
+    NSString *   mRequestTokenURL;
+    NSString *   mAuthoriseURL;
+    NSString *   mAccessTokenURL;
+    NSString *   mCallbackURL;
 }
 
--( void )httpGet:( NSString * )inURL
-      parameters:( NSArray * )inParameters
-        callback:( id< OAuthRequestCallback > )inCallback;
+-( NSDictionary * )httpGet:( NSString * )inURL
+                parameters:( NSArray * )inParameters
+                     error:( NSError ** )outError;
 
--( void )httpPost:( NSString * )inURL
-       parameters:( NSArray * )inParameters
-         callback:( id< OAuthRequestCallback > )inCallback;
+-( NSDictionary * )httpPost:( NSString * )inURL
+                 parameters:( NSArray * )inParameters
+                      error:( NSError ** )outError;
 
 -( id )initWithKey:( NSString * )inKey
             secret:( NSString * )inSecret
-   tokenRequestURL:( NSString * )inTokenRequestURL
+   requestTokenURL:( NSString * )inRequestTokenURL
       authoriseURL:( NSString * )inAuthoriseURL
-    tokenaccessURL:( NSString * )inAccessURL
+    accessTokenURL:( NSString * )inAccessTokenURL
     callbackSuffix:( NSString * )inCallbackSuffix;
 
 -( BOOL )openURL:( NSURL * )inURL;

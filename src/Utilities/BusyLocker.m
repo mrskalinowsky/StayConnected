@@ -1,26 +1,18 @@
-#import "TwitterContactsProvider.h"
-#import "TwitterRequestUtil.h"
+#import "BusyLocker.h"
 
-@implementation TwitterRequestUtil
+@implementation BusyLocker
 
 -( void )dealloc {
     [ mLock release ];
-    [ mProvider release ];
     [ super dealloc ];
 }
 
--( id )initWithProvider:( TwitterContactsProvider * )inProvider {
+-( id )init {
     self = [ super init ];
     if ( self != nil ) {
-        mProvider = [ inProvider retain ];
         mLock = [ [ NSCondition alloc ] init ];
-        mIsBusy = FALSE;
     }
     return self;
-}
-
--( void )requestComplete {
-    [ mProvider requestComplete:self ];
 }
 
 -( void )setBusy:( BOOL )inBusy {

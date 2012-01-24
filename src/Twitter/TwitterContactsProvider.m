@@ -10,18 +10,14 @@
 
 static NSString * sKey             = @"tXgnFM29DuKawZXbr1FfiA";
 static NSString * sSecret          = @"KX2nKmTNz1Rc0mV6FDFB5i7vjUBYupGEjcZn1gguvw";
-static NSString * sTokenRequestURL = @"https://twitter.com/oauth/request_token";
+static NSString * sRequestTokenURL = @"https://twitter.com/oauth/request_token";
 static NSString * sAuthoriseURL    = @"https://twitter.com/oauth/authorize";
-static NSString * sTokenAccessURL  = @"https://twitter.com/oauth/access_token";
+static NSString * sAccessTokenURL  = @"https://twitter.com/oauth/access_token";
 static NSString * sCallbackSuffix  = @"twitter";
 
 -( void )dealloc {
     [ mOAuthRequestor release ];
     [ super dealloc ];
-}
-
--( OAuthRequestor * )getOAuthRequestor {
-    return mOAuthRequestor;
 }
 
 -( id )init {
@@ -30,36 +26,52 @@ static NSString * sCallbackSuffix  = @"twitter";
         mOAuthRequestor =
         [ [ OAuthRequestor alloc ] initWithKey:sKey
                                         secret:sSecret
-                               tokenRequestURL:sTokenRequestURL
+                               requestTokenURL:sRequestTokenURL
                                   authoriseURL:sAuthoriseURL
-                                tokenaccessURL:sTokenAccessURL
+                                accessTokenURL:sAccessTokenURL
                                 callbackSuffix:sCallbackSuffix ];
     }
     return self;
 }
 
-// ContactsProvider Implementation
--( void )createNewContacts:( NSArray * )inContacts
-                   message:( NSString * )inMessage
-                  callback:( id< NewContactsCallback > )inCallback {
+-( void )backgroundCreateNewContacts:( CreateNewContactsArgs * )inArgs {
     TwitterCreateNewContacts * theCreateNewContacts =
-    [ [ TwitterCreateNewContacts alloc ] initWithProvider:self
-                                               contactIds:inContacts
-                                                 callback:inCallback ];
-    [ theCreateNewContacts createNewContacts ];
-    // theCreateNewContacts is released later in requestComplete
+     [ [ TwitterCreateNewContacts alloc ] initWithRequestor:mOAuthRequestor ];
+    NSError * theError = nil;
+    [ theCreateNewContacts createNewContacts:inArgs.contacts error:&theError ];
+    [ inArgs.callback onContactsRequested:theError ];
+    [ theCreateNewContacts release ];
 }
 
--( void )getContacts:( NSArray * )inContactIds
-          attributes:( NSArray * )inAttributes
-            callback:( id< ContactsCallback > )inCallback {
+-( void )backgroundGetContacts:( GetContactsArgs * )inArgs {
     TwitterGetContacts * theGetContacts =
-    [ [ TwitterGetContacts alloc ] initWithProvider:self
-                                         contactIds:inContactIds
-                                         attributes:inAttributes
-                                           callback:inCallback ];
-    [ theGetContacts getContacts ];
-    // theGetContacts is released later in requestComlete
+     [ [ TwitterGetContacts alloc ] initWithRequestor:mOAuthRequestor ];
+    NSError * theError = nil;
+    NSArray * theContacts = [ theGetContacts getContacts:inArgs.contactIds
+                                              attributes:inArgs.attributes
+                                                   error:&theError ];
+    [ inArgs.callback onContactsFound:theContacts error:theError ];
+    [ theGetContacts release ];
+}
+
+-( void )backgroundSearchForContacts:( SearchForContactsArgs * )inArgs {
+    TwitterSearchContacts * theSearchContacts =
+     [ [ TwitterSearchContacts alloc ] initWithRequestor:mOAuthRequestor ];
+    NSError * theError = nil;
+    NSArray * theContacts = [ theSearchContacts searchContacts:inArgs.searchString
+                                                    attributes:inArgs.attributes
+                                                         error:&theError ];
+    [ inArgs.callback onContactsFound:theContacts error:theError ];
+    [ theSearchContacts release ];
+}
+
+-( void )backgroundSendMessage:( SendMessageArgs * )inArgs {
+    TwitterSendMessage * theSendMessage =
+     [ [ TwitterSendMessage alloc ] initWithRequestor:mOAuthRequestor ];
+    NSError * theError = nil;
+    [ theSendMessage sendMessage:inArgs.contacts message:inArgs.message error:&theError ];
+    [ inArgs.callback onMessageSent:theError ];
+    [ theSendMessage release ];
 }
 
 -( NSString * )getName {
@@ -67,34 +79,7 @@ static NSString * sCallbackSuffix  = @"twitter";
 }
 
 -( BOOL )openURL:( NSURL * )inURL {
-    return FALSE;
+    return [ mOAuthRequestor openURL:inURL ];
 }
 
--( void )requestComplete:( id )inRequestObject {
-    [ inRequestObject release ];
-}
-
--( void )searchForContacts:( NSString * )inSearchString
-                attributes:( NSArray * )inAttributes
-                  callback:( id< ContactsCallback > )inCallback {
-    TwitterSearchContacts * theSearchContacts =
-    [ [ TwitterSearchContacts alloc ] initWithProvider:self
-                                         searchString:inSearchString
-                                         attributes:inAttributes
-                                           callback:inCallback ];
-    [ theSearchContacts searchContacts ];
-    // theSearchContacts is released later in requestComlete
-}
-
--( void )sendMessage:( NSArray * )inContacts
-             message:( NSString * )inMessage
-            callback:( id< SendMessageCallback > )inCallback {
-    TwitterSendMessage * theSendMessage =
-    [ [ TwitterSendMessage alloc ] initWithProvider:self
-                                           contacts:inContacts
-                                            message:inMessage
-                                           callback:inCallback ];
-    [ theSendMessage sendMessage ];
-    // theSendMessage is released later in requestComlete
-}
 @end

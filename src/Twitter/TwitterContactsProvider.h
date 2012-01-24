@@ -1,16 +1,12 @@
 #import <Foundation/Foundation.h>
 
-#import "ContactsProvider.h"
+#import "ContactsProviderBaseImpl.h"
 
 @class OAuthRequestor;
 
-@interface TwitterContactsProvider : NSObject < ContactsProvider > {
+@interface TwitterContactsProvider : ContactsProviderBaseImpl {
     @private
     OAuthRequestor * mOAuthRequestor;
-    
 }
-
--( OAuthRequestor * )getOAuthRequestor;
--( void )requestComplete:( id )inRequestObject;
 
 @end

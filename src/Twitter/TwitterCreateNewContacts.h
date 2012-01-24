@@ -1,23 +1,10 @@
 #import <Foundation/Foundation.h>
 
-#import "OAuthRequestor.h"
+#import "TwitterCommandBaseImpl.h"
 
-@protocol NewContactsCallback;
+@interface TwitterCreateNewContacts : TwitterCommandBaseImpl
 
-@interface TwitterCreateNewContacts : NSObject< OAuthRequestCallback > {
-    @private
-    TwitterContactsProvider * mProvider;
-    NSArray * mContactIds;
-    id< NewContactsCallback > mCallback;
-    NSMutableString * mErrors;
-    int mRemainingRequestCount;
-}
-
--( void )createNewContacts;
-
--( id )initWithProvider:( TwitterContactsProvider * )inProvider
-             contactIds:( NSArray * )inContactIds
-               callback:( id< NewContactsCallback > )inCallback;
+-( void )createNewContacts:( NSArray * )inContactIds error:( NSError ** )outError;
 
 @end
 

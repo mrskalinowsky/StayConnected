@@ -12,6 +12,12 @@
 		4BBCA72F14BCC1D4004B135E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA72E14BCC1D4004B135E /* UIKit.framework */; };
 		4BBCA73114BCC1D4004B135E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA73014BCC1D4004B135E /* Foundation.framework */; };
 		4BBCA73314BCC1D4004B135E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA73214BCC1D4004B135E /* CoreGraphics.framework */; };
+		6278EEE414CF73D3006F3994 /* ContactBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6278EEDF14CF73D3006F3994 /* ContactBaseImpl.m */; };
+		6278EEE514CF73D3006F3994 /* ContactGroupBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6278EEE114CF73D3006F3994 /* ContactGroupBaseImpl.m */; };
+		6278EEE614CF73D3006F3994 /* ContactsProviderBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6278EEE314CF73D3006F3994 /* ContactsProviderBaseImpl.m */; };
+		6278EEE914CF73EF006F3994 /* OAuthURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6278EEE814CF73EF006F3994 /* OAuthURLConnection.m */; };
+		6278EEEC14CF7428006F3994 /* TwitterCommandBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6278EEEB14CF7428006F3994 /* TwitterCommandBaseImpl.m */; };
+		6278EEEF14CF748D006F3994 /* BusyLocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6278EEEE14CF748D006F3994 /* BusyLocker.m */; };
 		62DB587A14C1D9850002B1DA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DB587914C1D9850002B1DA /* Security.framework */; };
 		62DB587C14C1D98E0002B1DA /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DB587B14C1D98E0002B1DA /* Twitter.framework */; };
 		62DB587E14C1D99B0002B1DA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DB587D14C1D99B0002B1DA /* Accounts.framework */; };
@@ -30,8 +36,6 @@
 		CB4B6AFE14CB2CAC00803144 /* FacebookGetContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6AF614CB2CAC00803144 /* FacebookGetContacts.m */; };
 		CB4B6AFF14CB2CAC00803144 /* FacebookSearchContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6AF814CB2CAC00803144 /* FacebookSearchContacts.m */; };
 		CB4B6B0914CB2CE300803144 /* ContactAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B0214CB2CE300803144 /* ContactAttributes.m */; };
-		CB4B6B0A14CB2CE300803144 /* ContactBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B0414CB2CE300803144 /* ContactBaseImpl.m */; };
-		CB4B6B0B14CB2CE300803144 /* ContactGroupBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B0714CB2CE300803144 /* ContactGroupBaseImpl.m */; };
 		CB4B6B1014CB2D1800803144 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B0D14CB2D1800803144 /* MenuTableViewCell.m */; };
 		CB4B6B1114CB2D1800803144 /* UIImage+OverlayColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B0F14CB2D1800803144 /* UIImage+OverlayColor.m */; };
 		CB4B6B1A14CB2D4000803144 /* LinkedInConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B1314CB2D4000803144 /* LinkedInConstants.m */; };
@@ -43,8 +47,6 @@
 		CB4B6B4D14CB2DB400803144 /* TwitterContactsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B3E14CB2DB400803144 /* TwitterContactsProvider.m */; };
 		CB4B6B4E14CB2DB400803144 /* TwitterCreateNewContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B4014CB2DB400803144 /* TwitterCreateNewContacts.m */; };
 		CB4B6B4F14CB2DB400803144 /* TwitterGetContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B4214CB2DB400803144 /* TwitterGetContacts.m */; };
-		CB4B6B5014CB2DB400803144 /* TwitterRequestExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B4414CB2DB400803144 /* TwitterRequestExecutor.m */; };
-		CB4B6B5114CB2DB400803144 /* TwitterRequestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B4614CB2DB400803144 /* TwitterRequestUtil.m */; };
 		CB4B6B5214CB2DB400803144 /* TwitterSearchContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B4814CB2DB400803144 /* TwitterSearchContacts.m */; };
 		CB4B6B5314CB2DB400803144 /* TwitterSendMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B4A14CB2DB400803144 /* TwitterSendMessage.m */; };
 		CB4B6B5614CB2DD600803144 /* OAuthRequestor.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6B5514CB2DD600803144 /* OAuthRequestor.m */; };
@@ -115,6 +117,18 @@
 		4BBCA72E14BCC1D4004B135E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4BBCA73014BCC1D4004B135E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4BBCA73214BCC1D4004B135E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6278EEDE14CF73D3006F3994 /* ContactBaseImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactBaseImpl.h; sourceTree = "<group>"; };
+		6278EEDF14CF73D3006F3994 /* ContactBaseImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactBaseImpl.m; sourceTree = "<group>"; };
+		6278EEE014CF73D3006F3994 /* ContactGroupBaseImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactGroupBaseImpl.h; sourceTree = "<group>"; };
+		6278EEE114CF73D3006F3994 /* ContactGroupBaseImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactGroupBaseImpl.m; sourceTree = "<group>"; };
+		6278EEE214CF73D3006F3994 /* ContactsProviderBaseImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsProviderBaseImpl.h; sourceTree = "<group>"; };
+		6278EEE314CF73D3006F3994 /* ContactsProviderBaseImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsProviderBaseImpl.m; sourceTree = "<group>"; };
+		6278EEE714CF73EF006F3994 /* OAuthURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthURLConnection.h; sourceTree = "<group>"; };
+		6278EEE814CF73EF006F3994 /* OAuthURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthURLConnection.m; sourceTree = "<group>"; };
+		6278EEEA14CF7428006F3994 /* TwitterCommandBaseImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterCommandBaseImpl.h; sourceTree = "<group>"; };
+		6278EEEB14CF7428006F3994 /* TwitterCommandBaseImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterCommandBaseImpl.m; sourceTree = "<group>"; };
+		6278EEED14CF748D006F3994 /* BusyLocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusyLocker.h; sourceTree = "<group>"; };
+		6278EEEE14CF748D006F3994 /* BusyLocker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusyLocker.m; sourceTree = "<group>"; };
 		62DB587914C1D9850002B1DA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		62DB587B14C1D98E0002B1DA /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		62DB587D14C1D99B0002B1DA /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -145,11 +159,7 @@
 		CB4B6B0014CB2CE300803144 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
 		CB4B6B0114CB2CE300803144 /* ContactAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactAttributes.h; sourceTree = "<group>"; };
 		CB4B6B0214CB2CE300803144 /* ContactAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactAttributes.m; sourceTree = "<group>"; };
-		CB4B6B0314CB2CE300803144 /* ContactBaseImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactBaseImpl.h; sourceTree = "<group>"; };
-		CB4B6B0414CB2CE300803144 /* ContactBaseImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactBaseImpl.m; sourceTree = "<group>"; };
 		CB4B6B0514CB2CE300803144 /* ContactGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactGroup.h; sourceTree = "<group>"; };
-		CB4B6B0614CB2CE300803144 /* ContactGroupBaseImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactGroupBaseImpl.h; sourceTree = "<group>"; };
-		CB4B6B0714CB2CE300803144 /* ContactGroupBaseImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactGroupBaseImpl.m; sourceTree = "<group>"; };
 		CB4B6B0814CB2CE300803144 /* ContactsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsProvider.h; sourceTree = "<group>"; };
 		CB4B6B0C14CB2D1800803144 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
 		CB4B6B0D14CB2D1800803144 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
@@ -173,10 +183,6 @@
 		CB4B6B4014CB2DB400803144 /* TwitterCreateNewContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterCreateNewContacts.m; sourceTree = "<group>"; };
 		CB4B6B4114CB2DB400803144 /* TwitterGetContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterGetContacts.h; sourceTree = "<group>"; };
 		CB4B6B4214CB2DB400803144 /* TwitterGetContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterGetContacts.m; sourceTree = "<group>"; };
-		CB4B6B4314CB2DB400803144 /* TwitterRequestExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterRequestExecutor.h; sourceTree = "<group>"; };
-		CB4B6B4414CB2DB400803144 /* TwitterRequestExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterRequestExecutor.m; sourceTree = "<group>"; };
-		CB4B6B4514CB2DB400803144 /* TwitterRequestUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterRequestUtil.h; sourceTree = "<group>"; };
-		CB4B6B4614CB2DB400803144 /* TwitterRequestUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterRequestUtil.m; sourceTree = "<group>"; };
 		CB4B6B4714CB2DB400803144 /* TwitterSearchContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterSearchContacts.h; sourceTree = "<group>"; };
 		CB4B6B4814CB2DB400803144 /* TwitterSearchContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterSearchContacts.m; sourceTree = "<group>"; };
 		CB4B6B4914CB2DB400803144 /* TwitterSendMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterSendMessage.h; sourceTree = "<group>"; };
@@ -360,9 +366,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6278EEDD14CF73D3006F3994 /* ContactsProviderBase */ = {
+			isa = PBXGroup;
+			children = (
+				6278EEDE14CF73D3006F3994 /* ContactBaseImpl.h */,
+				6278EEDF14CF73D3006F3994 /* ContactBaseImpl.m */,
+				6278EEE014CF73D3006F3994 /* ContactGroupBaseImpl.h */,
+				6278EEE114CF73D3006F3994 /* ContactGroupBaseImpl.m */,
+				6278EEE214CF73D3006F3994 /* ContactsProviderBaseImpl.h */,
+				6278EEE314CF73D3006F3994 /* ContactsProviderBaseImpl.m */,
+			);
+			path = ContactsProviderBase;
+			sourceTree = "<group>";
+		};
 		62DB57CC14C1D7BE0002B1DA /* src */ = {
 			isa = PBXGroup;
 			children = (
+				6278EEDD14CF73D3006F3994 /* ContactsProviderBase */,
 				CB4B6C2814CC32E100803144 /* Controller */,
 				CB4B6A8514C8109700803144 /* Resources */,
 				CB4B6A7E14C8108600803144 /* View */,
@@ -382,11 +402,7 @@
 				CB4B6B0014CB2CE300803144 /* Contact.h */,
 				CB4B6B0114CB2CE300803144 /* ContactAttributes.h */,
 				CB4B6B0214CB2CE300803144 /* ContactAttributes.m */,
-				CB4B6B0314CB2CE300803144 /* ContactBaseImpl.h */,
-				CB4B6B0414CB2CE300803144 /* ContactBaseImpl.m */,
 				CB4B6B0514CB2CE300803144 /* ContactGroup.h */,
-				CB4B6B0614CB2CE300803144 /* ContactGroupBaseImpl.h */,
-				CB4B6B0714CB2CE300803144 /* ContactGroupBaseImpl.m */,
 				CB4B6B0814CB2CE300803144 /* ContactsProvider.h */,
 			);
 			path = ContactsProvider;
@@ -431,6 +447,8 @@
 		62DB57EF14C1D7BE0002B1DA /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
+				6278EEE714CF73EF006F3994 /* OAuthURLConnection.h */,
+				6278EEE814CF73EF006F3994 /* OAuthURLConnection.m */,
 				CB4B6B5414CB2DD600803144 /* OAuthRequestor.h */,
 				CB4B6B5514CB2DD600803144 /* OAuthRequestor.m */,
 			);
@@ -440,6 +458,8 @@
 		62DB580B14C1D7BE0002B1DA /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				6278EEEA14CF7428006F3994 /* TwitterCommandBaseImpl.h */,
+				6278EEEB14CF7428006F3994 /* TwitterCommandBaseImpl.m */,
 				CB4B6B3914CB2DB400803144 /* TwitterConstants.h */,
 				CB4B6B3A14CB2DB400803144 /* TwitterConstants.m */,
 				CB4B6B3B14CB2DB400803144 /* TwitterContact.h */,
@@ -450,10 +470,6 @@
 				CB4B6B4014CB2DB400803144 /* TwitterCreateNewContacts.m */,
 				CB4B6B4114CB2DB400803144 /* TwitterGetContacts.h */,
 				CB4B6B4214CB2DB400803144 /* TwitterGetContacts.m */,
-				CB4B6B4314CB2DB400803144 /* TwitterRequestExecutor.h */,
-				CB4B6B4414CB2DB400803144 /* TwitterRequestExecutor.m */,
-				CB4B6B4514CB2DB400803144 /* TwitterRequestUtil.h */,
-				CB4B6B4614CB2DB400803144 /* TwitterRequestUtil.m */,
 				CB4B6B4714CB2DB400803144 /* TwitterSearchContacts.h */,
 				CB4B6B4814CB2DB400803144 /* TwitterSearchContacts.m */,
 				CB4B6B4914CB2DB400803144 /* TwitterSendMessage.h */,
@@ -465,6 +481,8 @@
 		62DB581E14C1D7BE0002B1DA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				6278EEED14CF748D006F3994 /* BusyLocker.h */,
+				6278EEEE14CF748D006F3994 /* BusyLocker.m */,
 				CB4B6C3114CC336300803144 /* DismissDelegate.h */,
 				CB4B6B5714CB2DF100803144 /* Constants.h */,
 				CB4B6B5814CB2DF200803144 /* Constants.m */,
@@ -773,8 +791,6 @@
 				CB4B6AFE14CB2CAC00803144 /* FacebookGetContacts.m in Sources */,
 				CB4B6AFF14CB2CAC00803144 /* FacebookSearchContacts.m in Sources */,
 				CB4B6B0914CB2CE300803144 /* ContactAttributes.m in Sources */,
-				CB4B6B0A14CB2CE300803144 /* ContactBaseImpl.m in Sources */,
-				CB4B6B0B14CB2CE300803144 /* ContactGroupBaseImpl.m in Sources */,
 				CB4B6B1014CB2D1800803144 /* MenuTableViewCell.m in Sources */,
 				CB4B6B1114CB2D1800803144 /* UIImage+OverlayColor.m in Sources */,
 				CB4B6B1A14CB2D4000803144 /* LinkedInConstants.m in Sources */,
@@ -786,8 +802,6 @@
 				CB4B6B4D14CB2DB400803144 /* TwitterContactsProvider.m in Sources */,
 				CB4B6B4E14CB2DB400803144 /* TwitterCreateNewContacts.m in Sources */,
 				CB4B6B4F14CB2DB400803144 /* TwitterGetContacts.m in Sources */,
-				CB4B6B5014CB2DB400803144 /* TwitterRequestExecutor.m in Sources */,
-				CB4B6B5114CB2DB400803144 /* TwitterRequestUtil.m in Sources */,
 				CB4B6B5214CB2DB400803144 /* TwitterSearchContacts.m in Sources */,
 				CB4B6B5314CB2DB400803144 /* TwitterSendMessage.m in Sources */,
 				CB4B6B5614CB2DD600803144 /* OAuthRequestor.m in Sources */,
@@ -830,6 +844,12 @@
 				CB4B6C2E14CC32E200803144 /* WebViewController.m in Sources */,
 				CB4B6C3414CC359000803144 /* ActivityLabel.m in Sources */,
 				CB4B6C3714CC3A0F00803144 /* StayConnectedMetrics.m in Sources */,
+				6278EEE414CF73D3006F3994 /* ContactBaseImpl.m in Sources */,
+				6278EEE514CF73D3006F3994 /* ContactGroupBaseImpl.m in Sources */,
+				6278EEE614CF73D3006F3994 /* ContactsProviderBaseImpl.m in Sources */,
+				6278EEE914CF73EF006F3994 /* OAuthURLConnection.m in Sources */,
+				6278EEEC14CF7428006F3994 /* TwitterCommandBaseImpl.m in Sources */,
+				6278EEEF14CF748D006F3994 /* BusyLocker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
