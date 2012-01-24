@@ -336,10 +336,10 @@
 			isa = PBXGroup;
 			children = (
 				62DB584914C1D7C90002B1DA /* 3rdparty */,
-				62DB57CC14C1D7BE0002B1DA /* src */,
-				4B71228114BCC26F00F2C5B6 /* StayConnected */,
 				4BBCA72D14BCC1D4004B135E /* Frameworks */,
 				4BBCA72B14BCC1D4004B135E /* Products */,
+				62DB57CC14C1D7BE0002B1DA /* src */,
+				4B71228114BCC26F00F2C5B6 /* StayConnected */,
 			);
 			sourceTree = "<group>";
 		};
@@ -382,16 +382,16 @@
 		62DB57CC14C1D7BE0002B1DA /* src */ = {
 			isa = PBXGroup;
 			children = (
+				62DB57CD14C1D7BE0002B1DA /* ContactsProvider */,
 				6278EEDD14CF73D3006F3994 /* ContactsProviderBase */,
 				CB4B6C2814CC32E100803144 /* Controller */,
-				CB4B6A8514C8109700803144 /* Resources */,
-				CB4B6A7E14C8108600803144 /* View */,
-				62DB57CD14C1D7BE0002B1DA /* ContactsProvider */,
 				62DB57D714C1D7BE0002B1DA /* Facebook */,
 				62DB57E614C1D7BE0002B1DA /* LinkedIn */,
 				62DB57EF14C1D7BE0002B1DA /* OAuth */,
+				CB4B6A8514C8109700803144 /* Resources */,
 				62DB580B14C1D7BE0002B1DA /* Twitter */,
 				62DB581E14C1D7BE0002B1DA /* Utilities */,
+				CB4B6A7E14C8108600803144 /* View */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -447,10 +447,10 @@
 		62DB57EF14C1D7BE0002B1DA /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
-				6278EEE714CF73EF006F3994 /* OAuthURLConnection.h */,
-				6278EEE814CF73EF006F3994 /* OAuthURLConnection.m */,
 				CB4B6B5414CB2DD600803144 /* OAuthRequestor.h */,
 				CB4B6B5514CB2DD600803144 /* OAuthRequestor.m */,
+				6278EEE714CF73EF006F3994 /* OAuthURLConnection.h */,
+				6278EEE814CF73EF006F3994 /* OAuthURLConnection.m */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
@@ -483,9 +483,9 @@
 			children = (
 				6278EEED14CF748D006F3994 /* BusyLocker.h */,
 				6278EEEE14CF748D006F3994 /* BusyLocker.m */,
-				CB4B6C3114CC336300803144 /* DismissDelegate.h */,
 				CB4B6B5714CB2DF100803144 /* Constants.h */,
 				CB4B6B5814CB2DF200803144 /* Constants.m */,
+				CB4B6C3114CC336300803144 /* DismissDelegate.h */,
 				CB4B6B5914CB2DF200803144 /* StayConnectedError.h */,
 				CB4B6B5A14CB2DF200803144 /* StayConnectedError.m */,
 				CB4B6C3514CC3A0E00803144 /* StayConnectedMetrics.h */,
