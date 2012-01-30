@@ -15,13 +15,13 @@
     NSString *   mCallbackURL;
 }
 
--( NSDictionary * )httpGet:( NSString * )inURL
-                parameters:( NSArray * )inParameters
-                     error:( NSError ** )outError;
+-( id )httpGet:( NSString * )inURL
+    parameters:( NSArray * )inParameters
+         error:( NSError ** )outError;
 
--( NSDictionary * )httpPost:( NSString * )inURL
-                 parameters:( NSArray * )inParameters
-                      error:( NSError ** )outError;
+-( id )httpPost:( NSString * )inURL
+     parameters:( NSArray * )inParameters
+          error:( NSError ** )outError;
 
 -( id )initWithKey:( NSString * )inKey
             secret:( NSString * )inSecret

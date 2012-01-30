@@ -49,15 +49,15 @@ static NSString * sURLSep         = @"?";
     [ super dealloc ];
 }
 
--( NSDictionary * )httpGet:( NSString * )inURL
-                parameters:( NSArray * )inParameters
-                     error:( NSError ** )outError {
+-( id )httpGet:( NSString * )inURL
+    parameters:( NSArray * )inParameters
+         error:( NSError ** )outError {
     return [ self httpRequest:sMethodGET url:inURL parameters:inParameters error:outError ];
 }
 
--( NSDictionary * )httpPost:( NSString * )inURL
-                 parameters:( NSArray * )inParameters
-                      error:( NSError ** )outError {
+-( id )httpPost:( NSString * )inURL
+     parameters:( NSArray * )inParameters
+          error:( NSError ** )outError {
     return [ self httpRequest:sMethodPOST url:inURL parameters:inParameters error:outError ];
 }
 
