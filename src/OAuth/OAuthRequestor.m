@@ -23,10 +23,10 @@ static NSString * sURLSep         = @"?";
 -( BOOL )getToken:( NSString * )inTokenURL
             error:( NSError ** )outError
       errorReason:( NSString * )inErrorReason;
--( NSDictionary * )httpRequest:( NSString * )inMethod
-                           url:( NSString * )inURL
-                    parameters:( NSArray * )inParameters
-                         error:( NSError ** )outError;
+-( id )httpRequest:( NSString * )inMethod
+               url:( NSString * )inURL
+        parameters:( NSArray * )inParameters
+             error:( NSError ** )outError;
 -( BOOL )isLoggedIn;
 -( BOOL )login:( NSError ** )outError;
 -( OAuthURLResponse * )oauthRequest:( NSString * )inMethod
@@ -152,10 +152,10 @@ static NSString * sURLSep         = @"?";
     return TRUE;
 }
  
--( NSDictionary * )httpRequest:( NSString * )inMethod
-                           url:( NSString * )inURL
-                    parameters:( NSArray * )inParameters
-                         error:( NSError ** )outError {
+-( id )httpRequest:( NSString * )inMethod
+               url:( NSString * )inURL
+        parameters:( NSArray * )inParameters
+             error:( NSError ** )outError {
     if ( ! [ self login:outError ] ) {
         NSLog(@"Error:%@", outError[ 0 ] );
         return nil;
