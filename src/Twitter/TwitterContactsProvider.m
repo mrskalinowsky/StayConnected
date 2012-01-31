@@ -61,7 +61,7 @@ static NSString * sCallbackSuffix  = @"twitter";
     NSArray * theContacts = [ theSearchContacts searchContacts:inArgs.searchString
                                                     attributes:inArgs.attributes
                                                          error:&theError ];
-    [ inArgs.callback onContactsFound:theContacts error:theError ];
+    [ inArgs.callback onContactsFound:theContacts error:theError ];     
     [ theSearchContacts release ];
 }
 

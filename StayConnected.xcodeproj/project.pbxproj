@@ -21,6 +21,7 @@
 		62DB587A14C1D9850002B1DA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DB587914C1D9850002B1DA /* Security.framework */; };
 		62DB587C14C1D98E0002B1DA /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DB587B14C1D98E0002B1DA /* Twitter.framework */; };
 		62DB587E14C1D99B0002B1DA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DB587D14C1D99B0002B1DA /* Accounts.framework */; };
+		62F0310614D4A3F600EA58DC /* TwitterContactGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0310514D4A3F600EA58DC /* TwitterContactGroup.m */; };
 		CB4B6A6F14C80FCB00803144 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4B6A6E14C80FCB00803144 /* QuartzCore.framework */; };
 		CB4B6A7114C80FD700803144 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4B6A7014C80FD700803144 /* iAd.framework */; };
 		CB4B6AE214CB291400803144 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4B6ADD14CB291400803144 /* AppDelegate.m */; };
@@ -132,6 +133,8 @@
 		62DB587914C1D9850002B1DA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		62DB587B14C1D98E0002B1DA /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		62DB587D14C1D99B0002B1DA /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		62F0310414D4A3F600EA58DC /* TwitterContactGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterContactGroup.h; sourceTree = "<group>"; };
+		62F0310514D4A3F600EA58DC /* TwitterContactGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterContactGroup.m; sourceTree = "<group>"; };
 		CB4B6A6E14C80FCB00803144 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CB4B6A7014C80FD700803144 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		CB4B6ADC14CB291400803144 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -474,6 +477,8 @@
 				CB4B6B4814CB2DB400803144 /* TwitterSearchContacts.m */,
 				CB4B6B4914CB2DB400803144 /* TwitterSendMessage.h */,
 				CB4B6B4A14CB2DB400803144 /* TwitterSendMessage.m */,
+				62F0310414D4A3F600EA58DC /* TwitterContactGroup.h */,
+				62F0310514D4A3F600EA58DC /* TwitterContactGroup.m */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -850,6 +855,7 @@
 				6278EEE914CF73EF006F3994 /* OAuthURLConnection.m in Sources */,
 				6278EEEC14CF7428006F3994 /* TwitterCommandBaseImpl.m in Sources */,
 				6278EEEF14CF748D006F3994 /* BusyLocker.m in Sources */,
+				62F0310614D4A3F600EA58DC /* TwitterContactGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
