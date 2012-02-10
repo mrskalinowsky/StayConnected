@@ -1,11 +1,12 @@
+
 #import <Foundation/Foundation.h>
+#import "ContactsProviderBaseImpl.h"
 
-#import "ContactsProvider.h"
+@class OAuthRequestor;
 
-@class LinkedIn;
-
-@interface LinkedInContactsProvider : NSObject< ContactsProvider >
-
--( void )requestComplete:( id )inRequestObject;
+@interface LinkedInContactsProvider : ContactsProviderBaseImpl {
+    @private
+    OAuthRequestor * mOAuthRequestor;
+}
 
 @end
