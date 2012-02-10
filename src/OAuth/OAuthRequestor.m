@@ -26,12 +26,14 @@ static NSString * sURLSep         = @"?";
 -( id )httpRequest:( NSString * )inMethod
                url:( NSString * )inURL
         parameters:( NSArray * )inParameters
+              body:( NSData * )inBody
              error:( NSError ** )outError;
 -( BOOL )isLoggedIn;
 -( BOOL )login:( NSError ** )outError;
 -( OAuthURLResponse * )oauthRequest:( NSString * )inMethod
                                 url:( NSString * )inURL
-                         parameters:( NSArray * )inParameters;
+                         parameters:( NSArray * )inParameters
+                               body:( NSData * )inBody;
 -( void )setCallbackURL:( OAMutableURLRequest * )inRequest;
 -( NSArray * )stringsToParameters:( NSArray * )inStrings;
 
@@ -52,13 +54,20 @@ static NSString * sURLSep         = @"?";
 -( id )httpGet:( NSString * )inURL
     parameters:( NSArray * )inParameters
          error:( NSError ** )outError {
-    return [ self httpRequest:sMethodGET url:inURL parameters:inParameters error:outError ];
+    return [ self httpRequest:sMethodGET url:inURL parameters:inParameters body:nil error:outError ];
 }
 
 -( id )httpPost:( NSString * )inURL
      parameters:( NSArray * )inParameters
           error:( NSError ** )outError {
-    return [ self httpRequest:sMethodPOST url:inURL parameters:inParameters error:outError ];
+    return [ self httpRequest:sMethodPOST url:inURL parameters:inParameters body:nil error:outError ];
+}
+
+-( id )httpPost:( NSString * )inURL
+     parameters:( NSArray * )inParameters
+           body:( NSData * )inBody
+          error:( NSError ** )outError {
+    return [ self httpRequest:sMethodPOST url:inURL parameters:inParameters body:inBody error:outError ];
 }
 
 -( id )initWithKey:( NSString * )inKey
@@ -133,7 +142,8 @@ static NSString * sURLSep         = @"?";
       errorReason:( NSString * )inErrorReason {
     OAuthURLResponse * theResponse = [ self oauthRequest:sMethodPOST
                                                      url:inTokenURL
-                                              parameters:nil ];
+                                              parameters:nil 
+                                                    body:nil ];
     if ( theResponse.error != nil ) {
         outError[ 0 ] = theResponse.error;
         return FALSE;
@@ -155,6 +165,7 @@ static NSString * sURLSep         = @"?";
 -( id )httpRequest:( NSString * )inMethod
                url:( NSString * )inURL
         parameters:( NSArray * )inParameters
+              body:( NSData * )inBody
              error:( NSError ** )outError {
     if ( ! [ self login:outError ] ) {
         NSLog(@"Error:%@", outError[ 0 ] );
@@ -162,7 +173,8 @@ static NSString * sURLSep         = @"?";
     }
     OAuthURLResponse * theResponse = [ self oauthRequest:inMethod
                                                      url:inURL
-                                              parameters:inParameters ];
+                                              parameters:inParameters
+                                                    body:inBody ];
     outError[ 0 ] = theResponse.error;
     if ( outError[ 0 ] != nil ) {
         return nil;
@@ -202,7 +214,8 @@ static NSString * sURLSep         = @"?";
 
 -( OAuthURLResponse * )oauthRequest:( NSString * )inMethod
                                 url:( NSString * )inURL
-                         parameters:( NSArray * )inParameters {
+                         parameters:( NSArray * )inParameters 
+                               body:( NSData * )inBody {
     OAMutableURLRequest * theRequest =
     [ [ OAMutableURLRequest alloc ] initWithURL:[ NSURL URLWithString:inURL ]
                                        consumer:mConsumer
@@ -211,11 +224,28 @@ static NSString * sURLSep         = @"?";
                               signatureProvider:nil ];
     [ theRequest setHTTPMethod:inMethod ];
     [ self setCallbackURL:theRequest ];
+    
     if ( inParameters != nil ) {
         [ theRequest setParameters:[ self stringsToParameters:inParameters ] ];
     }
+    
+    // Must be called *after* setParameters and *before* setHTTPBody!!
+    [ theRequest prepare ];
+    
+    if ( inBody != nil ) {
+        if ( [ NSJSONSerialization isValidJSONObject:[NSJSONSerialization 
+                                                      JSONObjectWithData:inBody 
+                                                      options:NSJSONWritingPrettyPrinted 
+                                                      error:nil] ] ) {
+            [ theRequest addValue:@"application/json" forHTTPHeaderField:@"Content-type" ];
+            [ theRequest addValue:@"json" forHTTPHeaderField:@"x-li-format" ];
+        }
+        [ theRequest setHTTPBody:[inBody retain] ];
+    }
+
     OAuthURLConnection * theConnection = [ [ OAuthURLConnection alloc ] init ];
     OAuthURLResponse * theResponse = [ theConnection executeRequest:theRequest ];
+
     [ theConnection release ];
     [ theRequest release ];
     return theResponse;

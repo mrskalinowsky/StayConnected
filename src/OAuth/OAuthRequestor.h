@@ -23,6 +23,11 @@
      parameters:( NSArray * )inParameters
           error:( NSError ** )outError;
 
+-( id )httpPost:( NSString * )inURL
+     parameters:( NSArray * )inParameters
+           body:( NSData * )inBody
+          error:( NSError ** )outError;
+
 -( id )initWithKey:( NSString * )inKey
             secret:( NSString * )inSecret
    requestTokenURL:( NSString * )inRequestTokenURL

@@ -12,7 +12,7 @@
 
 @implementation LinkedInSearchContacts
 
-static NSString * const sURLSearch = @"https://api.linkedin.com/v1/people-search:(people:(id,first-name,last-name,formatted-name,location:(name),picture-url,public-profile-url))";
+static NSString * const sURLSearch = @"https://api.linkedin.com/v1/people-search:(people:(id,first-name,last-name,formatted-name,location:(name),picture-url,public-profile-url,api-standard-profile-request))";
 
 -( NSArray * )searchContacts:( NSString * )inSearchString
                   attributes:( NSArray * )inAttributes
@@ -25,10 +25,9 @@ static NSString * const sURLSearch = @"https://api.linkedin.com/v1/people-search
     if ( outError[ 0 ] != nil ) {
         return nil;
     }
-    
+
     NSMutableDictionary * theContacts = [ [ NSMutableDictionary alloc ] init ];
     for ( NSDictionary * theResult in [[theResults valueForKey:@"people"] valueForKey:@"values"] ) {
-        NSLog(@"Contact: %@", [theResult valueForKey:@"formattedName"]);
         [ self addContactFromResult:theResult contacts:theContacts ];
     }
     NSArray * theFinalContacts = [ theContacts allValues ];

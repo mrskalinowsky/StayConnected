@@ -84,7 +84,7 @@ static NSString * const sURLPeople = @"https://api.linkedin.com/v1/people::(%@):
     [ mRequestor httpGet:[ NSString stringWithFormat:sURLPeople, theContactIds ]
               parameters:[ NSArray arrayWithObjects:sKeyFormat, sValueJSON, nil ]
                    error:outError ];
-    
+
     for ( NSDictionary * theResult in [theResults valueForKey:@"values"] ) {
         [ self addContactFromResult:theResult contacts:outContacts ];
     }

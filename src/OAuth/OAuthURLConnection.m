@@ -78,7 +78,6 @@
 
 -( void )initRequest:( OAMutableURLRequest * )inRequest {
     mRequest = [ inRequest retain ];
-    [ mRequest prepare ];
     mConnection = [ [ NSURLConnection alloc ] initWithRequest:mRequest delegate:self ];
 }
 
