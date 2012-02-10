@@ -9,9 +9,14 @@
 /* Begin PBXBuildFile section */
 		4B71228F14BCC26F00F2C5B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B71228214BCC26F00F2C5B6 /* InfoPlist.strings */; };
 		4B71229214BCC26F00F2C5B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B71228814BCC26F00F2C5B6 /* main.m */; };
+		4B98187114E53E3100EC5805 /* LinkedInSendMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B98187014E53E3100EC5805 /* LinkedInSendMessage.m */; };
 		4BBCA72F14BCC1D4004B135E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA72E14BCC1D4004B135E /* UIKit.framework */; };
 		4BBCA73114BCC1D4004B135E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA73014BCC1D4004B135E /* Foundation.framework */; };
 		4BBCA73314BCC1D4004B135E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA73214BCC1D4004B135E /* CoreGraphics.framework */; };
+		4BC2F00414E327E400E5AC76 /* LinkedInGetContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2F00314E327E400E5AC76 /* LinkedInGetContacts.m */; };
+		4BC2F00714E3281300E5AC76 /* LinkedInCommandBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2F00614E3281300E5AC76 /* LinkedInCommandBaseImpl.m */; };
+		4BC2F00A14E5291100E5AC76 /* LinkedInCreateNewContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2F00914E5291100E5AC76 /* LinkedInCreateNewContacts.m */; };
+		4BC2F00D14E5360700E5AC76 /* LinkedInSearchContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2F00C14E5360700E5AC76 /* LinkedInSearchContacts.m */; };
 		6278EEE414CF73D3006F3994 /* ContactBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6278EEDF14CF73D3006F3994 /* ContactBaseImpl.m */; };
 		6278EEE514CF73D3006F3994 /* ContactGroupBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6278EEE114CF73D3006F3994 /* ContactGroupBaseImpl.m */; };
 		6278EEE614CF73D3006F3994 /* ContactsProviderBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6278EEE314CF73D3006F3994 /* ContactsProviderBaseImpl.m */; };
@@ -114,10 +119,20 @@
 		4B71228814BCC26F00F2C5B6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4B71228914BCC26F00F2C5B6 /* StayConnected-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "StayConnected-Info.plist"; sourceTree = "<group>"; };
 		4B71228A14BCC26F00F2C5B6 /* StayConnected-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StayConnected-Prefix.pch"; sourceTree = "<group>"; };
+		4B98186F14E53E3100EC5805 /* LinkedInSendMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInSendMessage.h; sourceTree = "<group>"; };
+		4B98187014E53E3100EC5805 /* LinkedInSendMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInSendMessage.m; sourceTree = "<group>"; };
 		4BBCA72A14BCC1D4004B135E /* StayConnected.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StayConnected.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BBCA72E14BCC1D4004B135E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4BBCA73014BCC1D4004B135E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4BBCA73214BCC1D4004B135E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4BC2F00214E327E400E5AC76 /* LinkedInGetContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInGetContacts.h; sourceTree = "<group>"; };
+		4BC2F00314E327E400E5AC76 /* LinkedInGetContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInGetContacts.m; sourceTree = "<group>"; };
+		4BC2F00514E3281300E5AC76 /* LinkedInCommandBaseImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInCommandBaseImpl.h; sourceTree = "<group>"; };
+		4BC2F00614E3281300E5AC76 /* LinkedInCommandBaseImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInCommandBaseImpl.m; sourceTree = "<group>"; };
+		4BC2F00814E5291100E5AC76 /* LinkedInCreateNewContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInCreateNewContacts.h; sourceTree = "<group>"; };
+		4BC2F00914E5291100E5AC76 /* LinkedInCreateNewContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInCreateNewContacts.m; sourceTree = "<group>"; };
+		4BC2F00B14E5360600E5AC76 /* LinkedInSearchContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInSearchContacts.h; sourceTree = "<group>"; };
+		4BC2F00C14E5360700E5AC76 /* LinkedInSearchContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInSearchContacts.m; sourceTree = "<group>"; };
 		6278EEDE14CF73D3006F3994 /* ContactBaseImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactBaseImpl.h; sourceTree = "<group>"; };
 		6278EEDF14CF73D3006F3994 /* ContactBaseImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactBaseImpl.m; sourceTree = "<group>"; };
 		6278EEE014CF73D3006F3994 /* ContactGroupBaseImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactGroupBaseImpl.h; sourceTree = "<group>"; };
@@ -443,6 +458,16 @@
 				CB4B6B1714CB2D4000803144 /* LinkedInContactGroup.m */,
 				CB4B6B1814CB2D4000803144 /* LinkedInContactsProvider.h */,
 				CB4B6B1914CB2D4000803144 /* LinkedInContactsProvider.m */,
+				4BC2F00214E327E400E5AC76 /* LinkedInGetContacts.h */,
+				4BC2F00314E327E400E5AC76 /* LinkedInGetContacts.m */,
+				4BC2F00514E3281300E5AC76 /* LinkedInCommandBaseImpl.h */,
+				4BC2F00614E3281300E5AC76 /* LinkedInCommandBaseImpl.m */,
+				4BC2F00814E5291100E5AC76 /* LinkedInCreateNewContacts.h */,
+				4BC2F00914E5291100E5AC76 /* LinkedInCreateNewContacts.m */,
+				4BC2F00B14E5360600E5AC76 /* LinkedInSearchContacts.h */,
+				4BC2F00C14E5360700E5AC76 /* LinkedInSearchContacts.m */,
+				4B98186F14E53E3100EC5805 /* LinkedInSendMessage.h */,
+				4B98187014E53E3100EC5805 /* LinkedInSendMessage.m */,
 			);
 			path = LinkedIn;
 			sourceTree = "<group>";
@@ -856,6 +881,11 @@
 				6278EEEC14CF7428006F3994 /* TwitterCommandBaseImpl.m in Sources */,
 				6278EEEF14CF748D006F3994 /* BusyLocker.m in Sources */,
 				62F0310614D4A3F600EA58DC /* TwitterContactGroup.m in Sources */,
+				4BC2F00414E327E400E5AC76 /* LinkedInGetContacts.m in Sources */,
+				4BC2F00714E3281300E5AC76 /* LinkedInCommandBaseImpl.m in Sources */,
+				4BC2F00A14E5291100E5AC76 /* LinkedInCreateNewContacts.m in Sources */,
+				4BC2F00D14E5360700E5AC76 /* LinkedInSearchContacts.m in Sources */,
+				4B98187114E53E3100EC5805 /* LinkedInSendMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
