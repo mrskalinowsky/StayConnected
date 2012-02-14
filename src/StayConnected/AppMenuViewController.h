@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DismissDelegate.h"
+#import "LinkedInContactsProvider.h"
 
-@interface AppMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate> {
+@interface AppMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, DismissDelegate, ContactsCallback> {
 @private
     UITableView*                mMenuTable;
     UIViewController*           mCurrentViewController;
-    CGPoint                     mLastTapLocation; 
+    CGPoint                     mLastTapLocation;
 }
 
 @property (nonatomic, assign, readonly) UITableView* menuView;

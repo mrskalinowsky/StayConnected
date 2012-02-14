@@ -19,6 +19,13 @@ enum {
     ErrOauthFailed
 };
 
+// Table Cell Identifier 
+extern NSString *const UI_KEY_TITLE;
+extern NSString *const UI_KEY_FIRST_VALUE;
+extern NSString *const UI_KEY_SECOND_VALUE;
+extern NSString *const UI_KEY_THIRD_VALUE;
+extern NSString *const UI_KEY_LAST_VALUE;
+
 
 #define RGB(r, g, b) colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1
 #define RGBA(r, g, b, a) colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a

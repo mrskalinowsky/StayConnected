@@ -37,11 +37,11 @@ static const NSDictionary * sMapping = nil;
 +( void )initMapping {
     if ( sMapping == nil ) {
         sMapping = [ [ NSDictionary dictionaryWithObjectsAndKeys:
-                      ( NSString * )CONTACT_ATTR_ID,          sLinkedInAttributeId,
-                      ( NSString * )CONTACT_ATTR_LOCATION,    sLinkedInAttributeLocation,
-                      ( NSString * )CONTACT_ATTR_NAME,        sLinkedInAttributeFormattedName,
-                      ( NSString * )CONTACT_ATTR_PICTURE,     sLinkedInAttributePicture,
-                      ( NSString * )CONTACT_ATTR_WEBSITE,     sLinkedInAttributeWebsite,
+                      ( NSString * )sLinkedInAttributeId,           CONTACT_ATTR_ID,
+                      ( NSString * )sLinkedInAttributeLocation,     CONTACT_ATTR_LOCATION,
+                      ( NSString * )sLinkedInAttributeFormattedName,       CONTACT_ATTR_NAME,
+                      ( NSString * )sLinkedInAttributePicture,      CONTACT_ATTR_PICTURE,
+                      ( NSString * )sLinkedInAttributeWebsite,      CONTACT_ATTR_WEBSITE,
                       nil ] retain ];
     }
 }

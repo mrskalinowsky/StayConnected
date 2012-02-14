@@ -12,6 +12,7 @@
 @class StayConnectedViewController;
 @class PSStackedViewController;
 @class ContactProvider;
+@class LinkedInContactsProvider;
 
 #define XAppDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 

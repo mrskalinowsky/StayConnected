@@ -10,10 +10,15 @@
 #import "AppMenuViewController.h"
 #import "AppStackController.h"
 #import "FacebookContactsProvider.h"
+#import "LinkedInContactsProvider.h"
 #import <objc/runtime.h>
 #import "ConnectionController.h"
 #import "WebViewController.h"
 #import "FacebookConstants.h"
+#import "LinkedInConstants.h"
+#import "TwitterContactsProvider.h"
+#import "ContactAttributes.h"
+#import "LocalContactsController.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) PSStackedViewController *stackController;
@@ -59,7 +64,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     // use our own URL Handler
-    [self swapOpenURLImplementation];
+    //[self swapOpenURLImplementation];
     
     // set the fbProvider, just for testing purposes
     self.fbProvider = [(ContactProvider*)[[FacebookContactsProvider alloc] init] autorelease];
@@ -70,6 +75,12 @@
     
     self.window.rootViewController = self.stackController;
     [self.window makeKeyAndVisible];
+    
+    LocalContactsController * controller = [[[LocalContactsController alloc] initWithStyle:UITableViewStylePlain ] autorelease ];
+    controller.delegate = self;
+    controller.indexNumber = [ XAppDelegate.stackController.viewControllers count ];
+    [ XAppDelegate.stackController pushViewController:controller fromViewController:nil animated:YES];
+
     return YES;
 }
 
@@ -179,6 +190,20 @@
         [self.stackController.modalViewController presentModalViewController:navController animated:YES];
     else
         [self.stackController presentModalViewController:navController animated:YES]; 
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    NSLog(@"%@ openURL %@", [application description], url);
+    if ([ [ url host ] hasSuffix:@"linkedIn" ]) {
+        return [[[[LinkedInContactsProvider alloc] init] autorelease] openURL:url];
+    } else if ([ [ url host ] hasSuffix:@"twitter" ]) {
+        return [[[[TwitterContactsProvider alloc] init] autorelease] openURL:url];
+    } else if ([ [ url absoluteString ] hasPrefix:@"fb" ]) {
+        return [[[[FacebookContactsProvider alloc] init] autorelease] openURL:url];
+    } else {
+        return NO;
+    }
 }
 
 @end

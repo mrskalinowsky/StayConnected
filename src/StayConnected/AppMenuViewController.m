@@ -14,6 +14,11 @@
 #import "AppDelegate.h"
 #import "UIImage+OverlayColor.h"
 #import "FacebookContactsProvider.h"
+#import "ContactAttributes.h"
+#import "LinkedInContactsProvider.h"
+#import "SettingsController.h"
+#import "ProviderContactsController.h"
+#import "LocalContactsController.h"
 
 typedef enum {
     SectionMenuContacts = 0,
@@ -158,7 +163,7 @@ typedef enum {
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
         case SectionMenuContacts:
-            return 2; 
+            return 3; 
         case SectionMenuAccounts:
             return 6; 
         case SectionMenuSettings:
@@ -178,10 +183,14 @@ typedef enum {
         case SectionMenuContacts:
             switch (indexPath.row) {
                 case 0:
+                    cell.textLabel.text = NSLocalizedString(@"Contacts",@"Contacts");  
+                    cell.imageView.image = [UIImage imageNamed:@"symb-dates"]; 
+                    break;
+                case 1:
                     cell.textLabel.text = NSLocalizedString(@"Connect ...",@"Connect");  
                     cell.imageView.image = [UIImage imageNamed:@"symb-dates"];                    
                     break;
-                case 1:
+                case 2:
                     cell.textLabel.text = NSLocalizedString(@"Synchronize ...", @"Synchronize ...");
                     cell.imageView.image = [UIImage imageNamed:@"symb-plus"];
                     break;
@@ -244,15 +253,60 @@ typedef enum {
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {    
     
+    PSStackedViewController * stackController = XAppDelegate.stackController;
+    
+    NSInteger viewControllerCount = [[stackController viewControllers] count ];
+    
+    if ( viewControllerCount > 0 ) {
+        NSArray * poppedControllers = [ stackController popToRootViewControllerAnimated:YES ];
+        for (UIViewController * theController in poppedControllers) {
+            [theController release];
+        }
+    }
+    
     switch (indexPath.section) {
+        case SectionMenuContacts: {
+            switch (indexPath.row) {
+                case 0: {
+                    LocalContactsController * controller = [[[LocalContactsController alloc] initWithStyle:UITableViewStylePlain ] autorelease ];
+                    controller.delegate = self;
+                    controller.indexNumber = [ stackController.viewControllers count ];
+                    [ stackController pushViewController:controller fromViewController:nil animated:YES];
+                    break;
+                }
+            }
+            break;
+        }
         case SectionMenuAccounts: {
             switch (indexPath.row) {
+                case 0: {
+                    SettingsController * viewController = 
+                    [ [ [ SettingsController alloc ] initWithStyle:UITableViewStyleGrouped ] retain ];
+                    viewController.indexNumber = [ stackController.viewControllers count ];
+                    viewController.delegate = self;
+                    [ stackController pushViewController:viewController fromViewController:nil animated:YES ];
+                    break;
+                }
                 case 1: {
                     [XAppDelegate.fbProvider getContacts:nil attributes:nil callback:nil];
                 }   break;
+                case 4: {
+                    LinkedInContactsProvider * linkedInProvider = [ [ LinkedInContactsProvider alloc ] init ];
+                    ProviderContactsController * controller = [[[ProviderContactsController alloc] initWithStyle:UITableViewStylePlain provider:linkedInProvider ] autorelease ];
+                    controller.delegate = self;
+                    controller.indexNumber = [ stackController.viewControllers count ];
+                    [ stackController pushViewController:controller fromViewController:nil animated:YES];
+                    break;
+                }
             }
         }
     }
+}
+
+#pragma mark -
+#pragma mark ContactsCallback
+-( void )onContactsFound:(NSArray *)inContacts error:(NSError *)inError {
+    NSLog(@"onContactsFound");
 }
 
 #pragma mark -
@@ -260,7 +314,15 @@ typedef enum {
 - (void)handleTap:(UITapGestureRecognizer *)sender {     
     if (sender.state == UIGestureRecognizerStateEnded)     {
         mLastTapLocation = [sender locationInView:self.view];
-    } 
+    }
+    NSLog(@"handleTap");
+}
+
+#pragma mark -
+#pragma mark DismissDelegate
+- (void) dismiss:(UIViewController *)controller {
+	NSLog(@"Dismiss");
+    [ XAppDelegate.stackController popToRootViewControllerAnimated:YES ]; 
 }
 
 @end
