@@ -16,6 +16,7 @@
     UIViewController *          mCurrentViewController;
     UIViewController *          mAllContactsViewController;
     CGPoint                     mLastTapLocation;
+    NSArray                   * mAccounts;
 }
 
 @property (nonatomic, assign, readonly) UITableView* menuView;

@@ -15,6 +15,7 @@
     
 	NSArray					*_menuList;
     id<DismissDelegate>		_delegate;
+    NSString                * mSelectedAccount;
 }
 
 @property (nonatomic, assign) id<DismissDelegate> delegate;

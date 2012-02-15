@@ -16,9 +16,13 @@
 #import "FacebookContactsProvider.h"
 #import "ContactAttributes.h"
 #import "LinkedInContactsProvider.h"
+#import "TwitterContactsProvider.h"
+#import "ContactsProviderBaseImpl.h"
 #import "SettingsController.h"
 #import "ProviderContactsController.h"
 #import "LocalContactsController.h"
+#import "DataStore.h"
+#import "Account.h"
 
 typedef enum {
     SectionMenuContacts = 0,
@@ -30,6 +34,7 @@ typedef enum {
 
 - (void) allContactsClicked:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
 - (void) addProviderClicked:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
+- (void) accountClicked:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
 
 @end
 
@@ -43,6 +48,17 @@ typedef enum {
 
 @synthesize popoverController = mPopoverController;
 @synthesize menuView = mMenuTable;
+
+- (id) init {
+    self = [ super init ];
+    if ( self != nil ) {
+        NSMutableArray * accounts = [[NSMutableArray alloc] 
+                                     initWithArray:[ DataStore 
+                                                    fetchAccounts:[ AppDelegate managedObjectContext ] ] ];
+        mAccounts = [ accounts retain ];
+    }
+    return self;
+}
 
 #pragma - Badge Handling
 - (NSUInteger) badgeNumber {
@@ -113,6 +129,9 @@ typedef enum {
     
     mAllContactsViewController = [[[LocalContactsController alloc] initWithStyle:UITableViewStylePlain ] retain ];
     ((LocalContactsController * ) mAllContactsViewController).delegate = self;
+    
+    mAccounts = [[NSArray alloc] initWithArray:[ DataStore fetchAccounts:[ AppDelegate managedObjectContext ] ] ];
+    NSLog(@"Loaded %d accounts", [mAccounts count]);
 }
 
 - (void)viewDidUnload {
@@ -124,7 +143,7 @@ typedef enum {
             
     [mMenuTable release];
     mMenuTable = nil;
-    
+    [mAccounts release];
     [super viewDidUnload];    
 }
 
@@ -176,7 +195,7 @@ typedef enum {
         case SectionMenuContacts:
             return 3; 
         case SectionMenuAccounts:
-            return 6; 
+            return [mAccounts count] + 1;
         case SectionMenuSettings:
             return 2;
     }
@@ -212,26 +231,12 @@ typedef enum {
                     cell.textLabel.text = NSLocalizedString(@"Add ...", @"Add ...");
                     cell.imageView.image = [UIImage imageNamed:@"symb-all"];
                     break;
-                case 1:
-                    cell.textLabel.text = [NSString stringWithFormat:@"┖► %@", NSLocalizedString(@"Facebook", @"Facebook")];
-                    cell.imageView.image = [UIImage imageNamed:@"symb-fb"];
-                    break;
-                case 2:
-                    cell.textLabel.text = [NSString stringWithFormat:@"┖► %@", NSLocalizedString(@"Twitter", @"Twitter")];
+                default: {
+                    Account * theAccount = (Account *) [mAccounts objectAtIndex:indexPath.row - 1];
+                    cell.textLabel.text = theAccount.type;
                     cell.imageView.image = [UIImage imageNamed:@"symb-star"];
                     break;
-                case 3:
-                    cell.textLabel.text = [NSString stringWithFormat:@"┖► %@", NSLocalizedString(@"Google", @"Google")];
-                    cell.imageView.image = [UIImage imageNamed:@"symb-star"];
-                    break;
-                case 4:
-                    cell.textLabel.text = [NSString stringWithFormat:@"┖► %@", NSLocalizedString(@"LinkedIn", @"LinkedIn")];
-                    cell.imageView.image = [UIImage imageNamed:@"symb-flag"];
-                    break;
-                default:
-                    cell.textLabel.text = NSLocalizedString(@"Xing", @"Xing");
-                    cell.imageView.image = [UIImage imageNamed:@"symb-trash"];
-                    break;
+                }
             }
         }   break;
         case SectionMenuSettings: 
@@ -264,21 +269,11 @@ typedef enum {
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {    
     
-    PSStackedViewController * stackController = XAppDelegate.stackController;
-    
     switch (indexPath.section) {
         case SectionMenuContacts: {
             switch (indexPath.row) {
                 case 0: {
-                    //[ self allContactsClicked:<#(UITableView *)#> indexPath:<#(NSIndexPath *)#> ];
-                    UIViewController * topController = stackController.topViewController;
-                    if (![topController isKindOfClass:[LocalContactsController class]]) {
-                        NSLog(@"no LocalContactsController");
-                        ((LocalContactsController * ) mAllContactsViewController).indexNumber = [ stackController.viewControllers count ];
-                        [ stackController pushViewController:mAllContactsViewController fromViewController:stackController.rootViewController animated:NO];
-                    } else {
-                        NSLog(@"is LocalContactsController");
-                    }
+                    [ self allContactsClicked:tableView indexPath:indexPath ];
                     break;
                 }
             }
@@ -287,22 +282,11 @@ typedef enum {
         case SectionMenuAccounts: {
             switch (indexPath.row) {
                 case 0: {
-                    SettingsController * viewController = 
-                    [ [ [ SettingsController alloc ] initWithStyle:UITableViewStyleGrouped ] retain ];
-                    viewController.indexNumber = [ stackController.viewControllers count ];
-                    viewController.delegate = self;
-                    [ stackController pushViewController:viewController fromViewController:nil animated:YES ];
+                    [ self addProviderClicked:tableView indexPath:indexPath ];
                     break;
                 }
-                case 1: {
-                    [XAppDelegate.fbProvider getContacts:nil attributes:nil callback:nil];
-                }   break;
-                case 4: {
-                    LinkedInContactsProvider * linkedInProvider = [ [ LinkedInContactsProvider alloc ] init ];
-                    ProviderContactsController * controller = [[[ProviderContactsController alloc] initWithStyle:UITableViewStylePlain provider:linkedInProvider ] autorelease ];
-                    controller.delegate = self;
-                    controller.indexNumber = [ stackController.viewControllers count ];
-                    [ stackController pushViewController:controller fromViewController:nil animated:YES];
+                default: {
+                    [ self accountClicked:tableView indexPath:indexPath ];
                     break;
                 }
             }
@@ -338,10 +322,54 @@ typedef enum {
 
 - (void) allContactsClicked:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
     
+    PSStackedViewController * stackController = XAppDelegate.stackController;
+    UIViewController * topController = stackController.topViewController;
+    
+    if (![topController isKindOfClass:[LocalContactsController class]]) {
+        ((LocalContactsController * ) mAllContactsViewController).indexNumber = [ stackController.viewControllers count ];
+        [ stackController pushViewController:mAllContactsViewController fromViewController:stackController.rootViewController animated:NO];
+    }
 }
 
 - (void) addProviderClicked:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
     
+    PSStackedViewController * stackController = XAppDelegate.stackController;
+    UIViewController * topController = stackController.topViewController;
+    
+    if (![topController isKindOfClass:[SettingsController class]]) {
+        SettingsController * viewController = 
+        [ [ [ SettingsController alloc ] initWithStyle:UITableViewStyleGrouped ] retain ];
+        viewController.indexNumber = [ stackController.viewControllers count ];
+        viewController.delegate = self;
+        [ stackController pushViewController:viewController fromViewController:nil animated:YES ];
+    }
+}
+
+- (void) accountClicked:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
+    
+    PSStackedViewController * stackController = XAppDelegate.stackController;
+    
+    ContactsProviderBaseImpl * theProvider = nil;
+    Account * theAccount = (Account *) [mAccounts objectAtIndex:indexPath.row - 1];
+    NSString * theType = theAccount.type;
+    
+    if ([ theType isEqualToString:ACCOUNT_TYPE_FACEBOOK ]) {
+        //theProvider = XAppDelegate.fbProvider;
+    } else if ([ theType isEqualToString:ACCOUNT_TYPE_LINKEDIN ]) {
+        theProvider = [ [ LinkedInContactsProvider alloc ] init ];
+    } else if ([ theType isEqualToString:ACCOUNT_TYPE_TWITTER ]) {
+        theProvider = [ [ TwitterContactsProvider alloc ] init ];
+    }
+    
+    if (theProvider) {
+        ProviderContactsController * controller = [ [ [ProviderContactsController alloc] 
+                                                     initWithStyle:UITableViewStylePlain 
+                                                     provider:theProvider ] 
+                                                   autorelease ];
+        controller.delegate = self;
+        controller.indexNumber = [ stackController.viewControllers count ];
+        [ stackController pushViewController:controller fromViewController:nil animated:YES];
+    }
 }
 
 @end

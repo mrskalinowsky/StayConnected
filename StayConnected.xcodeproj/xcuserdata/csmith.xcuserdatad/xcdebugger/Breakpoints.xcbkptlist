@@ -9,11 +9,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "src/StayConnected/AppMenuViewController.m"
-         timestampString = "351032296.207491"
+         timestampString = "351038535.949002"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "287"
-         endingLineNumber = "287"
+         startingLineNumber = "282"
+         endingLineNumber = "282"
          landmarkName = "-tableView:didSelectRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>

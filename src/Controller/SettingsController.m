@@ -14,6 +14,8 @@
 #import "TwitterContactsProvider.h"
 #import "LinkedInContactsProvider.h"
 #import "ContactAttributes.h"
+#import "Account.h"
+#import "AppDelegate.h"
 
 @implementation SettingsController
 
@@ -45,16 +47,16 @@
 
     _menuList = [ [ NSArray arrayWithObjects:
                    [NSDictionary dictionaryWithObjectsAndKeys:
-				   NSLocalizedString(@"facebook", @"facebook"), UI_KEY_TITLE,
-				   NSLocalizedString(@"facebook", @"facebook"), UI_KEY_FIRST_VALUE,
+				   NSLocalizedString(ACCOUNT_TYPE_FACEBOOK, ACCOUNT_TYPE_FACEBOOK), UI_KEY_TITLE,
+				   NSLocalizedString(ACCOUNT_TYPE_FACEBOOK, ACCOUNT_TYPE_FACEBOOK), UI_KEY_FIRST_VALUE,
 				   nil ],
                    [NSDictionary dictionaryWithObjectsAndKeys:
-                           NSLocalizedString(@"linkedin", @"linkedin"), UI_KEY_TITLE,
-                           NSLocalizedString(@"linkedin", @"linkedin"), UI_KEY_FIRST_VALUE, 
+                           NSLocalizedString(ACCOUNT_TYPE_LINKEDIN, ACCOUNT_TYPE_LINKEDIN), UI_KEY_TITLE,
+                           NSLocalizedString(ACCOUNT_TYPE_LINKEDIN, ACCOUNT_TYPE_LINKEDIN), UI_KEY_FIRST_VALUE, 
                     nil], 
                    [NSDictionary dictionaryWithObjectsAndKeys:
-                    NSLocalizedString(@"twitter", @"twitter"), UI_KEY_TITLE,
-                    NSLocalizedString(@"twitter", @"twitter"), UI_KEY_FIRST_VALUE, 
+                    NSLocalizedString(ACCOUNT_TYPE_TWITTER, ACCOUNT_TYPE_TWITTER), UI_KEY_TITLE,
+                    NSLocalizedString(ACCOUNT_TYPE_TWITTER, ACCOUNT_TYPE_TWITTER), UI_KEY_FIRST_VALUE, 
                     nil], 
                    nil] retain];
 	
@@ -204,14 +206,17 @@
     switch (indexPath.row) {
         case 0: {
             //theProvider =  [ [ [ FacebookContactsProvider alloc ] init ] autorelease ];
+            mSelectedAccount = ( NSString * ) ACCOUNT_TYPE_FACEBOOK;
             break;
         }
         case 1: {
             theProvider =  [ [ [ LinkedInContactsProvider alloc ] init ] autorelease ];
+             mSelectedAccount = ( NSString * ) ACCOUNT_TYPE_LINKEDIN;
             break;
         }
         case 2: {
             theProvider =  [ [ [ TwitterContactsProvider alloc ] init ] autorelease ];
+             mSelectedAccount = ( NSString * ) ACCOUNT_TYPE_TWITTER;
             break;
         }
     }
@@ -227,13 +232,29 @@
 -( void )onContactsFound:(NSArray *)inContacts error:(NSError *)inError {
     NSLog(@"onContactsFound");
     if (inError != nil) {
-        NSLog(@"Error authenticating... %@", inError);
-        // Show UIAlert
+        [[[[UIAlertView alloc]
+		   initWithTitle:@"Error connecting to account" message:[inError description] 
+		   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil]
+		  autorelease]
+		 show];
         [ _delegate dismiss:self ];
     } else {
-        // Save provider to DB
-        [ _delegate dismiss:self ];
+        NSManagedObjectContext * theContext = [ AppDelegate managedObjectContext ];
+        Account * newAccount = (Account *) [NSEntityDescription insertNewObjectForEntityForName:@"Account" 
+                                                                         inManagedObjectContext:theContext];
+        newAccount.id = [NSNumber numberWithInt:1];
+        newAccount.type = mSelectedAccount;
         
+        NSError * theError = nil;
+        [theContext save:&theError];
+        if (theError != nil) {
+            [[[[UIAlertView alloc]
+               initWithTitle:@"Error saving account" message:[theError description] 
+               delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil]
+              autorelease]
+             show];
+        }
+        [ _delegate dismiss:self ];
     }
 }
 

@@ -25,6 +25,7 @@
 		4BC2F00D14E5360700E5AC76 /* LinkedInSearchContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2F00C14E5360700E5AC76 /* LinkedInSearchContacts.m */; };
 		4BF2F2DF14EC538E00383CCE /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF2F2DE14EC538E00383CCE /* Account.m */; };
 		4BF2F2E214EC53A600383CCE /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF2F2E114EC53A600383CCE /* Friend.m */; };
+		4BF2F2E514EC599E00383CCE /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF2F2E414EC599E00383CCE /* DataStore.m */; };
 		6278EEE414CF73D3006F3994 /* ContactBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6278EEDF14CF73D3006F3994 /* ContactBaseImpl.m */; };
 		6278EEE514CF73D3006F3994 /* ContactGroupBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6278EEE114CF73D3006F3994 /* ContactGroupBaseImpl.m */; };
 		6278EEE614CF73D3006F3994 /* ContactsProviderBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6278EEE314CF73D3006F3994 /* ContactsProviderBaseImpl.m */; };
@@ -154,6 +155,8 @@
 		4BF2F2DE14EC538E00383CCE /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Account.m; path = Model/Account.m; sourceTree = "<group>"; };
 		4BF2F2E014EC53A600383CCE /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Friend.h; path = Model/Friend.h; sourceTree = "<group>"; };
 		4BF2F2E114EC53A600383CCE /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Friend.m; path = Model/Friend.m; sourceTree = "<group>"; };
+		4BF2F2E314EC599E00383CCE /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataStore.h; path = Model/DataStore.h; sourceTree = "<group>"; };
+		4BF2F2E414EC599E00383CCE /* DataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataStore.m; path = Model/DataStore.m; sourceTree = "<group>"; };
 		6278EEDE14CF73D3006F3994 /* ContactBaseImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactBaseImpl.h; sourceTree = "<group>"; };
 		6278EEDF14CF73D3006F3994 /* ContactBaseImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactBaseImpl.m; sourceTree = "<group>"; };
 		6278EEE014CF73D3006F3994 /* ContactGroupBaseImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactGroupBaseImpl.h; sourceTree = "<group>"; };
@@ -381,6 +384,8 @@
 				4BF2F2E114EC53A600383CCE /* Friend.m */,
 				4BF2F2DD14EC538E00383CCE /* Account.h */,
 				4BF2F2DE14EC538E00383CCE /* Account.m */,
+				4BF2F2E314EC599E00383CCE /* DataStore.h */,
+				4BF2F2E414EC599E00383CCE /* DataStore.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -936,6 +941,7 @@
 				4BB7B76B14EC482200D44BE7 /* StayConnected.xcdatamodeld in Sources */,
 				4BF2F2DF14EC538E00383CCE /* Account.m in Sources */,
 				4BF2F2E214EC53A600383CCE /* Friend.m in Sources */,
+				4BF2F2E514EC599E00383CCE /* DataStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,6 +4,10 @@ extern NSString * const COMPANY_NAME;
 extern NSString * const APP_NAME;
 extern NSString * const PRODUCT_NAME;
 
+extern NSString * const ACCOUNT_TYPE_LINKEDIN;
+extern NSString * const ACCOUNT_TYPE_FACEBOOK;
+extern NSString * const ACCOUNT_TYPE_TWITTER;
+
 // Error Codes
 enum {
     ErrUnknown = 1,

@@ -27,4 +27,9 @@
 @property (nonatomic, strong, readonly) PSStackedViewController *stackController;
 @property (nonatomic, strong, readonly) ContactProvider *fbProvider;
 
+// general available access to the datastore
++ (NSManagedObjectContext*) managedObjectContext;
++ (NSManagedObjectContext*) managedObjectContext:(NSPersistentStoreCoordinator*)inCoordinator;
++ (NSPersistentStoreCoordinator*) persistentStoreCoordinator:(NSString *)inName;
+
 @end
