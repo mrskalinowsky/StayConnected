@@ -49,9 +49,10 @@
     
     for ( int i = 0; i < peopleCount; i++) {
         ABRecordRef ref = CFArrayGetValueAtIndex( allPeople, i );
+        ABRecordID theId = ABRecordGetRecordID(ref);
         NSString * firstName = (NSString *) ABRecordCopyValue(ref, kABPersonFirstNameProperty);
         NSString * lastName = (NSString *) ABRecordCopyValue(ref, kABPersonLastNameProperty);
-        [theContacts addObject:[NSString stringWithFormat:@"%@ %@", firstName, lastName]];
+        [theContacts addObject:[NSString stringWithFormat:@"[%d] %@ %@", theId, firstName, lastName]];
     }
     
     _contactList = theContacts;

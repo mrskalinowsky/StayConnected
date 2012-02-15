@@ -14,6 +14,8 @@
 		4BB7B76014EA8B7D00D44BE7 /* ProviderContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB7B75F14EA8B7D00D44BE7 /* ProviderContactsController.m */; };
 		4BB7B76314EAAE1000D44BE7 /* LocalContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB7B76214EAAE1000D44BE7 /* LocalContactsController.m */; };
 		4BB7B76514EAB21400D44BE7 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB7B76414EAB21400D44BE7 /* AddressBook.framework */; };
+		4BB7B76B14EC482200D44BE7 /* StayConnected.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4BB7B76914EC482200D44BE7 /* StayConnected.xcdatamodeld */; };
+		4BB7B77914EC500E00D44BE7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB7B77814EC500E00D44BE7 /* CoreData.framework */; };
 		4BBCA72F14BCC1D4004B135E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA72E14BCC1D4004B135E /* UIKit.framework */; };
 		4BBCA73114BCC1D4004B135E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA73014BCC1D4004B135E /* Foundation.framework */; };
 		4BBCA73314BCC1D4004B135E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA73214BCC1D4004B135E /* CoreGraphics.framework */; };
@@ -21,6 +23,8 @@
 		4BC2F00714E3281300E5AC76 /* LinkedInCommandBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2F00614E3281300E5AC76 /* LinkedInCommandBaseImpl.m */; };
 		4BC2F00A14E5291100E5AC76 /* LinkedInCreateNewContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2F00914E5291100E5AC76 /* LinkedInCreateNewContacts.m */; };
 		4BC2F00D14E5360700E5AC76 /* LinkedInSearchContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2F00C14E5360700E5AC76 /* LinkedInSearchContacts.m */; };
+		4BF2F2DF14EC538E00383CCE /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF2F2DE14EC538E00383CCE /* Account.m */; };
+		4BF2F2E214EC53A600383CCE /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF2F2E114EC53A600383CCE /* Friend.m */; };
 		6278EEE414CF73D3006F3994 /* ContactBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6278EEDF14CF73D3006F3994 /* ContactBaseImpl.m */; };
 		6278EEE514CF73D3006F3994 /* ContactGroupBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6278EEE114CF73D3006F3994 /* ContactGroupBaseImpl.m */; };
 		6278EEE614CF73D3006F3994 /* ContactsProviderBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6278EEE314CF73D3006F3994 /* ContactsProviderBaseImpl.m */; };
@@ -132,6 +136,8 @@
 		4BB7B76114EAAE1000D44BE7 /* LocalContactsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalContactsController.h; sourceTree = "<group>"; };
 		4BB7B76214EAAE1000D44BE7 /* LocalContactsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalContactsController.m; sourceTree = "<group>"; };
 		4BB7B76414EAB21400D44BE7 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		4BB7B76A14EC482200D44BE7 /* StayConnected.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StayConnected.xcdatamodel; sourceTree = "<group>"; };
+		4BB7B77814EC500E00D44BE7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4BBCA72A14BCC1D4004B135E /* StayConnected.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StayConnected.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BBCA72E14BCC1D4004B135E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4BBCA73014BCC1D4004B135E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -144,6 +150,10 @@
 		4BC2F00914E5291100E5AC76 /* LinkedInCreateNewContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInCreateNewContacts.m; sourceTree = "<group>"; };
 		4BC2F00B14E5360600E5AC76 /* LinkedInSearchContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInSearchContacts.h; sourceTree = "<group>"; };
 		4BC2F00C14E5360700E5AC76 /* LinkedInSearchContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInSearchContacts.m; sourceTree = "<group>"; };
+		4BF2F2DD14EC538E00383CCE /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Account.h; path = Model/Account.h; sourceTree = "<group>"; };
+		4BF2F2DE14EC538E00383CCE /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Account.m; path = Model/Account.m; sourceTree = "<group>"; };
+		4BF2F2E014EC53A600383CCE /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Friend.h; path = Model/Friend.h; sourceTree = "<group>"; };
+		4BF2F2E114EC53A600383CCE /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Friend.m; path = Model/Friend.m; sourceTree = "<group>"; };
 		6278EEDE14CF73D3006F3994 /* ContactBaseImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactBaseImpl.h; sourceTree = "<group>"; };
 		6278EEDF14CF73D3006F3994 /* ContactBaseImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactBaseImpl.m; sourceTree = "<group>"; };
 		6278EEE014CF73D3006F3994 /* ContactGroupBaseImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactGroupBaseImpl.h; sourceTree = "<group>"; };
@@ -319,6 +329,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BB7B77914EC500E00D44BE7 /* CoreData.framework in Frameworks */,
 				4BB7B76514EAB21400D44BE7 /* AddressBook.framework in Frameworks */,
 				CB4B6A7114C80FD700803144 /* iAd.framework in Frameworks */,
 				CB4B6A6F14C80FCB00803144 /* QuartzCore.framework in Frameworks */,
@@ -362,6 +373,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4BB7B76814EC47DB00D44BE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4BB7B76914EC482200D44BE7 /* StayConnected.xcdatamodeld */,
+				4BF2F2E014EC53A600383CCE /* Friend.h */,
+				4BF2F2E114EC53A600383CCE /* Friend.m */,
+				4BF2F2DD14EC538E00383CCE /* Account.h */,
+				4BF2F2DE14EC538E00383CCE /* Account.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		4BBCA71F14BCC1D4004B135E = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +407,7 @@
 		4BBCA72D14BCC1D4004B135E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4BB7B77814EC500E00D44BE7 /* CoreData.framework */,
 				4BB7B76414EAB21400D44BE7 /* AddressBook.framework */,
 				CB4B6A7014C80FD700803144 /* iAd.framework */,
 				CB4B6A6E14C80FCB00803144 /* QuartzCore.framework */,
@@ -413,6 +437,7 @@
 		62DB57CC14C1D7BE0002B1DA /* src */ = {
 			isa = PBXGroup;
 			children = (
+				4BB7B76814EC47DB00D44BE7 /* Model */,
 				62DB57CD14C1D7BE0002B1DA /* ContactsProvider */,
 				6278EEDD14CF73D3006F3994 /* ContactsProviderBase */,
 				CB4B6C2814CC32E100803144 /* Controller */,
@@ -908,6 +933,9 @@
 				4BB7B75214E9B09B00D44BE7 /* SettingsController.m in Sources */,
 				4BB7B76014EA8B7D00D44BE7 /* ProviderContactsController.m in Sources */,
 				4BB7B76314EAAE1000D44BE7 /* LocalContactsController.m in Sources */,
+				4BB7B76B14EC482200D44BE7 /* StayConnected.xcdatamodeld in Sources */,
+				4BF2F2DF14EC538E00383CCE /* Account.m in Sources */,
+				4BF2F2E214EC53A600383CCE /* Friend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1029,6 +1057,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4BB7B76914EC482200D44BE7 /* StayConnected.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4BB7B76A14EC482200D44BE7 /* StayConnected.xcdatamodel */,
+			);
+			currentVersion = 4BB7B76A14EC482200D44BE7 /* StayConnected.xcdatamodel */;
+			name = StayConnected.xcdatamodeld;
+			path = Model/StayConnected.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4BBCA72114BCC1D4004B135E /* Project object */;
 }

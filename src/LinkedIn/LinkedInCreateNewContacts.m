@@ -58,7 +58,7 @@ static NSString * const sURLCreateNewContact = @"https://api.linkedin.com/v1/peo
         return;
     }
     
-    NSString * theResults = [ mRequestor httpPost:sURLCreateNewContact
+    [ mRequestor httpPost:sURLCreateNewContact
                parameters:[ NSArray arrayWithObjects:sKeyFormat, sValueJSON, nil ]
                      body:body
                     error:outError ];

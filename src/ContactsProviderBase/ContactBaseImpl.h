@@ -1,5 +1,5 @@
-#import <Foundation/Foundation.h>
 
+#import <Foundation/Foundation.h>
 #import "Contact.h"
 
 @protocol ContactGroup;

@@ -12,8 +12,9 @@
 
 @interface AppMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, DismissDelegate, ContactsCallback> {
 @private
-    UITableView*                mMenuTable;
-    UIViewController*           mCurrentViewController;
+    UITableView *               mMenuTable;
+    UIViewController *          mCurrentViewController;
+    UIViewController *          mAllContactsViewController;
     CGPoint                     mLastTapLocation;
 }
 

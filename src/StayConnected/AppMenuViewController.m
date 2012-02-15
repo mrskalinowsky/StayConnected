@@ -26,7 +26,14 @@ typedef enum {
 	SectionMenuSettings = 2,
 } SectionMenu;
 
-@interface AppMenuViewController()
+@interface AppMenuViewController (PrivateMethods)
+
+- (void) allContactsClicked:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
+- (void) addProviderClicked:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
+
+@end
+
+@interface AppMenuViewController ()
 
 @property (nonatomic, retain) IBOutlet UIPopoverController*	popoverController;
 
@@ -103,12 +110,16 @@ typedef enum {
 	self.menuView.tableHeaderView = searchBar;      
     [self.menuView setContentOffset:CGPointMake(0, 0) animated: NO];        
     [self.menuView reloadData];
+    
+    mAllContactsViewController = [[[LocalContactsController alloc] initWithStyle:UITableViewStylePlain ] retain ];
+    ((LocalContactsController * ) mAllContactsViewController).delegate = self;
 }
 
 - (void)viewDidUnload {
     
     [mCurrentViewController release];
-    mCurrentViewController = nil;    
+    mCurrentViewController = nil;
+    [mAllContactsViewController release];
     self.popoverController = nil;
             
     [mMenuTable release];
@@ -255,23 +266,19 @@ typedef enum {
     
     PSStackedViewController * stackController = XAppDelegate.stackController;
     
-    NSInteger viewControllerCount = [[stackController viewControllers] count ];
-    
-    if ( viewControllerCount > 0 ) {
-        NSArray * poppedControllers = [ stackController popToRootViewControllerAnimated:YES ];
-        for (UIViewController * theController in poppedControllers) {
-            [theController release];
-        }
-    }
-    
     switch (indexPath.section) {
         case SectionMenuContacts: {
             switch (indexPath.row) {
                 case 0: {
-                    LocalContactsController * controller = [[[LocalContactsController alloc] initWithStyle:UITableViewStylePlain ] autorelease ];
-                    controller.delegate = self;
-                    controller.indexNumber = [ stackController.viewControllers count ];
-                    [ stackController pushViewController:controller fromViewController:nil animated:YES];
+                    //[ self allContactsClicked:<#(UITableView *)#> indexPath:<#(NSIndexPath *)#> ];
+                    UIViewController * topController = stackController.topViewController;
+                    if (![topController isKindOfClass:[LocalContactsController class]]) {
+                        NSLog(@"no LocalContactsController");
+                        ((LocalContactsController * ) mAllContactsViewController).indexNumber = [ stackController.viewControllers count ];
+                        [ stackController pushViewController:mAllContactsViewController fromViewController:stackController.rootViewController animated:NO];
+                    } else {
+                        NSLog(@"is LocalContactsController");
+                    }
                     break;
                 }
             }
@@ -323,6 +330,18 @@ typedef enum {
 - (void) dismiss:(UIViewController *)controller {
 	NSLog(@"Dismiss");
     [ XAppDelegate.stackController popToRootViewControllerAnimated:YES ]; 
+}
+
+@end
+
+@implementation AppMenuViewController (PrivateMethods)
+
+- (void) allContactsClicked:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
+    
+}
+
+- (void) addProviderClicked:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
+    
 }
 
 @end
