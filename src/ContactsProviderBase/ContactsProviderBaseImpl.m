@@ -11,6 +11,11 @@
 
 @implementation ContactsProviderBaseImpl
 
+-( BOOL )canOpenURL:( NSURL * )inURL {
+    NSLog(@"ContactsProviderBaseImpl.canOpenURL:%@ not implemented", inURL);
+    return FALSE;
+}
+
 -( void )createNewContacts:( NSArray * )inContacts
                    message:( NSString * )inMessage
                   callback:( id< NewContactsCallback > )inCallback {

@@ -15,6 +15,8 @@
     NSString *   mCallbackURL;
 }
 
+-( BOOL )canOpenURL:( NSURL * )inURL;
+
 -( id )httpGet:( NSString * )inURL
     parameters:( NSArray * )inParameters
          error:( NSError ** )outError;

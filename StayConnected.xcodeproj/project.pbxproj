@@ -379,13 +379,13 @@
 		4BB7B76814EC47DB00D44BE7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4BB7B76914EC482200D44BE7 /* StayConnected.xcdatamodeld */,
-				4BF2F2E014EC53A600383CCE /* Friend.h */,
-				4BF2F2E114EC53A600383CCE /* Friend.m */,
 				4BF2F2DD14EC538E00383CCE /* Account.h */,
 				4BF2F2DE14EC538E00383CCE /* Account.m */,
 				4BF2F2E314EC599E00383CCE /* DataStore.h */,
 				4BF2F2E414EC599E00383CCE /* DataStore.m */,
+				4BF2F2E014EC53A600383CCE /* Friend.h */,
+				4BF2F2E114EC53A600383CCE /* Friend.m */,
+				4BB7B76914EC482200D44BE7 /* StayConnected.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -442,12 +442,12 @@
 		62DB57CC14C1D7BE0002B1DA /* src */ = {
 			isa = PBXGroup;
 			children = (
-				4BB7B76814EC47DB00D44BE7 /* Model */,
 				62DB57CD14C1D7BE0002B1DA /* ContactsProvider */,
 				6278EEDD14CF73D3006F3994 /* ContactsProviderBase */,
 				CB4B6C2814CC32E100803144 /* Controller */,
 				62DB57D714C1D7BE0002B1DA /* Facebook */,
 				62DB57E614C1D7BE0002B1DA /* LinkedIn */,
+				4BB7B76814EC47DB00D44BE7 /* Model */,
 				62DB57EF14C1D7BE0002B1DA /* OAuth */,
 				CB4B6A8514C8109700803144 /* Resources */,
 				62DB580B14C1D7BE0002B1DA /* Twitter */,
@@ -493,6 +493,8 @@
 		62DB57E614C1D7BE0002B1DA /* LinkedIn */ = {
 			isa = PBXGroup;
 			children = (
+				4BC2F00514E3281300E5AC76 /* LinkedInCommandBaseImpl.h */,
+				4BC2F00614E3281300E5AC76 /* LinkedInCommandBaseImpl.m */,
 				CB4B6B1214CB2D4000803144 /* LinkedInConstants.h */,
 				CB4B6B1314CB2D4000803144 /* LinkedInConstants.m */,
 				CB4B6B1414CB2D4000803144 /* LinkedInContact.h */,
@@ -501,12 +503,10 @@
 				CB4B6B1714CB2D4000803144 /* LinkedInContactGroup.m */,
 				CB4B6B1814CB2D4000803144 /* LinkedInContactsProvider.h */,
 				CB4B6B1914CB2D4000803144 /* LinkedInContactsProvider.m */,
-				4BC2F00214E327E400E5AC76 /* LinkedInGetContacts.h */,
-				4BC2F00314E327E400E5AC76 /* LinkedInGetContacts.m */,
-				4BC2F00514E3281300E5AC76 /* LinkedInCommandBaseImpl.h */,
-				4BC2F00614E3281300E5AC76 /* LinkedInCommandBaseImpl.m */,
 				4BC2F00814E5291100E5AC76 /* LinkedInCreateNewContacts.h */,
 				4BC2F00914E5291100E5AC76 /* LinkedInCreateNewContacts.m */,
+				4BC2F00214E327E400E5AC76 /* LinkedInGetContacts.h */,
+				4BC2F00314E327E400E5AC76 /* LinkedInGetContacts.m */,
 				4BC2F00B14E5360600E5AC76 /* LinkedInSearchContacts.h */,
 				4BC2F00C14E5360700E5AC76 /* LinkedInSearchContacts.m */,
 				4B98186F14E53E3100EC5805 /* LinkedInSendMessage.h */,
@@ -535,6 +535,8 @@
 				CB4B6B3A14CB2DB400803144 /* TwitterConstants.m */,
 				CB4B6B3B14CB2DB400803144 /* TwitterContact.h */,
 				CB4B6B3C14CB2DB400803144 /* TwitterContact.m */,
+				62F0310414D4A3F600EA58DC /* TwitterContactGroup.h */,
+				62F0310514D4A3F600EA58DC /* TwitterContactGroup.m */,
 				CB4B6B3D14CB2DB400803144 /* TwitterContactsProvider.h */,
 				CB4B6B3E14CB2DB400803144 /* TwitterContactsProvider.m */,
 				CB4B6B3F14CB2DB400803144 /* TwitterCreateNewContacts.h */,
@@ -545,8 +547,6 @@
 				CB4B6B4814CB2DB400803144 /* TwitterSearchContacts.m */,
 				CB4B6B4914CB2DB400803144 /* TwitterSendMessage.h */,
 				CB4B6B4A14CB2DB400803144 /* TwitterSendMessage.m */,
-				62F0310414D4A3F600EA58DC /* TwitterContactGroup.h */,
-				62F0310514D4A3F600EA58DC /* TwitterContactGroup.m */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -760,14 +760,14 @@
 			children = (
 				CB4B6C2914CC32E200803144 /* ConnectionController.h */,
 				CB4B6C2A14CC32E200803144 /* ConnectionController.m */,
-				CB4B6C2B14CC32E200803144 /* WebViewController.h */,
-				CB4B6C2C14CC32E200803144 /* WebViewController.m */,
-				4BB7B74F14E9B09B00D44BE7 /* SettingsController.h */,
-				4BB7B75014E9B09B00D44BE7 /* SettingsController.m */,
-				4BB7B75E14EA8B7D00D44BE7 /* ProviderContactsController.h */,
-				4BB7B75F14EA8B7D00D44BE7 /* ProviderContactsController.m */,
 				4BB7B76114EAAE1000D44BE7 /* LocalContactsController.h */,
 				4BB7B76214EAAE1000D44BE7 /* LocalContactsController.m */,
+				4BB7B75E14EA8B7D00D44BE7 /* ProviderContactsController.h */,
+				4BB7B75F14EA8B7D00D44BE7 /* ProviderContactsController.m */,
+				4BB7B74F14E9B09B00D44BE7 /* SettingsController.h */,
+				4BB7B75014E9B09B00D44BE7 /* SettingsController.m */,
+				CB4B6C2B14CC32E200803144 /* WebViewController.h */,
+				CB4B6C2C14CC32E200803144 /* WebViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

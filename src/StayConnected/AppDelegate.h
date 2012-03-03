@@ -27,6 +27,8 @@
 @property (nonatomic, strong, readonly) PSStackedViewController *stackController;
 @property (nonatomic, strong, readonly) ContactProvider *fbProvider;
 
+-( BOOL )handleProviderURL:( NSURL * )inURL;
+
 // general available access to the datastore
 + (NSManagedObjectContext*) managedObjectContext;
 + (NSManagedObjectContext*) managedObjectContext:(NSPersistentStoreCoordinator*)inCoordinator;

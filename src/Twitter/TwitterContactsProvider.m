@@ -1,3 +1,4 @@
+#import "AppDelegate.h"
 #import "OAuthRequestor.h"
 #import "TwitterConstants.h"
 #import "TwitterContactsProvider.h"
@@ -14,6 +15,12 @@ static NSString * sRequestTokenURL = @"https://twitter.com/oauth/request_token";
 static NSString * sAuthoriseURL    = @"https://twitter.com/oauth/authorize";
 static NSString * sAccessTokenURL  = @"https://twitter.com/oauth/access_token";
 static NSString * sCallbackSuffix  = @"twitter";
+
+-( BOOL )canOpenURL:( NSURL * )inURL {
+    NSString * thePrefix = [ inURL absoluteString ];
+    return [ thePrefix hasPrefix:sAuthoriseURL ] ||
+           [ mOAuthRequestor canOpenURL:inURL ];
+}
 
 -( void )dealloc {
     [ mOAuthRequestor release ];
@@ -79,7 +86,17 @@ static NSString * sCallbackSuffix  = @"twitter";
 }
 
 -( BOOL )openURL:( NSURL * )inURL {
-    return [ mOAuthRequestor openURL:inURL ];
+    BOOL theRC;
+    if ( [ [ inURL absoluteString ] hasPrefix:sAuthoriseURL ] ) {
+        [ XAppDelegate performSelectorOnMainThread:@selector(handleProviderURL:)
+                                        withObject:inURL
+                                     waitUntilDone:FALSE ];
+        theRC = TRUE;
+    } else {
+        theRC = [ mOAuthRequestor openURL:inURL ];
+    }
+    [ XAppDelegate.stackController dismissModalViewControllerAnimated:YES ];
+    return theRC;
 }
 
 @end

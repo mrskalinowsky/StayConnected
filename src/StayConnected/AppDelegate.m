@@ -291,28 +291,18 @@ static NSPersistentStoreCoordinator     *sPersistentStoreCoordinator;
 	[self.window.rootViewController presentModalViewController:navController animated:YES]; 
 }
 
-- (void) handleFBLogin:(NSURL*)url {
-	
-	// Create the modal view controller
+- ( BOOL )handleProviderURL:( NSURL * )url {
 	ConnectionController *controller = [[[ConnectionController alloc] initWithNibName:nil bundle:nil] autorelease];
-	
-	// We are the delegate responsible for dismissing the modal view 
 	controller.delegate = self;
 	controller.url = url;
-    
-    // Create a Navigation controller
 	UINavigationController *navController = [[[UINavigationController alloc]
 											  initWithRootViewController:controller] autorelease];
-	
-  //  navController.navigationBar.tintColor = [UIColor baGrayColor];	
-	
-	// show the navigation controller modally
 	navController.modalPresentationStyle = UIModalPresentationFormSheet;
-    
     if (self.stackController.modalViewController) 
         [self.stackController.modalViewController presentModalViewController:navController animated:YES];
     else
-        [self.stackController presentModalViewController:navController animated:YES]; 
+        [self.stackController presentModalViewController:navController animated:YES];
+    return TRUE;
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url

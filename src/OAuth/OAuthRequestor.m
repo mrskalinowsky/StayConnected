@@ -41,6 +41,10 @@ static NSString * sURLSep         = @"?";
 
 @implementation OAuthRequestor
 
+-( BOOL )canOpenURL:( NSURL * )inURL {
+    return [ [ inURL absoluteString ] hasPrefix:mCallbackURL ];
+}
+
 -( void )dealloc {
     [ mCallbackURL release ];
     [ mAccessTokenURL release ];

@@ -15,6 +15,11 @@
 @protocol ContactsProvider < NSObject >
 
 /*
+ * Indicates whether or not a provider can open a url using openURL
+ */
+-( BOOL )canOpenURL:( NSURL * )inURL;
+
+/*
  * Request one or more new contact requests
  *  inContacts, an NSArray of Contact objects, specifies the contacts
  *  inMessage specifies a message to send as part of the requests

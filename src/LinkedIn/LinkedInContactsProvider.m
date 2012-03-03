@@ -1,3 +1,4 @@
+#import "AppDelegate.h"
 #import "OAuthRequestor.h"
 #import "LinkedInContactsProvider.h"
 #import "LinkedInConstants.h"
@@ -16,6 +17,12 @@ static NSString * sCallbackSuffix  = @"linkedIn";
 
 static NSString * sQueryUserURL = @"https://api.linkedin.com/query";
 static NSString * sQueryParamKey = @"userid";
+
+-( BOOL )canOpenURL:( NSURL * )inURL {
+    NSString * thePrefix = [ inURL absoluteString ];
+    return [ thePrefix hasPrefix:sAuthoriseURL ] ||
+           [ mOAuthRequestor canOpenURL:inURL ];
+}
 
 -( void )dealloc {
     [ mOAuthRequestor release ];
@@ -78,7 +85,17 @@ static NSString * sQueryParamKey = @"userid";
 }
 
 -( BOOL )openURL:( NSURL * )inURL {
-    return [ mOAuthRequestor openURL:inURL ];
+    BOOL theRC;
+    if ( [ [ inURL absoluteString ] hasPrefix:sAuthoriseURL ] ) {
+        [ XAppDelegate performSelectorOnMainThread:@selector(handleProviderURL:)
+                                        withObject:inURL
+                                     waitUntilDone:FALSE ];
+        theRC = TRUE;
+    } else {
+        theRC = [ mOAuthRequestor openURL:inURL ];
+    }
+    [ XAppDelegate.stackController dismissModalViewControllerAnimated:YES ];
+    return theRC;
 }
 
 @end

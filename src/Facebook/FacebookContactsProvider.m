@@ -1,8 +1,13 @@
+#import "AppDelegate.h"
 #import "FacebookContactsProvider.h"
 #import "FacebookConstants.h"
 #import "FacebookGetContacts.h"
 #import "FacebookSearchContacts.h"
 #import "FBConnect.h"
+
+static NSString * const sURLPrefixFBAuth  = @"fbauth://authorize";
+static NSString * const sURLPrefixFBOAuth = @"https://m.facebook.com/dialog/oauth";
+static NSString * const sURLPrefixFBAppId = @"fb100188760104407://authorize";
 
 @implementation FacebookContactsProvider
 
@@ -38,6 +43,13 @@
 }
 
 // ContactsProvider Implementation
+-( BOOL )canOpenURL:( NSURL * )inURL {
+    NSString * thePrefix = [ inURL absoluteString ];
+    return [ thePrefix hasPrefix:sURLPrefixFBAuth ]  ||
+           [ thePrefix hasPrefix:sURLPrefixFBOAuth ] ||
+           [ thePrefix hasPrefix:sURLPrefixFBAppId ];
+}
+
 -( void )createNewContacts:( NSArray * )inContacts
                    message:( NSString * )inMessage
                   callback:( id< NewContactsCallback > )inCallback {
@@ -58,7 +70,11 @@
 }
 
 -( BOOL )openURL:( NSURL * )inURL {
-    return [ mFacebook handleOpenURL:inURL ];
+    BOOL theRC = [ [ inURL absoluteString ] hasPrefix:sURLPrefixFBOAuth ] ?
+        [ XAppDelegate handleProviderURL:inURL ] :
+        [ mFacebook handleOpenURL:inURL ];
+    [ XAppDelegate.stackController dismissModalViewControllerAnimated:YES ];
+    return theRC;
 }
 
 -( void )searchForContacts:( NSString * )inSearchString
