@@ -11,8 +11,6 @@
 
 @class StayConnectedViewController;
 @class PSStackedViewController;
-@class ContactProvider;
-@class LinkedInContactsProvider;
 
 #define XAppDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
@@ -20,12 +18,10 @@
 @private    
     UIWindow						*mWindow;	
     PSStackedViewController         *mStackController;
-    ContactProvider                 *mFBProvider;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, strong, readonly) PSStackedViewController *stackController;
-@property (nonatomic, strong, readonly) ContactProvider *fbProvider;
 
 -( BOOL )handleProviderURL:( NSURL * )inURL;
 

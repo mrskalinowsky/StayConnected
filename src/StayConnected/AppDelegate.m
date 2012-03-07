@@ -4,48 +4,28 @@
 #import "AppDelegate.h"
 #import "AppMenuViewController.h"
 #import "AppStackController.h"
-#import "FacebookContactsProvider.h"
-#import "LinkedInContactsProvider.h"
 #import "ConnectionController.h"
+#import "ContactsProviderManager.h"
 #import "WebViewController.h"
-#import "FacebookConstants.h"
-#import "LinkedInConstants.h"
-#import "TwitterContactsProvider.h"
-#import "ContactAttributes.h"
 #import "LocalContactsController.h"
 #import "Constants.h"
 
 
 @interface AppDelegate ()
 @property (nonatomic, strong) PSStackedViewController *stackController;
-@property (nonatomic, strong) ContactProvider *fbProvider;
 
 - (void) swapOpenURLImplementation;
-- (void) handleFBLogin:(NSURL*)url;
 - (void) handleURL:(NSURL *)url;
 @end
 
-
-// this implementation handles the open of URLs app wide. Typically they are opened in Safari, but our up should
-// keep URL requests inside the app, see also: http://52apps.net/post/879106231/method-swizzling-uitextview-and-safari
 @implementation UIApplication (Private)
 
 -(BOOL) customOpenURL:(NSURL*)url {
-	
-    if ([[url absoluteString] hasPrefix:@"fbauth://"]) {
-        return [XAppDelegate.fbProvider openURL:url];
-    }
-    else if ([[url absoluteString] hasPrefix:@"https://m.facebook.com/dialog/oauth"]) {
-			// fb login dialog
-        [XAppDelegate handleFBLogin:url];
-        return YES;
-    }
-    else if ([[url absoluteString] hasPrefix:[NSString stringWithFormat:@"fb%@://authorize", sFacebookAppId]]) {
-        [XAppDelegate.stackController dismissModalViewControllerAnimated:YES];	
-        return [XAppDelegate.fbProvider openURL:url];
-		}
-    else {
-        [XAppDelegate handleURL:url];
+    ContactsProviderManager * theManager = [ ContactsProviderManager instance ];
+	if ( [ theManager canOpenURL:url ] ) {
+        return [ theManager openURL:url ];
+    } else {
+        [ XAppDelegate handleURL:url ];
         return YES;
     }
 }
@@ -55,7 +35,6 @@
 
 @synthesize stackController = mStackController;
 @synthesize window=mWindow;
-@synthesize fbProvider = mFBProvider;
 
 static NSManagedObjectContext			*sManagedObjectContext;
 static NSManagedObjectModel             *sManagedObjectModel;
@@ -185,25 +164,15 @@ static NSPersistentStoreCoordinator     *sPersistentStoreCoordinator;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    // use our own URL Handler
-    //[self swapOpenURLImplementation];
-    
-    // set the fbProvider, just for testing purposes
-    self.fbProvider = [(ContactProvider*)[[FacebookContactsProvider alloc] init] autorelease];
-    
-    // set root controller as stack controller
+    [self swapOpenURLImplementation];
     AppMenuViewController *masterController = [[AppMenuViewController alloc] init];
     self.stackController = [[AppStackController alloc] initWithRootViewController:masterController];
-    
     self.window.rootViewController = self.stackController;
     [self.window makeKeyAndVisible];
-    
     LocalContactsController * controller = [[[LocalContactsController alloc] initWithStyle:UITableViewStylePlain ] autorelease ];
     controller.delegate = self;
     controller.indexNumber = [ XAppDelegate.stackController.viewControllers count ];
     [ XAppDelegate.stackController pushViewController:controller fromViewController:nil animated:YES];
-    
     return YES;
 }
 
@@ -247,7 +216,6 @@ static NSPersistentStoreCoordinator     *sPersistentStoreCoordinator;
 }
 
 - (void)dealloc {
-    self.fbProvider = nil;
     self.window = nil;
     self.stackController = nil;
     [super dealloc];
@@ -272,22 +240,12 @@ static NSPersistentStoreCoordinator     *sPersistentStoreCoordinator;
 }
 
 - (void) handleURL:(NSURL*)url {
-	
-	// Create the modal view controller
 	WebViewController *webViewController = [[[WebViewController alloc] initWithNibName:@"WebViewController" bundle:nil] autorelease];
-	
-	// We are the delegate responsible for dismissing the modal view 
 	webViewController.delegate = self;
 	webViewController.url = url;
 	webViewController.modalPresentationStyle = UIModalPresentationFormSheet;
-	
-	// Create a Navigation controller
 	UINavigationController *navController = [[[UINavigationController alloc]
 											  initWithRootViewController:webViewController] autorelease];
-	
-//    navController.navigationBar.tintColor = [UIColor baGrayColor];	
-	
-	// show the navigation controller modally
 	[self.window.rootViewController presentModalViewController:navController animated:YES]; 
 }
 
@@ -303,19 +261,6 @@ static NSPersistentStoreCoordinator     *sPersistentStoreCoordinator;
     else
         [self.stackController presentModalViewController:navController animated:YES];
     return TRUE;
-}
-
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    if ([ [ url host ] hasSuffix:@"linkedIn" ]) {
-        return [[[[LinkedInContactsProvider alloc] init] autorelease] openURL:url];
-    } else if ([ [ url host ] hasSuffix:@"twitter" ]) {
-        return [[[[TwitterContactsProvider alloc] init] autorelease] openURL:url];
-    } else if ([ [ url absoluteString ] hasPrefix:@"fb" ]) {
-        return [[[[FacebookContactsProvider alloc] init] autorelease] openURL:url];
-    } else {
-        return NO;
-    }
 }
 
 @end
