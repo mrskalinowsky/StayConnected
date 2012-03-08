@@ -32,6 +32,7 @@
 		6278EEE914CF73EF006F3994 /* OAuthURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6278EEE814CF73EF006F3994 /* OAuthURLConnection.m */; };
 		6278EEEC14CF7428006F3994 /* TwitterCommandBaseImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6278EEEB14CF7428006F3994 /* TwitterCommandBaseImpl.m */; };
 		6278EEEF14CF748D006F3994 /* BusyLocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6278EEEE14CF748D006F3994 /* BusyLocker.m */; };
+		62D2C5CD1506D547000E5E56 /* ContactsProviderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D2C5CC1506D547000E5E56 /* ContactsProviderManager.m */; };
 		62DB587A14C1D9850002B1DA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DB587914C1D9850002B1DA /* Security.framework */; };
 		62DB587C14C1D98E0002B1DA /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DB587B14C1D98E0002B1DA /* Twitter.framework */; };
 		62DB587E14C1D99B0002B1DA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DB587D14C1D99B0002B1DA /* Accounts.framework */; };
@@ -169,6 +170,8 @@
 		6278EEEB14CF7428006F3994 /* TwitterCommandBaseImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterCommandBaseImpl.m; sourceTree = "<group>"; };
 		6278EEED14CF748D006F3994 /* BusyLocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusyLocker.h; sourceTree = "<group>"; };
 		6278EEEE14CF748D006F3994 /* BusyLocker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusyLocker.m; sourceTree = "<group>"; };
+		62D2C5CB1506D547000E5E56 /* ContactsProviderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsProviderManager.h; sourceTree = "<group>"; };
+		62D2C5CC1506D547000E5E56 /* ContactsProviderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsProviderManager.m; sourceTree = "<group>"; };
 		62DB587914C1D9850002B1DA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		62DB587B14C1D98E0002B1DA /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		62DB587D14C1D99B0002B1DA /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -558,6 +561,8 @@
 				6278EEEE14CF748D006F3994 /* BusyLocker.m */,
 				CB4B6B5714CB2DF100803144 /* Constants.h */,
 				CB4B6B5814CB2DF200803144 /* Constants.m */,
+				62D2C5CB1506D547000E5E56 /* ContactsProviderManager.h */,
+				62D2C5CC1506D547000E5E56 /* ContactsProviderManager.m */,
 				CB4B6C3114CC336300803144 /* DismissDelegate.h */,
 				CB4B6B5914CB2DF200803144 /* StayConnectedError.h */,
 				CB4B6B5A14CB2DF200803144 /* StayConnectedError.m */,
@@ -942,6 +947,7 @@
 				4BF2F2DF14EC538E00383CCE /* Account.m in Sources */,
 				4BF2F2E214EC53A600383CCE /* Friend.m in Sources */,
 				4BF2F2E514EC599E00383CCE /* DataStore.m in Sources */,
+				62D2C5CD1506D547000E5E56 /* ContactsProviderManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
